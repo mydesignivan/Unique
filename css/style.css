@@ -1,0 +1,314 @@
+/*------------------------------------------------------------------------------
+ - ESTILO GENERAL
+ -----------------------------------------------------------------------------*/
+.fleft{float:left !important;}
+.fright{float:right !important;}
+.align-center{text-align: center !important;}
+.align-right{text-align: right !important;}
+.border{border:1px solid red !important;}
+.text-size-80{font-size: 80% !important;}
+.text-size-90{font-size: 90% !important;}
+.trow{
+    float:left;
+    clear: both;
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA MENSAJES DEL VALIDADOR
+ -----------------------------------------------------------------------------*/
+.valid-success{
+    background: transparent url(../images/icon_success.png) no-repeat left !important;
+    width: 16px;
+    height: 16px;
+    padding: 0 0 0 18px !important;
+    color: #264409 !important;
+    border: none !important;
+    font-size: 100% !important;
+}
+.valid-error{
+    background: #FBE3E4;
+    color: #8a1f11;
+    border: 2px solid #FBC2C4;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 90%;
+    font-weight: normal;
+    min-width: 150px;
+    max-width: 330px;
+    text-align: left;
+}
+.valid-highlight{border-style: dashed !important;}
+.valid-unhighlight{border-style: solid !important;}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LINK
+ -----------------------------------------------------------------------------*/
+a:link{color: #000;}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LABEL
+ -----------------------------------------------------------------------------*/
+.label{
+    display: block;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.label1{
+    width: 100px;
+}
+.label2{
+    width: 150px;
+}
+.label-leyend{
+    color: #000;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA INPUT
+ -----------------------------------------------------------------------------*/
+input[type=text],input[type=password], textarea{
+    padding:3px !important;
+    text-align:left;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:100%;
+    margin:0 !important;
+}
+.input-contact{
+    width: 300px;
+}
+.input-login{
+    width: 150px;
+}
+.input-form{
+    width: 300px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA TEXTAREA
+ -----------------------------------------------------------------------------*/
+.textarea-contact{
+    width: 300px;
+    height: 150px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA SELECT
+ -----------------------------------------------------------------------------*/
+select{
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA BUTTON
+ -----------------------------------------------------------------------------*/
+.button{
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA FORMULARIO FIELDSET
+ -----------------------------------------------------------------------------*/
+fieldset{
+    padding: 10px;
+    border:1px solid #D38D2A;
+}
+    fieldset legend{
+        font-size: 100%;
+        padding: 0 5px 0 5px;
+    }
+
+fieldset.gallery-panel{
+    float:left;
+    width: 640px;
+    height: 200px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+    fieldset.gallery-panel .cont{
+        float: left;
+        width: 640px;
+        height: 200px;
+        position: relative;
+        overflow: auto;
+        /*border: 1px solid red;*/
+    }
+
+    fieldset.gallery-panel ul{
+        margin:0;
+        padding:0;
+    }
+        fieldset.gallery-panel ul li{
+            list-style-type: none;
+            display: inline;
+            float:left;
+            width: 130px;
+            height: 90px;
+            margin: 0 8px 8px 0;
+            padding:5px;
+            background-color: #EEF3F6;
+            border: 2px solid #A5A5A5;
+            text-align: center;
+        }
+            fieldset.gallery-panel ul li .d1{
+                clear: both;
+                margin-top: 5px;
+            }
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "HEADER"
+ -----------------------------------------------------------------------------*/
+.header .header-top{
+    text-align: center;
+    padding: 50px 0 40px 0;
+}
+
+
+/* MENU
+ -----------------------------------------------------------------------------*/
+ul.menu{
+    clear: both;
+    width: 930px;
+    /*border: 1px solid red;*/
+}
+ul.menu, ul.menu li{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+ul.menu li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 5px;
+    /*border: 1px solid red;*/
+}
+    ul.menu li a{
+        float: left;
+        display: block;
+        color: #FFF5D8;
+        font-size: 148%;
+    }
+    ul.menu li .l, ul.menu li .m, ul.menu li .r{
+        float: left;
+        height: 50px;
+    }
+    ul.menu li .l{
+        background: url(../images/menu-left.png) no-repeat top left;
+        width: 5px;
+        /*border: 1px solid red;*/
+    }
+    ul.menu li .m{
+        background: url(../images/menu-middle.png) repeat-x top;
+        text-align: center;
+        padding: 11px 5px 0 5px;
+        height: 39px !important;
+        margin-top: -1px;
+        /*border: 1px solid red;*/
+    }
+    ul.menu li .r{
+        background: url(../images/menu-right.png) no-repeat top right;
+        width: 5px;
+        /*border: 1px solid red;*/
+    }
+
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "MAIN CONTAINER"
+ -----------------------------------------------------------------------------*/
+.main-container{
+    margin-top: 20px;
+}
+    .main-container .t, .main-container .i, .main-container .b{
+        float: left;
+        clear: left;
+    }
+    .main-container .t{
+        background: url(../images/main-container-top.png) no-repeat top left;
+        width: 897px;
+        height: 80px;
+    }
+    .main-container .i{
+        background: url(../images/main-container-inner.png) repeat-y;
+        width: 817px;
+        padding: 0 40px 0 40px;
+    }
+    .main-container .b{
+        background: url(../images/main-container-bottom.png) no-repeat top left;
+        width: 897px;
+        height: 77px;
+    }
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "FOOTER"
+ -----------------------------------------------------------------------------*/
+.footer{
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: #fff;
+}
+    .footer a{
+        color: #fff;
+    }
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA CONTAINERS
+ -----------------------------------------------------------------------------*/
+.cont-images-index{
+    width: 787px;
+    margin: 0 auto;
+}
+    .cont-images-index .thumb{
+        margin-bottom: 10px;
+    }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA EL LOGIN
+ -----------------------------------------------------------------------------*/
+.contlogin{
+    background: url(../images/bg-login.png) no-repeat;
+    width: 306px;
+    height: 112px;
+    margin: 10px auto;
+    padding: 10px 5px 5px 5px;
+    /*border:1px solid red;*/
+}
+    .contlogin .error{
+        width: 260px;
+        margin: 5px auto;
+    }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLAS
+ -----------------------------------------------------------------------------*/
+table{
+    background-color: #E9D4B0;
+    width: 100%;
+}
+table thead td{
+    font-weight: bold;
+}
+table td{
+    /*border: 1px solid #C7A773;*/
+    border: 1px solid #D9BA83;
+}
+table tbody tr.row-even{
+    background-color: #F7F0E3;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLA "CONTENT"
+ -----------------------------------------------------------------------------*/
+.table-contents .cell1{
+    width: 800px;
+}
+.table-contents .cell2{
+    text-align: center;
+}
