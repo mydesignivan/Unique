@@ -59,7 +59,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #A62D38; }
 
-h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h1 { font-size: 210%; line-height: 1; margin-bottom: 0.5em; }
 h2 { font-size: 170%; margin-bottom: 0.75em; font-weight: normal;}
 h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
 h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
@@ -80,7 +80,7 @@ p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
 p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
 
 a:focus, 
-a:hover     { color: #000; }
+a:hover     { color: #A62D38; }
 a           { color: #A62D38; text-decoration: none; }
 
 blockquote  { margin: 1.5em; color: #666; font-style: italic; }
@@ -465,7 +465,7 @@ form.inline p { margin-bottom:0; }
 
 .error,
 .notice, 
-.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+.success    { padding: 5px; margin-bottom: 1em; border: 2px solid #ddd; }
 
 .error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
 .notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }

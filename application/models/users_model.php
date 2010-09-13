@@ -12,7 +12,6 @@ class Users_model extends Model {
      public function save(){
         $data = array(
             'email'   => $_POST['txtEmail'],
-            'codegm'  => $_POST['txtCodeGM'],
             'last_modified' => date('Y-m-d H:i:s')
         );
 

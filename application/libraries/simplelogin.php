@@ -55,8 +55,6 @@ class Simplelogin{
 
             //Remove the password field
             unset($row['password']);
-            unset($row['codegm']);
-            unset($row['content']);
 
             //Set session data
             $this->CI->session->set_userdata($row);

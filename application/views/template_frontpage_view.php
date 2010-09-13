@@ -30,13 +30,18 @@
             <div class="i">
 
                 <?php if( isset($tlp_title_section) ){?>
-                <h1 class="title-section"><?=$tlp_title_section?></h1>
+                <h1 class="title-section"><?=$tlp_title_section?><img src="images/dibujo-titulo-seccion.png" alt="" width="74" height="57" /></h1>
+                <div class="clear">&nbsp;</div>
                 <?php }?>
 
                 <?php require($tlp_section);?>
 
             </div>
             <div class="b"></div>
+            <div class="clear span-24">
+                <div class="flores-left"></div>
+                <div class="flores-right"></div>
+            </div>
         </div>
         <div class="clear span-24 last footer"> 
             <?php require('includes/footer_inc.php');?>

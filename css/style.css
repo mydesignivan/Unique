@@ -12,9 +12,25 @@
     float:left;
     clear: both;
     width: 100%;
-    margin: 5px 0 5px 0;
+    margin: 7px 0 7px 0;
 }
 
+h1.title-section{
+    float: left;
+    border-bottom: 2px solid #AC3C45;
+    padding: 0 0 16px 35px;
+    margin: -45px 0 20px -40px;
+}
+    h1.title-section img{
+        position: relative;
+        right: -68px;
+        top: 41px;
+    }
+
+img.imgframe{
+    padding: 5px;
+    background-color: #fff;
+}
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA MENSAJES DEL VALIDADOR
@@ -47,6 +63,17 @@
  - ESTILOS PARA LINK
  -----------------------------------------------------------------------------*/
 a:link{color: #000;}
+a.link-bodas{
+    display: block;
+    margin-top: 5px;
+    font-size: 120%;
+    font-weight: bold;
+    color: #A62D38;
+}
+a.link-title{
+    color:#A62D38;
+    font-size: 110%;
+}
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LABEL
@@ -57,16 +84,17 @@ a:link{color: #000;}
     text-align: right;
     margin-right: 10px;
     cursor: pointer;
+    font-weight: normal;
+    font-size: 118% !important;
 }
-.label1{
+.label-contact{
+    width: 200px;
+}
+.label-login{
     width: 100px;
 }
-.label2{
-    width: 150px;
-}
 .label-leyend{
-    color: #000;
-    font-size: 90%;
+    font-size: 100%;
     font-weight: normal;
 }
 
@@ -76,38 +104,62 @@ a:link{color: #000;}
 input[type=text],input[type=password], textarea{
     padding:3px !important;
     text-align:left;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Garamond, "Minion Web", "ITC Stone Serif", "MS Georgia", "Bitstream Cyberbi";
     font-size:100%;
-    margin:0 !important;
+    margin:0;
+    border:1px solid #D7A2A3;
 }
 .input-contact{
-    width: 300px;
+    width: 250px;
+}
+.input-date{
+    width: 80px;
+    text-align: center !important;
+    margin-right: 5px !important;
 }
 .input-login{
-    width: 150px;
+    width: 170px;
 }
 .input-form{
     width: 300px;
+}
+.input-phonecode{
+    width: 50px;
+}
+.input-phonenum{
+    width: 180px;
 }
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA TEXTAREA
  -----------------------------------------------------------------------------*/
 .textarea-contact{
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 100px;
 }
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA SELECT
  -----------------------------------------------------------------------------*/
 select{
+    background-color: #fff;
+    border:1px solid #D7A2A3;
+    margin:0;
+}
+.select-contact{
+    width: 260px;
 }
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA BUTTON
  -----------------------------------------------------------------------------*/
 .button{
+    background: transparent url(../images/button.png) no-repeat;
+    border: none;
+    width: 77px;
+    height: 40px;
+    color: #A62D38;
+    position: relative;
 }
 
 /*------------------------------------------------------------------------------
@@ -115,7 +167,7 @@ select{
  -----------------------------------------------------------------------------*/
 fieldset{
     padding: 10px;
-    border:1px solid #D38D2A;
+    border:2px solid #501B23;
 }
     fieldset legend{
         font-size: 100%;
@@ -176,6 +228,13 @@ ul.menu{
     width: 930px;
     /*border: 1px solid red;*/
 }
+ul.menu-paneladmin{
+    clear: both;
+    width: 480px;
+    margin-left: 230px !important;
+    margin-bottom: -10px !important;
+    /*border: 1px solid red;*/
+}
 ul.menu, ul.menu li{
     margin: 0;
     padding: 0;
@@ -185,6 +244,7 @@ ul.menu li{
     list-style-type: none;
     display: inline;
     margin-right: 5px;
+    text-align: center;
     /*border: 1px solid red;*/
 }
     ul.menu li a{
@@ -195,25 +255,56 @@ ul.menu li{
     }
     ul.menu li .l, ul.menu li .m, ul.menu li .r{
         float: left;
-        height: 50px;
     }
     ul.menu li .l{
         background: url(../images/menu-left.png) no-repeat top left;
         width: 5px;
+        height: 50px;
         /*border: 1px solid red;*/
     }
     ul.menu li .m{
         background: url(../images/menu-middle.png) repeat-x top;
         text-align: center;
         padding: 11px 5px 0 5px;
-        height: 39px !important;
+        height: 39px;
         margin-top: -1px;
         /*border: 1px solid red;*/
     }
     ul.menu li .r{
         background: url(../images/menu-right.png) no-repeat top right;
         width: 5px;
+        height: 50px;
         /*border: 1px solid red;*/
+    }
+
+    /* MENU SELECCIONADO
+     -------------------------------------------------------------------------*/
+    ul.menu li.current .l{
+        background: url(../images/menu-select-left.png) no-repeat top left;
+        width: 6px;
+        height: 52px;
+        /*border: 1px solid red;*/
+    }
+    ul.menu li.current .m{
+        background: url(../images/menu-select-middle.png) repeat-x top;
+        height: 42px;
+        margin-top: 0;
+        /*border: 1px solid red;*/
+    }
+    ul.menu li.current .r{
+        background: url(../images/menu-select-right.png) no-repeat top right;
+        width: 6px;
+        height: 52px;
+        /*border: 1px solid red;*/
+    }
+    ul.menu li.current .adorno{
+        clear: both;
+        position: relative;
+        background: url(../images/dibujo-menu.png) no-repeat;
+        width: 37px;
+        height: 19px;
+        margin: 0 auto;
+        top: -10px;
     }
 
 
@@ -222,7 +313,7 @@ ul.menu li{
  - ESTILO QUE ESTAN EN EL "MAIN CONTAINER"
  -----------------------------------------------------------------------------*/
 .main-container{
-    margin-top: 20px;
+    margin-top: 10px;
 }
     .main-container .t, .main-container .i, .main-container .b{
         float: left;
@@ -242,6 +333,30 @@ ul.menu li{
         background: url(../images/main-container-bottom.png) no-repeat top left;
         width: 897px;
         height: 77px;
+    }
+    .main-container .flores-left, .main-container .flores-right{
+        position: relative;
+        z-index: 0;
+    }
+    .main-container .flores-left{
+        float: left;
+        background: url(../images/flores-izquierda.png) no-repeat;
+        width: 116px;
+        height: 280px;
+        margin: -250px 0 0 -70px;
+        /*border:1px solid red;*/
+    }
+    .main-container .flores-right{
+        float: right;
+        background: url(../images/flores-derecha.png) no-repeat;
+        width: 75px;
+        height: 222px;
+        margin: -200px -60px 0 0;
+        /*border:1px solid red;*/
+    }
+    .main-container .content, .main-container .content span, .main-container .content p{
+        font-family: Garamond, "Minion Web", "ITC Stone Serif", "MS Georgia", "Bitstream Cyberbi" !important;
+        color: #A62D38 !important;
     }
 
 
@@ -269,28 +384,67 @@ ul.menu li{
         margin-bottom: 10px;
     }
 
+.cont-images-bodas{
+    margin: 0;
+    padding: 0;
+}
+    .cont-images-bodas li{
+        padding: 0;
+        margin: 0 0 20px 0;
+        list-style-type: none;
+        float: left;
+        width: 269px;
+        height: inherit;
+        text-align: center;
+        /*border: 1px solid red;*/
+    }
+
+.cont-separator{
+    float: left;
+    clear: both;
+    width: 815px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    /*border: 1px solid red;*/
+}
+
 /*------------------------------------------------------------------------------
  - ESTILO PARA EL LOGIN
  -----------------------------------------------------------------------------*/
 .contlogin{
-    background: url(../images/bg-login.png) no-repeat;
-    width: 306px;
-    height: 112px;
-    margin: 10px auto;
-    padding: 10px 5px 5px 5px;
-    /*border:1px solid red;*/
+    width: 350px;
+    margin: 0 auto;
 }
+    .contlogin .left, .contlogin .middle, .contlogin .right{
+        float: left;
+        height: 183px;
+    }
+
+    .contlogin .left{
+        background: url(../images/bg-login-left.png) no-repeat;
+        width: 21px;
+    }
+    .contlogin .middle{
+        background: url(../images/bg-login-middle.png) repeat-x;
+        width: 300px;
+        padding-top: 20px;
+    }
+    .contlogin .right{
+        background: url(../images/bg-login-right.png) no-repeat;
+        width: 21px;
+    }
     .contlogin .error{
-        width: 260px;
-        margin: 5px auto;
+        padding: 2px !important;
+        margin-bottom: 0;
     }
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA TABLAS
  -----------------------------------------------------------------------------*/
 table{
-    background-color: #E9D4B0;
+    background-color: #F7F0E3;
     width: 100%;
+    color: #A62D38 !important;
 }
 table thead td{
     font-weight: bold;
@@ -307,7 +461,7 @@ table tbody tr.row-even{
  - ESTILO PARA TABLA "CONTENT"
  -----------------------------------------------------------------------------*/
 .table-contents .cell1{
-    width: 800px;
+    width: 750px;
 }
 .table-contents .cell2{
     text-align: center;

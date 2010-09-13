@@ -7,6 +7,7 @@ class Modalidad extends Controller {
         parent::Controller();
 
         $this->load->model('users_model');
+        $this->load->model('contents_model');
 
         $this->load->library('dataview', array(
             'tlp_title'            => TITLE_MODALIDAD,
@@ -24,7 +25,9 @@ class Modalidad extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_section'        => 'frontpage/modalidad_view.php'
+            'tlp_section'        => 'frontpage/modalidad_view.php',
+            'tlp_title_section'  => 'Modalidad',
+            'content'            => $this->contents_model->get_content('modalidad')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

@@ -11,7 +11,7 @@ class Myaccount extends Controller {
         $this->load->model("users_model");
 
         $this->load->library('dataview', array(
-            'tlp_section'        =>  'panel/myaccount_view.php',
+            'tlp_section'        =>  'paneladmin/myaccount_view.php',
             'tlp_title'          =>  TITLE_INDEX,
             'tlp_title_section'  => "Mi Cuenta"
         ));
@@ -29,14 +29,14 @@ class Myaccount extends Controller {
             'tlp_script'    =>  array('plugins_validator', 'class_account'),
             'info'          =>  $this->users_model->get_info(array('username'=>$this->session->userdata('username')))
         ));
-        $this->load->view('template_panel_view', $this->_data);
+        $this->load->view('template_paneladmin_view', $this->_data);
     }
 
     public function save(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $res = $this->users_model->save();
             $this->session->set_flashdata('status', $res ? "success" : "error");
-            redirect('/panel/myaccount/');
+            redirect('/paneladmin/myaccount/');
         }
     }
 

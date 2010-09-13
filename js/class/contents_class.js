@@ -47,7 +47,7 @@ var Contents = new (function(){
         };
         _working=true;
         el.disabled = true;
-        $.post(baseURI+'panel/contents/ajax_save', params, function(data){
+        $.post(baseURI+'paneladmin/contents/ajax_save', params, function(data){
             al.hide();
             _working=false;
             el.disabled = false;

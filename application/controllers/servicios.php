@@ -7,6 +7,7 @@ class Servicios extends Controller {
         parent::Controller();
 
         $this->load->model('users_model');
+        $this->load->model('contents_model');
 
         $this->load->library('dataview', array(
             'tlp_title'            => TITLE_SERVICIOS,
@@ -24,7 +25,9 @@ class Servicios extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_section'        => 'frontpage/servicios_view.php'
+            'tlp_section'        => 'frontpage/servicios_view.php',
+            'tlp_title_section'  => 'Servicios',
+            'content'            => $this->contents_model->get_content('servicios')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

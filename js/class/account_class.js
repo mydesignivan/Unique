@@ -5,12 +5,14 @@ var Account = new (function(){
     this.initializer = function(){
         var o = $.extend({}, jQueryValidatorOptDef, {
             rules : {
-                txtName: 'required',
+                txtNameNovia : 'required',
+                txtNameNovio : 'required',
+                cboLugar     : 'required',
                 txtEmail: {
-                   required: true,
-                   email: true
+                   required : true,
+                   email    : true
                 },
-                txtMessage: 'required'
+                txtPhoneNum : 'required'
             },
             submitHandler : function(form){
                 _Loader.show('#form1');
@@ -21,17 +23,27 @@ var Account = new (function(){
             }
         });
         $('#form1').validate(o);
+
+        // Configura el calendario
+        $("#txtDate").datepicker({
+            showOn          : 'both',
+            buttonImage     : 'images/icon_calendar.png',
+            buttonImageOnly : true,
+            dateFormat      : 'dd-mm-yy',
+            changeMonth     : true,
+            changeYear      : true,
+            monthNamesShort : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+        });
+
     };
 
     this.initializer2 = function(){
         _optval = $.extend({}, jQueryValidatorOptDef, {
             rules : {
                 txtEmail: {
-                   required: true,
-                   email: true
-                },
-                txtInfo   : 'required',
-                txtCodeGM : 'required'
+                   required : true,
+                   email    : true
+                }
             },
             submitHandler : function(form){
                 _Loader.show('#form1');
@@ -55,7 +67,7 @@ var Account = new (function(){
             _optval.rules.txtPassOld = {
                 required : true,
                 remote : {
-                   url  : baseURI+'panel/myaccount/ajax_check_pass/',
+                   url  : baseURI+'paneladmin/myaccount/ajax_check_pass/',
                    type : "post"
                 }
             };
@@ -82,12 +94,12 @@ var Account = new (function(){
          show : function(sel){
              var f = $(sel);
              f.find('img.jq-loading').show();
-             f.find('.jq-submit')[0].disabled=true;
+             $('#btnSubmit')[0].disabled=true;
          },
          hide : function(sel){
              var f = $(sel);
              f.find('img.jq-loading').hide();
-             f.find('.jq-submit')[0].disabled=false;
+             $('#btnSubmit')[0].disabled=false;
          }
      };
 

@@ -3,9 +3,9 @@
 <base href="<?=base_url();?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<meta http-equiv="cache-control" content="Public" />
+<!--<meta http-equiv="cache-control" content="Public" />
 <meta http-equiv="expires" content="<?=add_date(date('D, d M Y H:i:s'), 'D, d M Y H:i:s', array('h'=>1))?> GMT" />
-<meta http-equiv="last-modified" content="<?=date('D, d M Y H:i:s')?> GMT" />
+<meta http-equiv="last-modified" content="<?=date('D, d M Y H:i:s')?> GMT" />-->
 
 <link href="images/favicon.ico" rel="stylesheet icon" type="image/ico" />
 

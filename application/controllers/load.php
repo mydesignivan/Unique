@@ -31,7 +31,7 @@ class Load extends Controller {
             require('./js/includes/'.$filename.'_inc.php');
 
             foreach ( $script_js as $val ){
-                if( $val=="global" ) {
+                if( $val=="baseuri" ) {
                     $indexphp = index_page();
                     if( !empty($indexphp) ) $indexphp.="/";
                     echo 'var baseURI = document.getElementsByTagName("base")[0].getAttribute("href")+"'.$indexphp.'";';

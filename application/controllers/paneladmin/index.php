@@ -8,7 +8,7 @@ class Index extends Controller {
 
         $this->load->library("simplelogin");
         $this->load->library('dataview', array(
-            'tlp_section'        =>  'panel/login_view.php',
+            'tlp_section'        =>  'paneladmin/login_view.php',
             'tlp_title'          =>  TITLE_INDEX,
             'tlp_title_section'  => "Panel Admin - Iniciar Sesi&oacute;n"
         ));
@@ -22,12 +22,10 @@ class Index extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        //echo $this->encpss->decode('4MEt6GePFtXIXW1EHlEJ3Tecv47sl5v9DqXIJg==');
-        
         if( $this->session->userdata('logged_in') ) {
-            redirect('/panel/myaccount/');
+            redirect('/paneladmin/myaccount/');
         }else{
-            $this->load->view('template_panel_view', $this->_data);
+            $this->load->view('template_paneladmin_view', $this->_data);
         }
     }
 
@@ -43,7 +41,7 @@ class Index extends Controller {
                 redirect('/panel/');
 
             }else{
-                redirect('/panel/myaccount/');
+                redirect('/paneladmin/myaccount/');
             }
         }
     }
