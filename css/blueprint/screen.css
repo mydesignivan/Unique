@@ -362,6 +362,9 @@ next column, or to pull it into the previous column.  */
 .prepend-top { 
   margin-top:1.5em; 
 }
+.prepend-top2 {
+  margin-top:2.5em;
+}
 .append-bottom { 
   margin-bottom:1.5em; 
 }

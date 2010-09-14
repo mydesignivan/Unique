@@ -26,18 +26,24 @@ class Index extends Controller {
         $this->load->model("contents_model");
 
         $this->_data = $this->dataview->set_data(array(
-            'tlp_script'         => array("plugins_validator", "class_bodas"),
+            'tlp_script'         => array("plugins_validator", "plugins_formatnumber","class_bodas"),
             'tlp_title'          =>  TITLE_INDEX,
-            'tlp_title_section'  => "P&aacute;ginas"
+            'tlp_title_section'  => "Bodas"
         ));
         $this->load->view('template_frontpage_view', $this->_data);
 
     }
 
 
-
     /* AJAX FUNCTIONS
      **************************************************************************/
+    public function ajax_get_form(){
+         $form=$this->uri->segment(4);
+         
+         $this->load->view("paneluser/ajax/$form");
+    }
+
+     
 
     /* PRIVATE FUNCTIONS
      **************************************************************************/
