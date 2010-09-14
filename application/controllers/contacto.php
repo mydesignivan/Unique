@@ -41,14 +41,18 @@ class Contacto extends Controller {
             $message = EMAIL_CONTACT_MESSAGE;
             $message = str_replace('{name_novia}', $_POST['txtNameNovia'], $message);
             $message = str_replace('{name_novio}', $_POST['txtNameNovio'], $message);
-            $message = str_replace('{lugar}', $_POST['cboLugar'], $message);
+            $message = str_replace('{lugar}', $_POST['txtLugar'], $message);
             $message = str_replace('{fecha}', $_POST['txtDate'], $message);
             $message = str_replace('{mail}', $_POST['txtEmail'], $message);
             $message = str_replace('{phone}', $_POST['txtPhoneCode'].$_POST['txtPhoneNum'], $message);
             $message = str_replace('{message}', $_POST['txtConsult'], $message);
 
+
             $datauser = $this->users_model->get_info(array('username'=>'admin'));
             $to = $datauser['email'];
+            /*echo $datauser."<br>";
+            echo $to."<br>";
+            echo $message."<br>";*/
 
             $this->email->from($_POST['txtEmail'], $_POST['txtNameNovia'].", ".$_POST['txtNameNovio']);
             $this->email->to($to);

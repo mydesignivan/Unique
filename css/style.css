@@ -28,7 +28,7 @@ h1.title-section{
     }
 
 h2 a{
-    color: #A62D38;
+    color: #A62D38 !important;
 
 }
 
@@ -312,7 +312,7 @@ ul.menu li{
         clear: both;
         position: relative;
         background: url(../images/dibujo-menu.png) no-repeat;
-        width: 37px;
+        width: 38px;
         height: 19px;
         margin: 0 auto;
         top: -10px;

@@ -7,7 +7,7 @@ var Account = new (function(){
             rules : {
                 txtNameNovia : 'required',
                 txtNameNovio : 'required',
-                cboLugar     : 'required',
+                txtLugar     : 'required',
                 txtEmail: {
                    required : true,
                    email    : true

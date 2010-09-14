@@ -30,8 +30,6 @@ var Bodas = new (function(){
         $(".menu-bodas li").removeClass("current");
         $(".menu-bodas li").eq(num_op).addClass("current");
         $('#resultboda').load(baseURI+'paneluser/index/ajax_get_form/'+vista);
-
-        
     };
 
 

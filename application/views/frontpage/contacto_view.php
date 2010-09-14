@@ -20,13 +20,8 @@
         <div class="fleft"><input type="text" id="txtNameNovio" name="txtNameNovio" class="input-contact" /></div>
     </div>
     <div class="trow">
-        <label class="label label-contact" for="cboLugar">* Lugar de Residencia</label>
-        <div class="fleft">
-            <select id="cboLugar" name="cboLugar" class="select-contact">
-                <option value="">&nbsp;</option>
-                <option value="sadas">dssdf</option>
-            </select>
-        </div>
+        <label class="label label-contact" for="txtLugar">* Lugar de Residencia</label>
+        <div class="fleft"><input type="text" id="txtLugar" name="txtLugar" class="input-contact" /></div>
     </div>
     <div class="trow">
         <label class="label label-contact" for="txtDate">Fecha de Casamiento</label>
@@ -57,6 +52,6 @@
 
 <script type="text/javascript">
 <!--
-Bodas.initializer();
+Account.initializer();
 -->
 </script>

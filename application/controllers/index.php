@@ -23,9 +23,6 @@ class Index extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        $this->load->library('encpss');
-        echo $this->encpss->encode('1234');
-
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/index_view.php'
         ));

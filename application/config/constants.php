@@ -60,13 +60,13 @@ define('ERR_UPLOAD_FILETYPE', 'El tipo de archivo es incompatible.');
 | EMAIL FORM CONTACTO
 |--------------------------------------------------------------------------
 */
-$msg = '<b>Nombre de la Novia:</b> {name_novia}<br /><br />';
-$msg = '<b>Nombre del Novio:</b> {name_novio}<br /><br />';
-$msg = '<b>Lugar de Residencia:</b> {lugar}<br /><br />';
-$msg = '<b>Fecha de Casamiento:</b> {fecha}<br /><br />';
-$msg.= '<b>E-mail:</b> {mail}<br /><br />';
-$msg.= '<b>Telefono:</b> {phone}<br /><br />';
-$msg.= '<b>Consulta:</b><hr color="#000000" />{message}';
+$msg = '<b>Nombre de la Novia:</b> {name_novia}<br />
+<b>Nombre del Novio:</b> {name_novio}<br />
+<b>Lugar de Residencia:</b> {lugar}<br />
+<b>Fecha de Casamiento:</b> {fecha}<br />
+<b>E-mail:</b> {mail}<br />
+<b>Telefono:</b> {phone}<br />
+<b>Consulta:</b><hr color="#000000" />{message}';
 define('EMAIL_CONTACT_SUBJECT', 'Unique WP - Formulario Contacto');
 define('EMAIL_CONTACT_MESSAGE', $msg);
 
