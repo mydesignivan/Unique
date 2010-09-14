@@ -81,10 +81,10 @@ define('UPLOAD_MAXSIZE', 2048); //Expresado en Kylobytes
 
 define('UPLOAD_PATH_GALLERY', './uploads/gallery/');
 
-define('IMAGE_THUMB_GALLERY_WIDTH', 150);
-define('IMAGE_THUMB_GALLERY_HEIGHT', 100);
-define('IMAGE_FULL_GALLERY_WIDTH', 960);
-define('IMAGE_FULL_GALLERY_HEIGHT', 425);
+define('IMAGE_THUMB_GALLERY_WIDTH', 108);
+define('IMAGE_THUMB_GALLERY_HEIGHT', 70);
+define('IMAGE_FULL_GALLERY_WIDTH', 515);
+define('IMAGE_FULL_GALLERY_HEIGHT', 335);
 
 /*
 |--------------------------------------------------------------------------

@@ -57,6 +57,6 @@
 
 <script type="text/javascript">
 <!--
-Account.initializer();
+Bodas.initializer();
 -->
 </script>

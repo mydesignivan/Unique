@@ -25,7 +25,8 @@ class Galeria extends Controller {
     public function index(){
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/galeria_view.php',
-            'tlp_title_section'  => 'Galer&iacute;a'
+            'tlp_title_section'  => 'Galer&iacute;a',
+            'tlp_script'         => array('plugins_galleriffic')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

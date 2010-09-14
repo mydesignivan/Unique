@@ -31,6 +31,10 @@ var TinyMCE_init = {
 
     relative_urls : false,
     document_base_url : baseURI,
+    
+    forced_root_block : false,
+    force_br_newlines : true,
+    force_p_newlines : false,
 
     file_browser_callback: 'openKCFinder'
 };

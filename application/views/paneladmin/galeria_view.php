@@ -10,15 +10,15 @@
 </div>
 <?php }?>
 
-<form id="form1" action="<?//=site_url(isset($info) ? '/paneladmin/galeria/edit/' : '/paneladmin/galeria/create/')?>" method="post" enctype="application/x-www-form-urlencoded">
+<form id="form1" action="<?=site_url('/paneladmin/galeria/save/')?>" method="post" enctype="application/x-www-form-urlencoded">
     <div class="trow">
         <fieldset class="gallery-panel">
             <div class="cont">
-                <ul id="gallery-image" <?php if( !isset($info) ){?>class="hide"<?php }?>>
-        <?php if( isset($info) ){?>
-            <?php foreach( $info as $row ){?>
+                <ul id="gallery-image" <?php if( count($info['gallery'])==0 ){?>class="hide"<?php }?>>
+        <?php if( count($info['gallery'])>0 ){?>
+            <?php foreach( $info['gallery'] as $row ){?>
                     <li>
-                        <a href="<?=UPLOAD_PATH_GALLERY.$row['image']?>" class="jq-image" rel="group"><img src="<?=UPLOAD_PATH_GALLERY.$row['thumb']?>" alt="<?=$row['thumb']?>" width="130" height="58" /></a>
+                        <a href="<?=UPLOAD_PATH_GALLERY.$row['image']?>" class="jq-image" rel="group"><img src="<?=UPLOAD_PATH_GALLERY.$row['thumb']?>" alt="<?=$row['thumb']?>" width="108" height="70" /></a>
                         <div class="d1 clear">
                             <a href="javascript:void(0)" class="link2 fleft jq-removeimg"><img src="images/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
                             <a href="javascript:void(0)" class="fright handle"><img src="images/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
@@ -60,6 +60,6 @@
 
 <script type="text/javascript">
 <!--
-    Galeria.initializer();
+    Galeria.initializer(<?=count($info['gallery'])>0 ? "true" : "false"?>);
 -->
 </script>

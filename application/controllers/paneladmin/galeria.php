@@ -27,28 +27,16 @@ class Galeria extends Controller {
             'tlp_title_section'  => "Galer&iacute;a de Im&aacute;gen",
             'tlp_script'         => array('plugins_jqui_sortable', 'plugins_fancybox', 'helpers_json', 'class_galeria'),
             'tlp_section'        => 'paneladmin/galeria_view.php',
-            'info'               => $this->galeria_model->get_list()
+            'info'               => array('gallery' => $this->galeria_model->get_list())
         ));
         $this->load->view('template_paneladmin_view', $this->_data);
     }
 
-    public function create(){
+    public function save(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-
-            $res = $this->products_model->create();
-            if( !$res ){
-                $this->session->set_flashdata('status', "error");
-                redirect('/panel/products/form/');
-            }else redirect('/panel/products/');
-                
-        }
-    }
-
-    public function edit(){
-        if( $_SERVER['REQUEST_METHOD']=="POST" ){
-            $res = $this->products_model->edit();
+            $res = $this->galeria_model->save();
             $this->session->set_flashdata('status', $res ? "success" : "error");
-            redirect('/panel/products/form/'.$_POST['products_id']);
+            redirect('/paneladmin/galeria/');
         }
     }
 

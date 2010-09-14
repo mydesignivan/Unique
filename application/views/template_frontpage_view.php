@@ -10,6 +10,7 @@
 
 <?php
     require('includes/head_inc.php');
+
     if( isset($tlp_script) && !empty($tlp_script) ) {
         if( !is_array($tlp_script) ) $tlp_script = array($tlp_script);
         foreach ( $tlp_script as $filename ){
