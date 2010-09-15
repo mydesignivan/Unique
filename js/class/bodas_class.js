@@ -32,6 +32,18 @@ var Bodas = new (function(){
         $('#resultboda').load(baseURI+'paneluser/index/ajax_get_form/'+vista);
     };
 
+    this.popup_login = function(id){
+        $.get(baseURI+'bodas/ajax_showpopup/'+id, function(data){
+            $('#popup-login').html(data).modal({
+                overlayClose : true,
+                onShow : function(){
+                    $('#txtUser').val('').focus();
+                    $('#txtPass').val('');
+                }
+            });
+        });
+    };
+
 
     /* PRIVATE PROPERTIES
      **************************************************************************/
