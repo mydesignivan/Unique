@@ -27,14 +27,33 @@ class Bodas extends Controller {
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/bodas_view.php',
             'tlp_title_section'  => 'Bodas',
+            'tlp_script'         => array('plugins_simplemodal', 'class_bodas'),
             'content'            => $this->contents_model->get_content('bodas')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
 
+    public function login(){
+        if( $_SERVER['REQUEST_METHOD']=="POST" ){
+            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"]);
+
+            $ret = array('status'=>'ok');
+            if( $statusLogin['status']=="error" ){
+                $ret['status'] = 'error';
+                $ret['message'] = "El usuario y/o password son incorrectos.";
+            }
+
+            die(json_encode($ret));
+        }
+    }
+
 
     /* AJAX FUNCTIONS
      **************************************************************************/
+    public function ajax_showpopup(){
+        $id = $this->uri->segment(3);
+        $this->load->view('frontpage/ajax/login_view', array('id'=>$id));
+    }
 
     /* PRIVATE FUNCTIONS
      **************************************************************************/
