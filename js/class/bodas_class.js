@@ -26,11 +26,18 @@ var Bodas = new (function(){
         formatNumber.init('#txtPhoneNum, #txtPhoneCode, #txtAdultos, #txtNiños');
     };
 
+
+
+
     this.load_menu = function(vista, num_op){
         $(".menu-bodas li").removeClass("current");
         $(".menu-bodas li").eq(num_op).addClass("current");
         $('#resultboda').load(baseURI+'paneluser/index/ajax_get_form/'+vista);
     };
+
+
+
+
 
 
     /* PRIVATE PROPERTIES

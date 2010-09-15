@@ -24,7 +24,7 @@ class Galeria extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_title_section'  => "Galer&iacute;a de Im&aacute;gen",
+            'tlp_title_section'  => "Galer&iacute;a de Im&aacute;genes",
             'tlp_script'         => array('plugins_jqui_sortable', 'plugins_fancybox', 'helpers_json', 'class_galeria'),
             'tlp_section'        => 'paneladmin/galeria_view.php',
             'info'               => array('gallery' => $this->galeria_model->get_list())
