@@ -1,3 +1,5 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+
 <form id="form1" action="<?//=site_url('/paneluser/')?>" method="post" enctype="application/x-www-form-urlencoded">
     <div class="trow">
         <label class="label label-contact" for="txtDedicatoria">Dedicatoria</label>

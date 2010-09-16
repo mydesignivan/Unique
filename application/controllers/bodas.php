@@ -6,6 +6,8 @@ class Bodas extends Controller {
     function __construct(){
         parent::Controller();
 
+        if( $this->session->userdata('logged_in') && $this->session->userdata('level')==0 ) redirect('/paneluser/');
+
         $this->load->model('users_model');
         $this->load->model('contents_model');
 
@@ -35,7 +37,8 @@ class Bodas extends Controller {
 
     public function login(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"]);
+            $this->load->library("simplelogin");
+            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"], 0);
 
             $ret = array('status'=>'ok');
             if( $statusLogin['status']=="error" ){
@@ -51,8 +54,12 @@ class Bodas extends Controller {
     /* AJAX FUNCTIONS
      **************************************************************************/
     public function ajax_showpopup(){
-        $id = $this->uri->segment(3);
-        $this->load->view('frontpage/ajax/login_view', array('id'=>$id));
+        if( $this->session->userdata('logged_in') && $this->session->userdata('level')==0 ){
+            die("logged_in");
+        }else{
+            $id = $this->uri->segment(3);
+            $this->load->view('frontpage/ajax/login_view', array('id'=>$id));            
+        }
     }
 
     /* PRIVATE FUNCTIONS

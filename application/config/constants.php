@@ -46,6 +46,8 @@ define('TBL_USERS',              'users');
 define('TBL_GALLERY',            'gallery');
 define('TBL_CONTENTS',           'contents');
 define('TBL_BODAS',              'bodas');
+define('TBL_REGALOS',            'bodas_regalos');
+define('TBL_MENU',               'bodas_menu');
 
 /*
 |--------------------------------------------------------------------------

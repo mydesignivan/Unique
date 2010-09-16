@@ -6,7 +6,7 @@ class Bodas extends Controller {
     function __construct(){
         parent::Controller();
 
-    //    if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
+        if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
         
         $this->load->model("bodas_model");
 
@@ -27,21 +27,18 @@ class Bodas extends Controller {
             'tlp_title_section'  => "Bodas",
        //     'tlp_script'         =>  array('plugins_jqui_sortable', 'helpers_json', 'class_products_list'),
             'tlp_section'        =>  'paneladmin/bodas_list_view.php',
-            'listProducts'       =>  $this->bodas_model->get_list()
+            'listBodas'          =>  $this->bodas_model->get_list()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
 
     public function form(){
-        /*echo preg_replace('/_.*$/', '', '13_filename.jpg');
-        die();*/
         $id = $this->uri->segment(4);
         $this->load->helper('form');
 
         $data = array(
             'tlp_section' =>  'paneladmin/bodas_form_view.php',
-            'tlp_script'  =>  array('plugins_validator', 'plugins_fancybox', 'helpers_json', 'class_admin_bodas')/*,
-//            'listProductsName' => $this->boda_model->get_list_productsname($id)*/
+            'tlp_script'  =>  array('plugins_validator', 'plugins_fancybox', 'helpers_json', 'class_bodas_form')
         );
 
         if( is_numeric($id) ){ // Edit
@@ -59,11 +56,11 @@ class Bodas extends Controller {
     public function create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
 
-            $res = $this->products_model->create();
+            $res = $this->bodas_model->create();
             if( !$res ){
                 $this->session->set_flashdata('status', "error");
-                redirect('/panel/products/form/');
-            }else redirect('/panel/products/');
+                redirect('/paneladmin/bodas/form/');
+            }else redirect('/paneladmin/bodas/');
                 
         }
     }
@@ -78,13 +75,14 @@ class Bodas extends Controller {
 
     public function delete(){
         if( is_numeric($this->uri->segment(4)) ){
-            if( !$this->products_model->delete($this->uri->segment(4)) ){
+            if( !$this->bodas_model->delete($this->uri->segment(4)) ){
                 $this->session->set_flashdata('status', 'error');
-                $this->session->set_flashdata('message', 'No se pudo eliminar el producto.');
+                $this->session->set_flashdata('message', 'No se pudo eliminar la boda.');
             }
             redirect('/panel/products/');
         }
     }
+
 
 
     /* AJAX FUNCTIONS
@@ -96,7 +94,7 @@ class Bodas extends Controller {
             $this->load->library('superupload');
 
             $config = array(
-                'path'          => UPLOAD_PATH_BODAS.$opcion,
+                'path'          => UPLOAD_PATH_BODAS,
                 'thumb_width'   => $opcion=='NOVIOS' ? IMAGE_THUMB_PAREJA_WIDTH : IMAGE_THUMB_NOVIOS_WIDTH,
                 'thumb_height'  => $opcion=='NOVIOS' ? IMAGE_THUMB_PAREJA_HEIGHT : IMAGE_THUMB_NOVIOS_HEIGHT,
                 'maxsize'       => UPLOAD_MAXSIZE,
@@ -106,9 +104,11 @@ class Bodas extends Controller {
                 'filename_prefix'       => $this->session->userdata('users_id')."_"
             );
             $this->superupload->initialize($config);
-            echo json_encode($this->superupload->upload($txt));
+            echo json_encode($this->superupload->upload(key($_FILES)));
         }        
     }
+
+
 
 
 

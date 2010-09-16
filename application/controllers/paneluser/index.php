@@ -6,6 +6,8 @@ class Index extends Controller {
     function __construct(){
         parent::Controller();
 
+        if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
+
         $this->load->library("simplelogin");
         $this->load->library('dataview', array(
             'tlp_section'        =>  'paneluser/bodas_view.php',
@@ -34,13 +36,23 @@ class Index extends Controller {
 
     }
 
+    public function logout(){
+        $this->load->library("simplelogin");
+        $this->simplelogin->logout();
+        redirect($this->config->item('base_url'));
+    }
+
 
     /* AJAX FUNCTIONS
      **************************************************************************/
     public function ajax_get_form(){
-         $form=$this->uri->segment(4);
+         $vista = $this->uri->segment(4);
+         $data = array();
+         if( $vista=="bodas_novios_view" ){
+            $data['form'] = "";
+         }
          
-         $this->load->view("paneluser/ajax/$form");
+         $this->load->view("paneluser/ajax/$vista", $data);
     }
 
      

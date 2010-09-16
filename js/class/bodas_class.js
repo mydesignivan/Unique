@@ -26,25 +26,71 @@ var Bodas = new (function(){
         formatNumber.init('#txtPhoneNum, #txtPhoneCode, #txtAdultos, #txtNiños');
     };
 
-
-
-
     this.load_menu = function(vista, num_op){
+        if( _working ) return false;
+        _working=true;
+
         $(".menu-bodas li").removeClass("current");
         $(".menu-bodas li").eq(num_op).addClass("current");
-        $('#resultboda').load(baseURI+'paneluser/index/ajax_get_form/'+vista);
+
+        $('div.jq-tab').hide();
+        var tab = $('#tab'+num_op);
+        if( !tab.data('opened') ){
+            $.get(baseURI+'paneluser/index/ajax_get_form/'+vista, function(data){
+                _working=false;
+                tab.html(data).show();
+                tab.data('opened', true);
+            });
+        }else{
+            _working=false;
+            tab.show();
+        }
+        
+        return false;
     };
 
     this.popup_login = function(id){
         $.get(baseURI+'bodas/ajax_showpopup/'+id, function(data){
-            $('#popup-login').html(data).modal({
-                overlayClose : true,
-                onShow : function(){
-                    $('#txtUser').val('').focus();
-                    $('#txtPass').val('');
-                }
-            });
+            if( data=="logged_in" ){
+                location.href = baseURI+'paneluser/';
+            }else{
+                $('#popup-login').html(data).modal({
+                    overlayClose : true,
+                    onShow : function(){
+                        $('#txtUser').val('').focus();
+                        $('#txtPass').val('');
+                    }
+                });
+            }
         });
+    };
+
+    this.submit_login = function(f){
+        $('#ajaxupload').show();
+        $(f).find(':submit')[0].disabled=true;
+
+        $.post(baseURI+'bodas/login', $(f).serialize(), function(data){
+            $('#ajaxupload').hide();
+            $(f).find(':submit')[0].disabled=false;
+            
+            try{
+                var res;
+                eval('res = '+data);
+            }catch(e){
+                alert('ERROR AJAX:\n\n'+data);
+                return false;
+            }
+
+            if( typeof res=="object" ){
+                if( res.status=="error" ){
+                    $('#msgbox-error').html(res.message).show();
+                }else location.href = baseURI+'paneluser/';
+            }
+
+            return false;
+        });
+        
+        return false;
     };
 
 
@@ -55,6 +101,7 @@ var Bodas = new (function(){
     /* PRIVATE PROPERTIES
      **************************************************************************/
      var _optval={};
+     var _working=false;
 
     /* PRIVATE METHODS
      **************************************************************************/

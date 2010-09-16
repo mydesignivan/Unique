@@ -32,6 +32,10 @@
 
                 <?php if( isset($tlp_title_section) ){?>
                 <h1 class="title-section"><?=$tlp_title_section?><img src="images/dibujo-titulo-seccion.png" alt="" width="74" height="57" /></h1>
+                <?php if( $this->session->userdata('logged_in') && $this->session->userdata('level')==0 && $this->uri->segment(1)=="paneluser" ) {?>
+                <div class="fright"><img src="images/icon_logout.png" alt="" width="16" height="16" />&nbsp;<a href="<?=site_url('/paneluser/index/logout/')?>" class="fright link-title">Cerrar Sesi&oacute;n</a></div>
+                <?php }?>
+
                 <div class="clear">&nbsp;</div>
                 <?php }?>
 

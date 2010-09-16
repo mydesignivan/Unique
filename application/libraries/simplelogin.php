@@ -19,7 +19,7 @@ class Simplelogin{
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
-    public function login($user = '', $password = '') {
+    public function login($user = '', $password = '', $level=1) {
         //Make sure login info was sent
         if( $user == '' OR $password == '' ) {
             return array('status'=>'error', 'error'=>'loginfaild');
@@ -33,7 +33,8 @@ class Simplelogin{
 
 
         //Check against user table
-        $query = $this->CI->db->get_where($this->user_table, array('username'=>$user));
+        $where = array('username'=>$user, 'level'=>$level);
+        $query = $this->CI->db->get_where($this->user_table, $where);
 
         if( $query->num_rows > 0 ) {
             $row = $query->row_array();

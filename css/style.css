@@ -31,6 +31,10 @@ h2 a{
     color: #A62D38 !important;
 
 }
+h3.subtitle img{
+    position: relative;
+    top:4px;
+}
 
 img.imgframe{
     padding: 5px;
@@ -95,6 +99,9 @@ a.link-title{
 .label-contact{
     width: 200px;
 }
+.label-contact2{
+    width: 260px;
+}
 .label-login{
     width: 100px;
     color:#A62D38 !important;
@@ -118,6 +125,14 @@ input[type=text],input[type=password], textarea{
 .input-contact{
     width: 250px;
 }
+.input-contact2{
+    width: 210px;
+}
+
+.marleft15{
+    margin-left:15px;
+}
+
 .input-date{
     width: 80px;
     text-align: center !important;
@@ -328,15 +343,6 @@ ul.menu-bodas{
     width: 800px;
     border-bottom: 2px solid #C16C6B;
     margin-bottom:10px;
-    
-    /*border: 1px solid red;*/
-}
-ul.menu-paneluser{
-    clear: both;
-    width: 480px;
-    margin-left: 230px !important;
-    margin-bottom: -10px !important;
-    /*border: 1px solid red;*/
 }
 ul.menu-bodas, ul.menu-bodas li{
     margin: 0;
@@ -351,6 +357,7 @@ ul.menu-bodas li{
     margin-right: 5px;
     text-align: center;
     border:1px solid #BC5B5C;
+    border-bottom: none;
     padding:5px 10px 0px 10px;
     background: #F7E1C9;
     /*border: 1px solid red;*/
@@ -360,42 +367,21 @@ ul.menu-bodas li{
         display: block;
         color: #BC5B5C;
         font-size: 148%;
-        font-style: italic;
-      
+        font-style: italic;      
     }
 
 
     /* MENU SELECCIONADO
      -------------------------------------------------------------------------*/
-
     ul.menu-bodas li.current {
         background: #BC5A5B;
         height: 27px;
         margin-top: 0;
-       
         /*border: 1px solid red;*/
     }
 
     ul.menu-bodas li.current a{
        color:#ffffff;
-        /*border: 1px solid red;*/
-    }
-
-    ul.menu-bodas li.current .m{
-        background: url(../images/menu-select-middle.png) repeat-x top;
-        height: 42px;
-        margin-top: 0;
-        /*border: 1px solid red;*/
-    }
-
-    ul.menu-bodas li.current .adorno{
-        clear: both;
-        position: relative;
-        background: url(../images/dibujo-menu.png) no-repeat;
-        width: 37px;
-        height: 19px;
-        margin: 0 auto;
-        top: -10px;
     }
 
 
@@ -543,6 +529,9 @@ table td{
     /*border: 1px solid #C7A773;*/
     border: 1px solid #D9BA83;
 }
+    table td.cell1 input[type=checkbox]{
+        margin: 0 !important;
+    }
 table tbody tr.row-even{
     background-color: #F7F0E3;
 }
@@ -554,5 +543,25 @@ table tbody tr.row-even{
     width: 750px;
 }
 .table-contents .cell2{
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLA "BODAS"
+ -----------------------------------------------------------------------------*/
+.table-bodas .cell1{
+    width: 30px;
+    text-align: center;
+    padding: 0;
+}
+.table-bodas .cell2{
+    width: 560px;
+}
+.table-bodas .cell3{
+    width: 100px;
+    text-align: center;
+}
+.table-bodas .cell4{
+    width: 100px;
     text-align: center;
 }

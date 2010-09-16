@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
     // Initially set opacity on thumbs and add
     // additional styling for hover effect on thumbs
     var onMouseOutOpacity = 0.67;
-    $('#thumbs ul.gf-thumbs li').opacityrollover({
+    $('#thumbs ul.thumbs li').opacityrollover({
         mouseOutOpacity:   onMouseOutOpacity,
         mouseOverOpacity:  1.0,
         fadeSpeed:         'fast',
@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
         numThumbs:                 8,
         preloadAhead:              10,
         enableTopPager:            true,
-        enableBottomPager:         true,
+        enableBottomPager:         false,
         maxPagesToShow:            7,
         imageContainerSel:         '#slideshow',
         controlsContainerSel:      '#controls',
@@ -26,19 +26,15 @@ jQuery(document).ready(function($) {
         loadingContainerSel:       '#loading',
         renderSSControls:          true,
         renderNavControls:         true,
-        playLinkText:              'Play Slideshow',
-        pauseLinkText:             'Pause Slideshow',
-        prevLinkText:              '&lsaquo; Previous Photo',
-        nextLinkText:              'Next Photo &rsaquo;',
-        nextPageLinkText:          'Next &rsaquo;',
-        prevPageLinkText:          '&lsaquo; Prev',
+        nextPageLinkText:          'siguiente',
+        prevPageLinkText:          'anterior',
         enableHistory:             false,
         autoStart:                 false,
         syncTransitions:           true,
         defaultTransitionDuration: 900,
         onSlideChange:             function(prevIndex, nextIndex) {
             // 'this' refers to the gallery, which is an extension of $('#thumbs')
-            this.find('ul.gf-thumbs').children()
+            this.find('ul.thumbs').children()
                 .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
                 .eq(nextIndex).fadeTo('fast', 1.0);
         },

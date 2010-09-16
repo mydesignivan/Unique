@@ -1,18 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
-<?php if( $this->session->flashdata('status_sendmail')=="ok" ){?>
-<div class="success">
-    Muchas Gracias por comunicarse con nosotros, nos comunicaremos con usted a la brevedad.
-</div>
-<?php }elseif( $this->session->flashdata('status_sendmail')=="error" ){?>
-<div class="error">
-    El formulario no ha podido ser enviado, porfavor, reintentelo nuevamente.
-</div>
-<?php }?>
-
-
 <div class="span-16">
-    <h3>Confirmar Asistencia</h3>
+    <h3 class="subtitle">Confirmar Asistencia <img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
     <form id="form1" action="<?//=site_url('/paneluser/')?>" method="post" enctype="application/x-www-form-urlencoded">
         <div class="trow">
             <label class="label label-contact" for="txtNameInvitado">* Nombre y Apellido<br/>

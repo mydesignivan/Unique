@@ -6,7 +6,7 @@ class Galeria extends Controller {
     function __construct(){
         parent::Controller();
 
-        $this->load->model('users_model');
+        $this->load->model('galeria_model');
 
         $this->load->library('dataview', array(
             'tlp_title'            => TITLE_GALERIA,
@@ -26,7 +26,8 @@ class Galeria extends Controller {
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/galeria_view.php',
             'tlp_title_section'  => 'Galer&iacute;a',
-            'tlp_script'         => array('plugins_galleriffic')
+            'tlp_script'         => array('plugins_galleriffic', 'class_bodas_gallery'),
+            'info'               => $this->galeria_model->get_list()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
