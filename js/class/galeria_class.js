@@ -61,7 +61,6 @@ var Galeria = new (function(){
      };
 
      var _on_submit = function(){
-  
         _Loader.show('#form1');
 
         var data={};

@@ -2,47 +2,91 @@ var Bodas = new (function(){
 
     /* PUBLIC METHODS
      **************************************************************************/
-
     this.initializer = function(){
         var o = $.extend({}, jQueryValidatorOptDef, {
             rules : {
-            /*    txtNombreNovio : 'required',
+                txtNombreNovio : 'required',
                 txtNombreNovia : 'required',
                 txtApellidoNovio : 'required',
                 txtApellidoNovia : 'required',
                 txtUbiSalon : 'required',
                 txtUbiIglesia : 'required',
                 txtHistNovia : 'required',
-                txtHistNovio : 'required',*/
-                txtHistNovios : 'required'
+                txtHistNovio : 'required',
+                txtHistNovios : 'required',
+                txtUsuario : {
+                    required: true,
+                    remote : {
+                       url  : baseURI+'paneladmin/bodas/ajax_check_exists/',
+                       type : "post",
+                       data : {bodas_id : $('#bodas_id').val()}
+                    }
+                },
+                txtPass : 'required'
             },
             submitHandler : function(form){
-             var regalos=[];
-             $("#lstRegalos option").each(function () {regalos.push($(this).text()); });
-            _ajaxupload_output.regalos=regalos;
-             var menus=[];
-             $("#lstMenu option").each(function () {menus.push($(this).text()); });
 
-             _ajaxupload_output.menus=menus;
+                _ajaxupload_output.gallery={};
+                _ajaxupload_output.gallery.images_new = PictureGallery.get_images_new();
 
-             $("#json").val(JSON.encode(_ajaxupload_output));
-             alert(JSON.encode(_ajaxupload_output));
-             
+                if(  $('#bodas_id').val()>0 ) {
+                    _ajaxupload_output.gallery.images_del = PictureGallery.get_images_del();
+                    _ajaxupload_output.gallery.images_order = PictureGallery.get_orders();
+                }
 
-//            $("#json").val($("#json").val()+JSON.encode(regalos));
+                 var regalos=[];
+                 $("#lstRegalos option").each(function () {regalos.push($(this).text());});
+                _ajaxupload_output.regalos=regalos;
+                 var menus=[];
+                 $("#lstMenu option").each(function () {menus.push($(this).text());});
 
-            //alert(JSON.encode(regalos));
+                 _ajaxupload_output.menus=menus;
 
-
+                 $("#json").val(JSON.encode(_ajaxupload_output));
 
                 _Loader.show('#form1');
                form.submit();
             },
             invalidHandler : function(){
                 _Loader.hide('#form1');
+            },
+            errorPlacement: function(error, element) {
+                element.parent().append(error);
             }
         });
         $('#form1').validate(o);
+
+        // ESTO ES PARA LA GALERIA DE IMAGENES
+        $(document).ready(function(){
+            PictureGallery.initializer({
+                sel_input      : '#txtUploadFile',
+                sel_button     : '#btnUpload',
+                sel_ajaxloader : '#ajax-loader1',
+                sel_gallery    : '#gallery-image',
+                sel_msgerror   : '#pg-msgerror',
+                action         : baseURI+'paneladmin/bodas/ajax_upload_gallery',
+                href_remove    : baseURI+'paneladmin/bodas/ajax_upload_delete',
+                defined_size   : {
+                    width  : 108,
+                    height : 70
+                },
+                callback       : function(){
+                    $('a.jq-image').fancybox();
+                }
+            });
+
+            // Configura Fancybox
+            $('a.jq-image').fancybox();
+        });
+
+        $("#gallery-image").sortable({
+                                stop : function(){
+                                    $('a.jq-image').fancybox();
+                                },
+                                revert: true,
+                                handle : '.handle'
+                           }).disableSelection();
+        // ----
 
 
        // ESTO ES PARA EL UPLOAD SIMPLE
@@ -131,25 +175,42 @@ var Bodas = new (function(){
         return false;
     };
 
-    this.agregarItem = function(list, item){
-        if($(item).val().length>0){
+    this.add_item = function(list, item){
+        if( $(item).val().length>0 ){
             $(list).append("<option value=''>"+$(item).val()+"</option");
             $(item).val("");
         }
+    };
 
-    }
-    this.quitarItem = function(list){
+    this.remove_item = function(list){
         $(list+" :selected").remove();
-    }
+    };
 
+    this.generate_pass = function(){
+      var str='';
+      var n=0;
+      while( n<10 ){
+          // between 0 - 1
+          var rndNum = Math.random();
 
+          // rndNum from 0 - 1000
+          rndNum = parseInt(rndNum * 1000);
 
- 
+          // rndNum from 33 - 127
+          rndNum = (rndNum % 74) + 48;
+
+          if( !(/^(58|59|60|61|62|63|64|91|92|93|94|95|96)$/.test(rndNum.toString())) ){
+              str+=String.fromCharCode(rndNum);
+              n++;
+          }
+      }
+
+       $('#txtPass').val(str);
+    };
 
 
     /* PRIVATE PROPERTIES
      **************************************************************************/
-     var _optval={};
      var _working=false;
      var _imgThumb;
      var _divError;

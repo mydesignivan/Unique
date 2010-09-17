@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-09-2010 a las 23:19:30
+-- Tiempo de generación: 18-09-2010 a las 00:01:20
 -- Versión del servidor: 5.1.37
 -- Versión de PHP: 5.3.0
 
@@ -25,12 +25,13 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Estructura de tabla para la tabla `bodas`
 --
 
+DROP TABLE IF EXISTS `bodas`;
 CREATE TABLE IF NOT EXISTS `bodas` (
   `bodas_id` int(11) NOT NULL AUTO_INCREMENT,
-  `fecha_evento` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `google_maps_salon` varchar(100) NOT NULL,
   `google_maps_iglesia` varchar(100) NOT NULL,
-  `users_id` int(11) NOT NULL,
   `nombre_novio` varchar(255) NOT NULL,
   `apellido_novio` varchar(255) NOT NULL,
   `nombre_novia` varchar(255) NOT NULL,
@@ -50,14 +51,42 @@ CREATE TABLE IF NOT EXISTS `bodas` (
   `date_added` datetime NOT NULL,
   `last_modified` datetime NOT NULL,
   PRIMARY KEY (`bodas_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Volcar la base de datos para la tabla `bodas`
 --
 
-INSERT INTO `bodas` (`bodas_id`, `fecha_evento`, `google_maps_salon`, `google_maps_iglesia`, `users_id`, `nombre_novio`, `apellido_novio`, `nombre_novia`, `apellido_novia`, `historia_novia`, `imagen_novia`, `imagen_novia_width`, `imagen_novia_height`, `historia_novio`, `imagen_novio`, `imagen_novio_width`, `imagen_novio_height`, `historia_novios`, `imagen_novios`, `imagen_novios_width`, `imagen_novios_height`, `date_added`, `last_modified`) VALUES
-(5, '2010-09-16 12:42:33', 'ubisalon', 'ubiiglesia', 4, 'nomnovio', 'apenovio', 'nombrenovia', 'apenovia', 'historia novioa', '4_12846516904c923aaab723a__bay-area-weddings.jpg', 108, 81, 'historias novios', '4_12846516984c923ab22c14e__weddings(main).jpg', 108, 82, 'historias novios', '4_12846517294c923ad12644d__imagen.jpg', 108, 81, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `bodas` (`bodas_id`, `username`, `password`, `google_maps_salon`, `google_maps_iglesia`, `nombre_novio`, `apellido_novio`, `nombre_novia`, `apellido_novia`, `historia_novia`, `imagen_novia`, `imagen_novia_width`, `imagen_novia_height`, `historia_novio`, `imagen_novio`, `imagen_novio_width`, `imagen_novio_height`, `historia_novios`, `imagen_novios`, `imagen_novios_width`, `imagen_novios_height`, `date_added`, `last_modified`) VALUES
+(7, 'damian', 'NSobVfFF+cZdRJP/9dJa9m48zIg=', 'ubisalo3', 'ubiiglesia3', 'nompibe3', 'apenovio3', 'nombrno3', 'apenov3', 'historia novia', '4_12847362754c9385137048a__wedding-planner-1.jpg', 108, 108, 'historia novios3', '4_12847363044c93853035212__inglewood_7_stephanotis_weddings.jpg', 108, 81, 'historia novios3', '4_12847363124c938538c8f82__weddings(main).jpg', 108, 82, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(8, 'fedex', '4G5YWZSrqY7ZOkY1YLgoLLw5v00=', 'ubisalon', 'ubiiglesia', 'nomnovio', 'apenovio', 'nombrenovia', 'apenovia', 'cxvcx vxc', '4_12847413124c9398c01b6e7__salon_boda_decoracion.jpg', 108, 73, 'gfdgfd ', '4_12847413154c9398c32d7a1__weddings(main).jpg', 108, 82, 'gfdgfd ', '4_12847413184c9398c6a6385__copy-of-weddings-2008009.jpg', 108, 80, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(9, 'damianx', 'y95t5XPxUHpdXksv28/y9L0y+Qg=', 'ubisalon2', 'ubiiglesia2', 'nombrepibe2', 'apepibe2', 'nombrenova2', 'apellidonovia2', 'dsad', '4_12847414054c93991d0e89c__inglewood_7_stephanotis_weddings.jpg', 108, 81, 'dsa dsada', '4_12847414094c93992162547__weddingsbythesea5.jpg', 108, 81, 'dsa dsada', '4_12847414134c939925dc6f8__imagen.jpg', 108, 81, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(10, 'damianx', 'dNfB95gRyb1gbVIT9j34vujP+t4=', 'ubisalon2', 'ubiiglesia2', 'nombrepibe2', 'apepibe2', 'nombrenova2', 'apellidonovia2', 'dsad', '4_12847414054c93991d0e89c__inglewood_7_stephanotis_weddings.jpg', 108, 81, 'dsa dsada', '4_12847414094c93992162547__weddingsbythesea5.jpg', 108, 81, 'dsa dsada', '4_12847414134c939925dc6f8__imagen.jpg', 108, 81, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(11, 'damianx', 'bh3yxK4FEWt54ESC529ZqrJ93qE=', 'ubisalon2', 'ubiiglesia2', 'nombrepibe2', 'apepibe2', 'nombrenova2', 'apellidonovia2', 'dsad', '4_12847414054c93991d0e89c__inglewood_7_stephanotis_weddings.jpg', 108, 81, 'dsa dsada', '4_12847414094c93992162547__weddingsbythesea5.jpg', 108, 81, 'dsa dsada', '4_12847414134c939925dc6f8__imagen.jpg', 108, 81, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bodas_gallery`
+--
+
+DROP TABLE IF EXISTS `bodas_gallery`;
+CREATE TABLE IF NOT EXISTS `bodas_gallery` (
+  `gallery_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bodas_id` int(11) NOT NULL,
+  `thumb` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `width` tinyint(4) NOT NULL,
+  `height` tinyint(4) NOT NULL,
+  `order` int(11) NOT NULL,
+  `last_modified` datetime NOT NULL,
+  PRIMARY KEY (`gallery_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `bodas_gallery`
+--
+
 
 -- --------------------------------------------------------
 
@@ -65,20 +94,26 @@ INSERT INTO `bodas` (`bodas_id`, `fecha_evento`, `google_maps_salon`, `google_ma
 -- Estructura de tabla para la tabla `bodas_menu`
 --
 
+DROP TABLE IF EXISTS `bodas_menu`;
 CREATE TABLE IF NOT EXISTS `bodas_menu` (
   `menu_id` int(11) NOT NULL AUTO_INCREMENT,
   `bodas_id` int(11) NOT NULL,
   `menu` varchar(255) NOT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Volcar la base de datos para la tabla `bodas_menu`
 --
 
 INSERT INTO `bodas_menu` (`menu_id`, `bodas_id`, `menu`) VALUES
-(3, 5, 'menu1'),
-(4, 5, 'menu2');
+(13, 7, 'menu3-12'),
+(14, 7, 'menu3_13'),
+(15, 8, 'mer'),
+(16, 8, 'fsdf'),
+(17, 9, 'cxzvc'),
+(18, 10, 'cxzvc'),
+(19, 11, 'cxzvc');
 
 -- --------------------------------------------------------
 
@@ -86,21 +121,25 @@ INSERT INTO `bodas_menu` (`menu_id`, `bodas_id`, `menu`) VALUES
 -- Estructura de tabla para la tabla `bodas_regalos`
 --
 
+DROP TABLE IF EXISTS `bodas_regalos`;
 CREATE TABLE IF NOT EXISTS `bodas_regalos` (
   `regalo_id` int(11) NOT NULL AUTO_INCREMENT,
   `bodas_id` int(11) NOT NULL,
   `regalo` varchar(255) NOT NULL,
   PRIMARY KEY (`regalo_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Volcar la base de datos para la tabla `bodas_regalos`
 --
 
 INSERT INTO `bodas_regalos` (`regalo_id`, `bodas_id`, `regalo`) VALUES
-(3, 5, 'regalo1'),
-(4, 5, 'regalo2'),
-(5, 5, 'regalo3');
+(14, 7, 'regalo3-1'),
+(15, 7, 'regalo3-9'),
+(16, 8, 'reg'),
+(17, 9, 'dsfa'),
+(18, 10, 'dsfa'),
+(19, 11, 'dsfa');
 
 -- --------------------------------------------------------
 
@@ -108,6 +147,7 @@ INSERT INTO `bodas_regalos` (`regalo_id`, `bodas_id`, `regalo`) VALUES
 -- Estructura de tabla para la tabla `ci_sessions`
 --
 
+DROP TABLE IF EXISTS `ci_sessions`;
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `session_id` varchar(40) NOT NULL DEFAULT '0',
   `ip_address` varchar(16) NOT NULL DEFAULT '0',
@@ -122,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('c4cc6521fa61029b9a12a0e19c3ab64e', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.2.9', 1284671177, 'a:7:{s:8:"users_id";s:1:"6";s:8:"username";s:8:"invitado";s:5:"email";s:0:"";s:5:"level";s:1:"0";s:10:"date_added";s:19:"2010-09-15 18:36:41";s:13:"last_modified";s:19:"2010-09-15 18:36:41";s:9:"logged_in";s:1:"1";}');
+('48c8b4e43e3be83dc59ee64bc1e7ea90', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.2.9', 1284760662, 'a:7:{s:8:"users_id";s:1:"3";s:8:"username";s:8:"mydesign";s:5:"email";s:20:"ivan@mydesign.com.ar";s:5:"level";s:1:"1";s:10:"date_added";s:19:"2010-08-23 19:09:30";s:13:"last_modified";s:19:"2010-08-23 19:09:33";s:9:"logged_in";s:1:"1";}');
 
 -- --------------------------------------------------------
 
@@ -130,6 +170,7 @@ INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activ
 -- Estructura de tabla para la tabla `contents`
 --
 
+DROP TABLE IF EXISTS `contents`;
 CREATE TABLE IF NOT EXISTS `contents` (
   `content_id` int(11) NOT NULL AUTO_INCREMENT,
   `reference` varchar(255) NOT NULL,
@@ -158,6 +199,7 @@ INSERT INTO `contents` (`content_id`, `reference`, `title`, `content`, `date_add
 -- Estructura de tabla para la tabla `gallery`
 --
 
+DROP TABLE IF EXISTS `gallery`;
 CREATE TABLE IF NOT EXISTS `gallery` (
   `gallery_id` int(11) NOT NULL AUTO_INCREMENT,
   `thumb` varchar(255) NOT NULL,
@@ -192,6 +234,7 @@ INSERT INTO `gallery` (`gallery_id`, `thumb`, `image`, `width`, `height`, `order
 -- Estructura de tabla para la tabla `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `users_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,

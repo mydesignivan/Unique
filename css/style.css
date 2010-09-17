@@ -62,7 +62,7 @@ img.imgframe{
     font-size: 90%;
     font-weight: normal;
     min-width: 150px;
-    max-width: 330px;
+    max-width: 230px;
     text-align: left;
 }
 .valid-highlight{border-style: dashed !important;}
@@ -125,12 +125,9 @@ input[type=text],input[type=password], textarea{
 .input-contact{
     width: 250px;
 }
-.input-contact2{
-    width: 210px;
-}
-
-.marleft15{
-    margin-left:15px;
+.input-small{
+    width: 150px;
+    margin-right: 5px;
 }
 
 .input-date{
@@ -237,6 +234,14 @@ fieldset.gallery-panel{
                 clear: both;
                 margin-top: 5px;
             }
+
+
+fieldset.gallery-panel2{
+    width:500px !important;
+}
+    fieldset.gallery-panel2 .cont{
+        width:500px !important;
+    }
 
 
 /*------------------------------------------------------------------------------

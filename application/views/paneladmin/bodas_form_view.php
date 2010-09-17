@@ -1,27 +1,20 @@
 <form id="form1" action="<?=site_url(isset($info) ? '/paneladmin/bodas/edit/' : '/paneladmin/bodas/create/')?>" method="post" enctype="application/x-www-form-urlencoded">
 
-    <div class="trow">
-        <label class="label label-contact2" for="txtNombreNovia">* Nombre y apellido de la novia<br/></label>
-        <div class="fleft"><input type="text" id="txtNombreNovia" name="txtNombreNovia" class="input-contact2" value="<?=@$info['nombre_novia']?>" /></div>
-        <div class="fleft marleft15 "><input type="text" id="txtApellidoNovia" name="txtApellidoNovia" class="input-contact2" value="<?=@$info['nombre_novia']?>" /></div>
+    <div class="trow" style="width:1000px;">
+        <label class="label label-contact2" for="txtNombreNovia">* Nombre y Apellido de la Novia</label>
+        <div class="span-19 last">
+            <div class="fleft" style="margin-right:5px;"><input type="text" id="txtNombreNovia" name="txtNombreNovia" class="input-small" value="<?=@$info['nombre_novia']?>" /></div>
+            <div class="fleft"><input type="text" id="txtApellidoNovia" name="txtApellidoNovia" class="input-small" value="<?=@$info['nombre_novia']?>" /></div>
+        </div>
     </div>
 
-
-
-    <div class="trow">
-        <label class="label label-contact2" for="txtNombreNovio">* Nombre y apellido del novio<br/></label>
-        <div class="fleft"><input type="text" id="txtNombreNovio" name="txtNombreNovio" class="input-contact2" value="<?=@$info['nombre_novio']?>" /></div>
-        <div class="fleft marleft15"><input type="text" id="txtApellidoNovio" name="txtApellidoNovio" class="input-contact2" value="<?=@$info['nombre_novia']?>" /></div>
+    <div class="trow" style="width:1000px;">
+        <label class="label label-contact2" for="txtHistNovia">* Breve historia de la Novia</label>
+        <div class="span-19 last"><textarea id="txtHistNovia" name="txtHistNovia" rows="5" cols="22" class="textarea-contact2"><?=@$info['historia_novia']?></textarea></div>
     </div>
 
-
-
     <div class="trow">
-        <label class="label label-contact2" for="txtHistNovia"> Breve hisotria de la Novia<br/></label>
-        <div class="fleft"><textarea id="txtHistNovia" name="txtHistNovia" rows="5" cols="22" class="textarea-contact2"><?=@$info['historia_novia']?></textarea></div>
-    </div>
-    <div class="trow">
-        <label class="label label-contact2" for="txtImageNovia"><span class="required">*</span>Im&aacute;gen</label>
+        <label class="label label-contact2" for="txtImageNovia">* Im&aacute;gen</label>
 <?php
 $src = isset($info) ? UPLOAD_PATH_NOVIA . $info['imagen_novia'] : '';
 ?>
@@ -35,15 +28,24 @@ $src = isset($info) ? UPLOAD_PATH_NOVIA . $info['imagen_novia'] : '';
             <label class="clear fleft label-leyend">M&aacute;ximo 2 megas por foto (gif, jpg, jpeg o png)</label>
             <div class="clear error span-7 ajaxupload-error hide">Este campo es obligatorio.</div>
         </div>
-        <input type="hidden" name="image_old" value="<?=$src?>" />
+        <input type="hidden" name="image_old_novia" value="<?=$src?>" />
     </div>
 
-    <div class="trow">
-        <label class="label label-contact2" for="txtHistNovio"> Breve hisotria del Novio<br/></label>
+    <div class="trow" style="width:1000px;">
+        <label class="label label-contact2" for="txtNombreNovio">* Nombre y Apellido del Novio<br/></label>
+        <div class="span-19 last">
+            <div class="fleft" style="margin-right:5px;"><input type="text" id="txtNombreNovio" name="txtNombreNovio" class="input-small" value="<?=@$info['nombre_novio']?>" /></div>
+            <div class="fleft"><input type="text" id="txtApellidoNovio" name="txtApellidoNovio" class="input-small" value="<?=@$info['nombre_novia']?>" /></div>
+        </div>
+    </div>
+
+    <div class="trow" style="width:1000px;">
+        <label class="label label-contact2" for="txtHistNovio">* Breve historia del Novio</label>
         <div class="fleft"><textarea id="txtHistNovio" name="txtHistNovio" rows="5" cols="22" class="textarea-contact2"><?=@$info['historia_novio']?></textarea></div>
     </div>
+    
     <div class="trow">
-        <label class="label label-contact2" for="txtImageNovio"><span class="required">*</span>Im&aacute;gen</label>
+        <label class="label label-contact2" for="txtImageNovio">* Im&aacute;gen</label>
 <?php
 $src = isset($info) ? UPLOAD_PATH_NOVIO . $info['imagen_novio'] : '';
 ?>
@@ -57,15 +59,16 @@ $src = isset($info) ? UPLOAD_PATH_NOVIO . $info['imagen_novio'] : '';
             <label class="clear fleft label-leyend">M&aacute;ximo 2 megas por foto (gif, jpg, jpeg o png)</label>
             <div class="clear error span-7 ajaxupload-error hide">Este campo es obligatorio.</div>
         </div>
-        <input type="hidden" name="image_old" value="<?=$src?>" />
+        <input type="hidden" name="image_old_novio" value="<?=$src?>" />
+    </div>
+
+    <div class="trow" style="width:1000px;">
+        <label class="label label-contact2" for="txtHistNovios">* Breve historia de la Pareja</label>
+        <div class="span-19 last"><textarea id="txtHistNovios" name="txtHistNovios" rows="5" cols="22" class="textarea-contact2"><?=@$info['historia_novios']?></textarea></div>
     </div>
 
     <div class="trow">
-        <label class="label label-contact2" for="txtHistNovios"> Breve hisotria de la Novios<br/></label>
-        <div class="fleft"><textarea id="txtHistNovios" name="txtHistNovios" rows="5" cols="22" class="textarea-contact2"><?=@$info['historia_novios']?></textarea></div>
-    </div>
-    <div class="trow">
-        <label class="label label-contact2" for="txtImageNovia"><span class="required">*</span>Im&aacute;gen</label>
+        <label class="label label-contact2" for="txtImageNovia">* Im&aacute;gen</label>
 <?php
 $src = isset($info) ? UPLOAD_PATH_NOVIOS . $info['imagen_novios'] : '';
 ?>
@@ -79,83 +82,131 @@ $src = isset($info) ? UPLOAD_PATH_NOVIOS . $info['imagen_novios'] : '';
             <label class="clear fleft label-leyend">M&aacute;ximo 2 megas por foto (gif, jpg, jpeg o png)</label>
             <div class="clear error span-7 ajaxupload-error hide">Este campo es obligatorio.</div>
         </div>
-        <input type="hidden" name="image_old" value="<?=$src?>" />
+        <input type="hidden" name="image_old_novios" value="<?=$src?>" />
     </div>
-
-
 
     <div class="trow">
         <label class="label label-contact2" for="txtUbiSalon">* Ubicaci&oacute;n sal&oacute;n<br/>
-            <span class="text-size-80">(c&oacute;digo Google Maps)  </span></label>
+            <span class="text-size-80">(c&oacute;digo Google Maps)</span></label>
         <div class="fleft"><input type="text" id="txtUbiSalon" name="txtUbiSalon" class="input-contact" value="<?=@$info['google_maps_salon']?>" /></div>
     </div>
 
-
     <div class="trow">
         <label class="label label-contact2" for="txtUbiIglesia">* Ubicaci&oacute;n Iglesia<br/>
-            <span class="text-size-80">(c&oacute;digo Google Maps)  </span></label>
+            <span class="text-size-80">(c&oacute;digo Google Maps)</span></label>
         <div class="fleft"><input type="text" id="txtUbiIglesia" name="txtUbiIglesia" class="input-contact" value="<?=@$info['google_maps_iglesia']?>" /></div>
     </div>
-
 
     <div class="trow">
         <label class="label label-contact2" for="lstRegalos"> Lista de Regalos<br/></label>
         <div class="fleft">
-            <?php
-            if (!isset($info['regalos'])) $info['regalos']=array();
+            <?php if (!isset($info['regalos'])) $info['regalos']=array();
             echo form_dropdown('lstRegalos', $info['regalos'], false, "id='lstRegalos' size='10' multiple  class='input-contact'" );?>
-
         </div>
     </div>
+
     <div class="trow">
-        <label class="label label-contact2" for="txtRegalo"> &nbsp;</label>
-         <label  >Regalo <br/></label>
-        <div class="fleft"><input type="text" id="txtRegalo" name="txtRegalo" class="input-contact" value="" /></div>
-    </div>
-    <div class="trow">
-        <label class="label label-contact2"  <br/></label>
-        
-        <button id="btnAgregarRegalo" type="button" onclick="Bodas.agregarItem('#lstRegalos','#txtRegalo');">Agregar</button>
-        <button id="btnQuitarRegalo" type="button" onclick="Bodas.quitarItem('#lstRegalos');">Quitar</button>
+        <label class="label label-contact2">&nbsp;</label>
+        <div class="fleft">
+            <label for="txtRegalo">Regalo</label><br />
+            <input type="text" id="txtRegalo" name="txtRegalo" class="input-contact" value="" />
+        </div>
     </div>
 
-
-
+    <div class="trow">
+        <label class="label label-contact2">&nbsp;</label>        
+        <button id="btnAgregarRegalo" type="button" onclick="Bodas.add_item('#lstRegalos','#txtRegalo');">Agregar</button>
+        <button id="btnQuitarRegalo" type="button" onclick="Bodas.remove_item('#lstRegalos');">Quitar</button>
+    </div>
 
     <div class="trow">
         <label class="label label-contact2" for="lstMenu"> Lista Menues<br/></label>
         <div class="fleft">
             <?php
             if (!isset($info['menus'])) $info['menus']=array();
-                echo form_dropdown('lstMenu', $info['menus'], false, "id='lstMenu' size='10' multiple  class='input-contact'" );
-               ?>
-
-
+                echo form_dropdown('lstMenu', $info['menus'], false, "id='lstMenu' size='10' multiple  class='input-contact'" );?>
         </div>
     </div>
 
-   <div class="trow">
-       <label class="label label-contact2" for="txtMenu">&nbsp;</label>
-        <label  >Menu <br/></label>
-        <div class="fleft"><input type="text" id="txtMenu" name="txtMenu" class="input-contact" value="" /></div>
-    </div>
     <div class="trow">
-        <label class="label label-contact2" > <br/></label>
-        
-        <button id="btnAgregarMenu" type="button" onclick="Bodas.agregarItem('#lstMenu','#txtMenu');">Agregar</button>
-        <button id="btnQuitarMenu" type="button" onclick="Bodas.quitarItem('#lstMenu');">Quitar</button>
+        <label class="label label-contact2">&nbsp;</label>
+        <div class="fleft">
+            <label for="txtMenu">Men&uacute;</label><br />
+            <input type="text" id="txtMenu" name="txtMenu" class="input-contact" value="" />
+        </div>
+    </div>
+    
+    <div class="trow">
+        <label class="label label-contact2" >&nbsp;</label>        
+        <button id="btnAgregarMenu" type="button" onclick="Bodas.add_item('#lstMenu','#txtMenu');">Agregar</button>
+        <button id="btnQuitarMenu" type="button" onclick="Bodas.remove_item('#lstMenu');">Quitar</button>
     </div>
 
+    <div class="trow"> 
+        <label class="label label-contact2" for="txtUsuario">* Nombre de Usuario<br/></label>
+        <div class="fleft"><input type="text" id="txtUsuario" name="txtUsuario" class="input-bodas" value="<?=@$info['username']?>" maxlength="10" /></div>
+    </div>
+    
+    <div class="trow">
+        <label class="label label-contact2" for="txtPass">* Contrase&ntilde;a<br/></label>
+        <div class="fleft"><input type="text" id="txtPass" name="txtPass" class="input-bodas" value="<?=@$info['password']?>" maxlength="10" /></div>
+        <button id="btnGenerarPass" type="button" onclick="Bodas.generate_pass();">Generar password</button>
+    </div>
 
+    <div class="trow">
+         <label class="label label-contact2">Galer&iacute;a de Im&aacute;genes</label>
+
+        <fieldset class="gallery-panel gallery-panel2">
+   
+            <div class="cont">
+                <ul id="gallery-image" <?php if( !isset($info['gallery']) ){?>class="hide"<?php }?>>
+        <?php if( isset($info['gallery']) ){?>
+            <?php foreach( $info['gallery'] as $row ){?>
+                    <li>
+                        <a href="<?=UPLOAD_PATH_GALLERY_BODAS.$row['image']?>" class="jq-image" rel="group"><img src="<?=UPLOAD_PATH_GALLERY_BODAS.$row['thumb']?>" alt="<?=$row['thumb']?>" width="108" height="70" /></a>
+                        <div class="d1 clear">
+                            <a href="javascript:void(0)" class="link2 fleft jq-removeimg"><img src="images/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
+                            <a href="javascript:void(0)" class="fright handle"><img src="images/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
+                        </div>
+                    </li>
+            <?php }?>
+
+        <?php }else{?>
+                    <li>
+                        <a href="" class="jq-image" rel="group"><img src="" alt="" width="" height="" /></a>
+                        <div class="d1 clear">
+                            <a href="javascript:void(0)" class="link2 fleft jq-removeimg"><img src="images/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
+                            <a href="javascript:void(0)" class="fright handle"><img src="images/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
+                        </div>
+                    </li>
+        <?php }?>
+                </ul>
+
+            </div>
+        </fieldset>
+
+        <div class="fleft clear">
+            <label class="label label-contact2" for="txtUsuario">&nbsp;</label>
+            <div class="span-14 last">
+                <input type="file" size="22" name="txtUploadFile" id="txtUploadFile" />&nbsp;
+                <button id="btnUpload" type="button" onclick="PictureGallery.upluad()">Subir</button>
+                <img id="ajax-loader1" src="images/ajax-loader4.gif" alt="Loading..." width="43" height="11" class="hide" />
+            </div>
+            <label class="label label-contact2" for="txtUsuario">&nbsp;</label>
+            <label class="label-leyend">M&aacute;ximo 2 megas por foto (gif, jpg, jpeg o png)</label>
+            <div class="clear span-14"></div>
+            <div id="pg-msgerror" class="clear error span-7 hide">Este campo es obligatorio</div>
+        </div>
+    </div>
     
     <div class="trow" style="width:470px">
         <div class="fright">
-            <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button fright" value="Enviar" />
+            <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button fright" value="Guardar" />
         </div>
     </div>
 
     <input type="hidden" name="json" id="json" />
-
+    <input type="hidden" name="bodas_id" id="bodas_id" value="<?=isset($info['bodas_id']) ? $info['bodas_id'] : 0;?>" />
 </form>
 
 <form id="ajaxupload-form" action="<?=site_url('/paneladmin/bodas/ajax_upload_bodas')?>" method="post" enctype="multipart/form-data" target="ifr" class="hide">

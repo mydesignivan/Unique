@@ -18,29 +18,31 @@ class Galeria_model extends Model {
 
         $this->db->trans_start(); // INICIO TRANSACCION
 
-        //Copia las imagenes nuevas de la galeria
-        $this->db->select_max('`order`');
-        $row = $this->db->get(TBL_GALLERY)->row_array();
-        $n = is_null($row['order']) ? 1 : $row['order'];
+        if( isset($gallery->images_new) ){
+            //Copia las imagenes nuevas de la galeria
+            $this->db->select_max('`order`');
+            $row = $this->db->get(TBL_GALLERY)->row_array();
+            $n = is_null($row['order']) ? 1 : $row['order'];
 
-        foreach( $gallery->images_new as $row ){
-            $n++;
+            foreach( $gallery->images_new as $row ){
+                $n++;
 
-            $cp1 = @copy(UPLOAD_PATH_GALLERY.".tmp/".urldecode($row->image_full), UPLOAD_PATH_GALLERY . urldecode($row->image_full));
-            $cp2 = @copy(UPLOAD_PATH_GALLERY.".tmp/".urldecode($row->image_thumb), UPLOAD_PATH_GALLERY . urldecode($row->image_thumb));
+                $cp1 = @copy(UPLOAD_PATH_GALLERY.".tmp/".urldecode($row->image_full), UPLOAD_PATH_GALLERY . urldecode($row->image_full));
+                $cp2 = @copy(UPLOAD_PATH_GALLERY.".tmp/".urldecode($row->image_thumb), UPLOAD_PATH_GALLERY . urldecode($row->image_thumb));
 
-            if( $cp1 && $cp2 ){
-                $data = array(
-                    'image'         => urldecode($row->image_full),
-                    'thumb'         => urldecode($row->image_thumb),
-                    'width'         => $row->width,
-                    'height'        => $row->height,
-                    'last_modified' => date('Y-m-d H:i:s'),
-                    'order'         => $n
-                );
+                if( $cp1 && $cp2 ){
+                    $data = array(
+                        'image'         => urldecode($row->image_full),
+                        'thumb'         => urldecode($row->image_thumb),
+                        'width'         => $row->width,
+                        'height'        => $row->height,
+                        'last_modified' => date('Y-m-d H:i:s'),
+                        'order'         => $n
+                    );
 
-                if( !$this->db->insert(TBL_GALLERY, $data) ) return false;
-            }else return false;
+                    if( !$this->db->insert(TBL_GALLERY, $data) ) return false;
+                }else return false;
+            }
         }
 
         // Elimina las imagenes quitadas

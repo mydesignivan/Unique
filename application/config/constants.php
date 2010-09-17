@@ -44,6 +44,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',	'x+b');
 */
 define('TBL_USERS',              'users');
 define('TBL_GALLERY',            'gallery');
+define('TBL_BODAS_GALLERY',      'bodas_gallery');
 define('TBL_CONTENTS',           'contents');
 define('TBL_BODAS',              'bodas');
 define('TBL_REGALOS',            'bodas_regalos');
@@ -82,6 +83,7 @@ define('EMAIL_CONTACT_MESSAGE', $msg);
 define('UPLOAD_FILETYPE', 'gif|jpg|png');
 define('UPLOAD_MAXSIZE', 2048); //Expresado en Kylobytes
 
+define('UPLOAD_PATH_GALLERY_BODAS', './uploads/bodas/gallery/');
 define('UPLOAD_PATH_GALLERY', './uploads/gallery/');
 define('UPLOAD_PATH_BODAS', './uploads/bodas/');
 define('UPLOAD_PATH_NOVIA', './uploads/bodas/novia/');

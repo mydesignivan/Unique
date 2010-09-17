@@ -24,14 +24,8 @@ jQuery.extend(jQuery.validator.messages, {
 
 jQuery.validator.setDefaults({
     messages : {
-        txtName : {
-            remote : 'El nombre del producto ya existe.'
-        },
-        txtPassOld:{
-            remote : 'La contrase&ntilde;a es incorrecta.'
-        },
-        txtCaptcha:{
-            remote : 'El c&oacute;digo ingresado no es v&aacute;lido.'
+        txtUsuario : {
+            remote : 'El nombre de usuario ya existe.'
         }
     }
 });
