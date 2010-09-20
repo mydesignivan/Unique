@@ -5,6 +5,7 @@
     <a href="<?=$this->config->item('base_url');?>"><img src="images/logo.png" alt="Unique WP" width="395" height="123" /></a>
 </div>
 
+<div class="clear span-24 last"> 
 <?php if( $this->session->userdata('logged_in') && $this->uri->segment(1)=="paneladmin" ) {
     $page = $this->uri->segment(2);
 
@@ -17,6 +18,7 @@
         <li <?php if( $page=="bodas") echo 'class="current"';?>><a href="<?=site_url('/paneladmin/bodas/')?>"><div class="l"></div><div class="m">Bodas</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="galeria") echo 'class="current"';?>><a href="<?=site_url('/paneladmin/galeria/')?>"><div class="l"></div><div class="m">Galer&iacute;a</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="contents") echo 'class="current"';?>><a href="<?=site_url('/paneladmin/contents/')?>"><div class="l"></div><div class="m">P&aacute;ginas</div><div class="r"></div> <div class="adorno"></div></a></li>
+        <li><a href="<?=site_url('/paneladmin/index/logout/')?>"><div class="l"></div><div class="m">Salir</div><div class="r"></div> <div class="adorno"></div></a></li>
     </ul>
 
 <?php }else{ // "FRONTPAGE"
@@ -30,7 +32,8 @@
         <li <?php if( $page=="galeria") echo 'class="current"';?>><a href="<?=site_url('/galeria/')?>"><div class="l"></div><div class="m">Galer&iacute;a</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="bodas") echo 'class="current"';?>><a href="<?=site_url('/bodas/')?>"><div class="l"></div><div class="m">Bodas</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="contacto") echo 'class="current"';?>><a href="<?=site_url('/contacto/')?>"><div class="l"></div><div class="m">Contacto</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="novedades") echo 'class="current"';?>><a href="<?=site_url('/novedades/')?>"><div class="l"></div><div class="m">Novedades</div><div class="r"></div> <div class="adorno"></div></a></li>
+        <li><a href="novedades"><div class="l"></div><div class="m">Novedades</div><div class="r"></div> <div class="adorno"></div></a></li>
     </ul>
 
 <?php }?>
+</div>

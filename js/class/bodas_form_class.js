@@ -2,51 +2,44 @@ var Bodas = new (function(){
 
     /* PUBLIC METHODS
      **************************************************************************/
-    this.initializer = function(){
-        var o = $.extend({}, jQueryValidatorOptDef, {
-            rules : {
-                txtNombreNovio : 'required',
-                txtNombreNovia : 'required',
-                txtApellidoNovio : 'required',
-                txtApellidoNovia : 'required',
-                txtUbiSalon : 'required',
-                txtUbiIglesia : 'required',
-                txtHistNovia : 'required',
-                txtHistNovio : 'required',
-                txtHistNovios : 'required',
-                txtUsuario : {
-                    required: true,
-                    remote : {
-                       url  : baseURI+'paneladmin/bodas/ajax_check_exists/',
-                       type : "post",
-                       data : {bodas_id : $('#bodas_id').val()}
-                    }
-                },
-                txtPass : 'required'
+    this.initializer = function(mode_edit){
+        _mode_edit = mode_edit;
+
+        var rules = {
+            txtNombreNovio : 'required',
+            txtNombreNovia : 'required',
+            txtApellidoNovio : 'required',
+            txtApellidoNovia : 'required',
+            txtUbiSalon : 'required',
+            txtUbiIglesia : 'required',
+            txtNombreIglesia : 'required',
+            txtNombreSalon : 'required',
+            txtHistNovia : 'required',
+            txtHistNovio : 'required',
+            txtHistNovios : 'required',
+            lstMenu : {
+                required_list : true
             },
-            submitHandler : function(form){
-
-                _ajaxupload_output.gallery={};
-                _ajaxupload_output.gallery.images_new = PictureGallery.get_images_new();
-
-                if(  $('#bodas_id').val()>0 ) {
-                    _ajaxupload_output.gallery.images_del = PictureGallery.get_images_del();
-                    _ajaxupload_output.gallery.images_order = PictureGallery.get_orders();
+            txtUsuario : {
+                required: true,
+                remote : {
+                   url  : baseURI+'paneladmin/bodas/ajax_check_exists/',
+                   type : "post",
+                   data : {bodas_id : $('#bodas_id').val()}
                 }
-
-                 var regalos=[];
-                 $("#lstRegalos option").each(function () {regalos.push($(this).text());});
-                _ajaxupload_output.regalos=regalos;
-                 var menus=[];
-                 $("#lstMenu option").each(function () {menus.push($(this).text());});
-
-                 _ajaxupload_output.menus=menus;
-
-                 $("#json").val(JSON.encode(_ajaxupload_output));
-
-                _Loader.show('#form1');
-               form.submit();
             },
+            txtPass : 'required'
+        };
+
+        if( !_mode_edit ){
+            rules.txtImageNovia = 'required';
+            rules.txtImageNovio = 'required';
+            rules.txtImageNovios = 'required';
+        }
+
+        var o = $.extend({}, jQueryValidatorOptDef, {
+            rules : rules,
+            submitHandler : _on_submit,
             invalidHandler : function(){
                 _Loader.hide('#form1');
             },
@@ -132,9 +125,13 @@ var Bodas = new (function(){
             return false;
         });
         //-----
+
+        $('#txtApellidoNovia, #txtNombreNovia, #txtApellidoNovio, #txtNombreNovio').blur(function(){$(this).ucTitle()});
     };
 
    this.upload = function(txt,opcion){
+        var input = $('#'+txt);
+        if( !input.val() ) return false;
         if( _working ) {
             alert("El servidor se encuentra ocupado.");
             return false;
@@ -142,8 +139,6 @@ var Bodas = new (function(){
 
         _working=true;
 
-        var input = $('#'+txt);
-        if( !input.val() ) return false;
         var parent = input.parent();
         var ext = input.val().replace(/^([\W\w]*)\./gi, '').toLowerCase();
 
@@ -176,9 +171,20 @@ var Bodas = new (function(){
     };
 
     this.add_item = function(list, item){
-        if( $(item).val().length>0 ){
-            $(list).append("<option value=''>"+$(item).val()+"</option");
-            $(item).val("");
+        item = $(item);
+        list = $(list);
+        if( item.val().length>0 ){
+            try{
+                list.find('option').each(function(){
+                   if( $(this).text().toLowerCase() == item.val().toLowerCase() ) throw true;
+                });
+            }catch(e){
+                alert('El item "'+ item.val() +'" ya existe.');
+                return false;
+            }
+
+            list.append("<option value=''>"+ item.val() +"</option");
+            item.val("").focus();
         }
     };
 
@@ -212,6 +218,7 @@ var Bodas = new (function(){
     /* PRIVATE PROPERTIES
      **************************************************************************/
      var _working=false;
+     var _mode_edit;
      var _imgThumb;
      var _divError;
      var _divAjaxLoad;
@@ -232,6 +239,36 @@ var Bodas = new (function(){
              f.find('img.jq-loading').hide();
              $('#btnSubmit')[0].disabled=false;
          }
+     };
+     
+     var _on_submit = function(form){
+        _ajaxupload_output.gallery={};
+        _ajaxupload_output.gallery.images_new = PictureGallery.get_images_new();
+
+        if( _mode_edit ) {
+            _ajaxupload_output.gallery.images_del = PictureGallery.get_images_del();
+            _ajaxupload_output.gallery.images_order = PictureGallery.get_orders();
+        }
+
+         var regalos=[];
+         $("#lstRegalos option").each(function () {regalos.push($(this).text());});
+         _ajaxupload_output.regalos=regalos;
+         var menus=[];
+         $("#lstMenu option").each(function () {menus.push($(this).text());});
+
+         _ajaxupload_output.menus=menus;
+
+         $("#json").val(JSON.encode(_ajaxupload_output));
+
+        $(['#txtUbiSalon', '#txtUbiIglesia']).each(function(i,o){
+             var div = $('<div></div>').append($(o).val());
+             div.find('br, small').remove();
+             div.find('iframe').attr('width', '362').attr('height', '196');
+             $(o).val(div.html());
+        });
+        
+        _Loader.show('#form1');
+        form.submit();
      };
 
 })();

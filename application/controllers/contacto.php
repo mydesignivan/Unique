@@ -29,7 +29,8 @@ class Contacto extends Controller {
             'tlp_section'        => 'frontpage/contacto_view.php',
             'tlp_title_section'  => 'Contacto',
             'tlp_script'         => array('plugins_validator', 'plugins_jqui-datepicker', 'class_account'),
-            'content'            => $this->contents_model->get_content('contacto')
+            'content'            => $this->contents_model->get_content('contacto'),
+            'content_footer'     => $this->contents_model->get_content('footer')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

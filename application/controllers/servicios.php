@@ -27,7 +27,8 @@ class Servicios extends Controller {
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/servicios_view.php',
             'tlp_title_section'  => 'Servicios',
-            'content'            => $this->contents_model->get_content('servicios')
+            'content'            => $this->contents_model->get_content('servicios'),
+            'content_footer'     => $this->contents_model->get_content('footer')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

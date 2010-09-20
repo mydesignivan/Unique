@@ -48,7 +48,7 @@ define('TBL_BODAS_GALLERY',      'bodas_gallery');
 define('TBL_CONTENTS',           'contents');
 define('TBL_BODAS',              'bodas');
 define('TBL_REGALOS',            'bodas_regalos');
-define('TBL_MENU',               'bodas_menu');
+define('TBL_MENU',               'bodas_menus');
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +77,24 @@ define('EMAIL_CONTACT_MESSAGE', $msg);
 
 /*
 |--------------------------------------------------------------------------
+| EMAIL FORM RSVP
+|--------------------------------------------------------------------------
+*/
+$msg = '<b>Nombre y Apellido:</b> {name}<br />
+<b>Mayores:</b> {adultos}<br />
+<b>Ni&ntilde;os:</b> {ninios}<br />
+<b>Menu elegido:</b> {menu}<br />
+<b>E-mail:</b> {mail}<br />
+<b>Telefono:</b> {phone}<br />
+<b>Observaciones:</b><br />{observaciones}';
+define('EMAIL_RSVP_SUBJECT', 'Unique WP - RSVP');
+//define('EMAIL_RSVP_TO', 'info@uniquewp.com.ar');
+define('EMAIL_RSVP_TO', 'iwmattoni@gmail.com');
+define('EMAIL_RSVP_MESSAGE', $msg);
+
+
+/*
+|--------------------------------------------------------------------------
 | UPLOAD FILE
 |--------------------------------------------------------------------------
 */
@@ -88,7 +106,7 @@ define('UPLOAD_PATH_GALLERY', './uploads/gallery/');
 define('UPLOAD_PATH_BODAS', './uploads/bodas/');
 define('UPLOAD_PATH_NOVIA', './uploads/bodas/novia/');
 define('UPLOAD_PATH_NOVIO', './uploads/bodas/novio/');
-define('UPLOAD_PATH_NOVIOS', './uploads/bodas/novios/');
+define('UPLOAD_PATH_PAREJA', './uploads/bodas/pareja/');
 
 
 
@@ -99,8 +117,8 @@ define('IMAGE_FULL_GALLERY_HEIGHT', 335);
 
 define('IMAGE_THUMB_NOVIOS_WIDTH', 108);
 define('IMAGE_THUMB_NOVIOS_HEIGHT', 70);
-define('IMAGE_THUMB_PAREJA_WIDTH', 108);
-define('IMAGE_THUMB_PAREJA_HEIGHT', 70);
+define('IMAGE_THUMB_PAREJA_WIDTH', 210);
+define('IMAGE_THUMB_PAREJA_HEIGHT', 300);
 
 
 /*

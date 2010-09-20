@@ -1,17 +1,22 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
-<?php if( $this->session->flashdata('status')!='' ){?>
-    <div class="<?=$this->session->flashdata('status')?>">
-        <?=$this->session->flashdata('message')?>
-    </div>
-    <div class="clear"></div>
+<?php if( $this->session->flashdata('status')=="success" ){?>
+<div class="success">
+    Las bodas pudieron ser eliminados correctamente.
+</div>
+<?php }elseif( $this->session->flashdata('status')=="error" ){?>
+<div class="error">
+    Las bodas no han podido ser eliminados.
+</div>
 <?php }?>
 
 
 
 <div class="trow">
-    <button type="button" onclick="BodasList.del_sel();" class="fright">Eliminar Seleccionados</button>
-    <button type="button" onclick="location.href='<?=site_url('paneladmin/bodas/form')?>'" class="fright">Agregar Boda</button>
+    <div class="fright">
+        <button type="button" onclick="location.href='<?=site_url('paneladmin/bodas/form')?>'">Agregar Boda</button>&nbsp;&nbsp;
+        <button type="button" onclick="BodasList.del_sel();">Eliminar Seleccionados</button>
+    </div>
 </div>
 
 
@@ -21,11 +26,12 @@
         <tr>
             <td class="cell1">&nbsp;</td>
             <td class="cell2">Bodas</td>
-            <td class="cell3">Modificar</td>
-            <td class="cell4">Eliminar</td>
+            <td class="cell3">Orden</td>
+            <td class="cell4">Modificar</td>
+            <td class="cell5">Eliminar</td>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="sortable">
 <?php
 $n=0;
 foreach( $listBodas->result_array() as $row ) {
@@ -33,14 +39,20 @@ foreach( $listBodas->result_array() as $row ) {
     $url = site_url('/paneladmin/bodas/form/'.$row['bodas_id']);
     $class = $n%2 ? 'row-even' : '';
 ?>
-        <tr class="<?=$class?>">
+        <tr id="id<?=$row['bodas_id']?>" class="<?=$class?>">
             <td class="cell1"><input type="checkbox" value="<?=$row['bodas_id']?>" /></td>
             <td class="cell2"><a href="<?=$url?>" class="link-title"><?=ucwords($row['nombre_novia']." &amp; ".$row['nombre_novio'])?></a></td>
-            <td class="cell3"><a href="<?=$url?>"><img src="images/icon_edit.png" alt="" width="16" alt="16" /><span>Modificar</span></a></td>
-            <td class="cell4"><a href="javascript:void(BodasList.del(<?=$row['bodas_id']?>))"><img src="images/icon_delete.png" alt="" width="16" alt="16" /><span>Eliminar</span></a></td>
+            <td class="cell3"><a href="javascript:void(0)" class="handle"><img src="images/icon_arrow_move.png" alt="" width="16" alt="16" /></a></td>
+            <td class="cell4"><a href="<?=$url?>" class="link1"><img src="images/icon_edit.png" alt="" width="16" alt="16" /><span>Modificar</span></a></td>
+            <td class="cell5"><a href="javascript:void(BodasList.del(<?=$row['bodas_id']?>))" class="link1"><img src="images/icon_delete.png" alt="" width="16" alt="16" /><span>Eliminar</span></a></td>
         </tr>
 <?php }?>
     </tbody>
 </table>
 <?php }?>
 
+<script type="text/javascript">
+<!--
+BodasList.initializer();
+-->
+</script>

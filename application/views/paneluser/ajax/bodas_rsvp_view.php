@@ -2,7 +2,7 @@
 
 <div class="span-16">
     <h3 class="subtitle">Confirmar Asistencia <img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
-    <form id="form1" action="<?//=site_url('/paneluser/')?>" method="post" enctype="application/x-www-form-urlencoded">
+    <form id="form1" action="<?=site_url('/paneluser/index/send')?>" method="post" enctype="application/x-www-form-urlencoded">
         <div class="trow">
             <label class="label label-contact" for="txtNameInvitado">* Nombre y Apellido<br/>
                 <span class="text-size-80">(Seg&uacute;n tarjeta de invitaci&oacute;n)  </span></label>
@@ -10,22 +10,20 @@
         </div>
         <div class="trow">
             <label class="label label-contact" for="txtAdultos">* Mayores</label>
-            <div class="fleft">
-                <input type="text" id="txtAdultos" name="txtAdultos" class="input-contact" />
-            </div>
+            <div class="fleft"><input type="text" id="txtAdultos" name="txtAdultos" class="input-contact" /></div>
         </div>
         <div class="trow">
-            <label class="label label-contact" for="txtNiños">* Niños</label>
-            <div class="fleft">
-                 <input type="text" id="txtNiños" name="txtNiños" class="input-contact" />
-            </div>
+            <label class="label label-contact" for="txtNinio">* Ni&ntilde;os</label>
+            <div class="fleft"><input type="text" id="txtNinio" name="txtNinio" class="input-contact" /></div>
         </div>
         <div class="trow">
             <label class="label label-contact" for="cboMenu">* Menu elegido</label>
             <div class="fleft">
-                <select id="cboMenu" name="cboMenu" class="select-contact">
-                    <option value="">&nbsp;</option>
-                    <option value="sadas">dssdf</option>
+                <select name="cboMenu" id="cboMenu" class="select-contact">
+                    <option value="">Seleccione un Menu</option>
+            <?php foreach( $info['menus'] as $row ){?>
+                    <option value="<?=$row['menu']?>"><?=$row['menu']?></option>
+            <?php }?>
                 </select>
             </div>
         </div>
@@ -42,8 +40,8 @@
                 Observaciones<br/>
                 <span class="text-size-80">(Ej: cel&iacute;acos, al&eacute;rgicos)</span>
             </label>
-            <label class="label label-contact" for="txtConsult"></label>
-            <div class="fleft"><textarea id="txtConsult" name="txtConsult" rows="5" cols="22" class="textarea-contact"></textarea></div>
+            <label class="label label-contact" for="txtObserv"></label>
+            <div class="fleft"><textarea id="txtObserv" name="txtObserv" rows="5" cols="22" class="textarea-contact"></textarea></div>
         </div>
         <div class="trow" style="width:470px">
             <div class="fright">
@@ -54,39 +52,24 @@
 
 </div>
 <div class="span-5 last">
-        <h3>Lista de Regalos</h3>
-
-        <ul>
-            <li class="title-section">aaaa y bbbb </li>
-            <li class="title-section">aaaa y bbbb </li>
-            <li class="title-section">aaaa y bbbb </li>
-            <li class="title-section">aaaa y bbbb </li>
-            <li class="title-section">aaaa y bbbb </li>
-            <li class="title-section">aaaa y bbbb </li>
-        </ul>
+    <h3 class="subtitle">Lista de Regalos de <?=ucwords($info['nombre_novia'])?> &amp; <?=ucwords($info['nombre_novio'])?> <img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
+    <ul>
+    <?php foreach( $info['regalos'] as $row ){?>
+        <li class="title-section"><?=$row['regalo']?></li>
+    <?php }?>
+    </ul>
 </div>
 
 
 <div class="clear fleft prepend-top" >
-
-    <div class="span-10 border">
-        <h3>Salon quinta al amanecer</h3>
-         <div>
-            <label class="label">Salon quinta al amanecer</label>
-         </div>
-        <div class="clear content"></div>
-
-            
+    <div class="span-10">
+        <h3>Salon <?=$info['nombre_salon']?></h3>
+        <div class="framegm"><?=$info['google_maps_salon']?></div>
     </div>
-     <div class="span-10  last border">
-         <h3>Iglesia San Nicolás</h3>
-         <div>
-            <label class="label">Salon quinta al amanecer</label>
-         </div>
-         <div class="clear content"></div>
+     <div class="span-10 prepend-1 last">
+         <h3>Iglesia <?=$info['nombre_iglesia']?></h3>
+        <div class="framegm"><?=$info['google_maps_iglesia']?></div>
     </div>
-
-
 </div>
 
 

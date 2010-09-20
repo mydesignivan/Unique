@@ -1,18 +1,12 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
 <ul class="cont-images-bodas">
-    <li class="margin-right">
-        <a href="javascript:void(Bodas.popup_login(1))"><img src="images/bodas-foto-1.jpg" alt="" width="210" height="300" class="imgframe" /></a><br />
-        <a href="javascript:void(Bodas.popup_login(1))" class="link-bodas"><img src="images/bodas-dibujo-nombres-left.png" alt="" width="29" height="15" />&nbsp;Paula &amp; Gabi&nbsp;<img src="images/bodas-dibujo-nombres-right.png" alt="" width="29" height="15" /></a>
-    </li>
+<?php foreach( $listBodas->result_array() as $row ) {?>
     <li>
-        <a href="javascript:void(Bodas.popup_login(2))"><img src="images/bodas-foto-2.jpg" alt="" width="210" height="300" class="imgframe" /></a><br />
-        <a href="javascript:void(Bodas.popup_login(2))" class="link-bodas"><img src="images/bodas-dibujo-nombres-left.png" alt="" width="29" height="15" />&nbsp;Andrea &amp; Edu&nbsp;<img src="images/bodas-dibujo-nombres-right.png" alt="" width="29" height="15" /></a>
+        <a href="javascript:void(Bodas.popup_login())"><img src="<?=UPLOAD_PATH_PAREJA.$row['imagen_novios']?>" alt="<?=$row['imagen_novios']?>" width="<?=$row['imagen_novios_width']?>" height="<?=$row['imagen_novios_height']?>" class="imgframe" /></a><br />
+        <a href="javascript:void(Bodas.popup_login())" class="link-bodas"><img src="images/bodas-dibujo-nombres-left.png" alt="" width="29" height="15" />&nbsp;<?=ucwords($row['nombre_novia'])?> &amp; <?=ucwords($row['nombre_novio'])?>&nbsp;<img src="images/bodas-dibujo-nombres-right.png" alt="" width="29" height="15" /></a>
     </li>
-    <li>
-        <a href="javascript:void(Bodas.popup_login(2))"><img src="images/bodas-foto-3.jpg" alt="" width="210" height="300" class="imgframe" /></a><br />
-        <a href="javascript:void(Bodas.popup_login(2))" class="link-bodas"><img src="images/bodas-dibujo-nombres-left.png" alt="" width="29" height="15" />&nbsp;Vero &amp; Guille&nbsp;<img src="images/bodas-dibujo-nombres-right.png" alt="" width="29" height="15" /></a>
-    </li>
+<?php }?>
 </ul>
 
 <div class="clear content"><?=$content?></div>

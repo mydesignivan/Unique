@@ -6,7 +6,7 @@ class Bodas extends Controller {
     function __construct(){
         parent::Controller();
 
-        if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
+        if( !$this->session->userdata('logged_in') || !is_numeric($this->session->userdata('users_id')) ) redirect($this->config->item('base_url'));
         
         $this->load->model("bodas_model");
 
@@ -35,13 +35,11 @@ class Bodas extends Controller {
     public function form(){
         $id = $this->uri->segment(4);
         $this->load->helper('form');
-       
 
         $data = array(
             'tlp_section' =>  'paneladmin/bodas_form_view.php',
             'tlp_script'  =>  array('plugins_validator', 'plugins_fancybox','plugins_jqui_sortable' ,'helpers_json', 'class_bodas_form')
         );
-
 
         if( is_numeric($id) ){ // Edit
             $data['tlp_title_section'] = "Editar Boda";
@@ -57,14 +55,11 @@ class Bodas extends Controller {
 
     public function create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-
             $res = $this->bodas_model->create();
             if( !$res ){
                 $this->session->set_flashdata('status', "error");
                 redirect('/paneladmin/bodas/form/');
-            }
-            //else redirect('/paneladmin/bodas/');
-                
+            }else redirect('/paneladmin/bodas/');
         }
     }
 
@@ -76,18 +71,16 @@ class Bodas extends Controller {
         }
     }
 
-    public function delete(){
-       
+    public function delete(){       
         if( $this->uri->segment(4) ){
             $id = $this->uri->segment_array();
             array_splice($id, 0,3);
-            if( !$this->bodas_model->delete($id) ){
-                $this->session->set_flashdata('status', 'error');
-                $this->session->set_flashdata('message', 'No se pudo eliminar la boda.');
-            }
-        //    redirect('/paneladmin/bodas/');
-        }
+            $res = $this->bodas_model->delete($id);
 
+            $this->session->set_flashdata('status', $res ? "success" : "error");
+            
+            redirect('/paneladmin/bodas/');
+        }
     }
 
 
@@ -96,7 +89,6 @@ class Bodas extends Controller {
     public function ajax_upload_bodas(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $opcion=$this->input->post("opcion");
-            $txt=$this->input->post("txt");
             $this->load->library('superupload');
 
             $config = array(
@@ -149,6 +141,9 @@ class Bodas extends Controller {
         }
     }
 
+    public function ajax_order(){
+        die($this->bodas_model->order() ? "success" : "error");
+    }
 
 
 

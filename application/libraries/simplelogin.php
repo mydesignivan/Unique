@@ -6,8 +6,8 @@ class Simplelogin{
 
     /* CONSTRUCTOR
      **************************************************************************/
-    function __construct(){
-        $this->user_table = TBL_USERS;
+    function __construct($p=array('table'=>TBL_USERS)){
+        $this->user_table = $p['table'];
         $this->CI =& get_instance();
         $this->CI->load->library('encpss');
     }
@@ -19,7 +19,7 @@ class Simplelogin{
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
-    public function login($user = '', $password = '', $level=1) {
+    public function login($user = '', $password = '') {
         //Make sure login info was sent
         if( $user == '' OR $password == '' ) {
             return array('status'=>'error', 'error'=>'loginfaild');
@@ -31,9 +31,8 @@ class Simplelogin{
             return array('status'=>'error', 'error'=>'loginfaild');
         }
 
-
         //Check against user table
-        $where = array('username'=>$user, 'level'=>$level);
+        $where = array('username'=>$user);
         $query = $this->CI->db->get_where($this->user_table, $where);
 
         if( $query->num_rows > 0 ) {
@@ -44,24 +43,20 @@ class Simplelogin{
                 return array('status'=>'error', 'error'=>'loginfaild');
             }
 
-            /*if( $row['level']==0 && $row['active']==0 ){
-                return array('status'=>'error', 'error'=>'userinactive');
-            }*/
-
             //Destroy old session
             $this->CI->session->sess_destroy();
 
             //Create a fresh, brand new session
             $this->CI->session->sess_create();
 
-            //Remove the password field
-            unset($row['password']);
-
             //Set session data
-            $this->CI->session->set_userdata($row);
-
-            //Set logged_in to true
-            $this->CI->session->set_userdata(array('logged_in' => true));
+            $data = array();
+            $data['logged_in'] = true;
+            if( isset($row['level']) ) $data['level'] = $row['level'];
+            if( isset($row['bodas_id']) ) $data['bodas_id'] = $row['bodas_id'];
+            if( isset($row['users_id']) ) $data['users_id'] = $row['users_id'];
+            
+            $this->CI->session->set_userdata($data);
 
             //Login was successful
             return array('status'=>'ok');

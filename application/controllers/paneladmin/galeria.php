@@ -6,7 +6,7 @@ class Galeria extends Controller {
     function __construct(){
         parent::Controller();
 
-        if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
+        if( !$this->session->userdata('logged_in') || !is_numeric($this->session->userdata('users_id')) ) redirect($this->config->item('base_url'));
         
         $this->load->model("galeria_model");
 

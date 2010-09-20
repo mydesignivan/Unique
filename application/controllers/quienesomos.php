@@ -27,7 +27,8 @@ class Quienesomos extends Controller {
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/quienesomos_view.php',
             'tlp_title_section'  => '¿Quienes Somos?',
-            'content'            => $this->contents_model->get_content('quienes-somos')
+            'content'            => $this->contents_model->get_content('quienes-somos'),
+            'content_footer'     => $this->contents_model->get_content('footer')
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

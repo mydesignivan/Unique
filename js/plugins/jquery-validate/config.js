@@ -30,11 +30,14 @@ jQuery.validator.addMethod("password", function(value, element, param) {
 }, "El password debe tener entre 8 y 10 caracteres, por lo menos un dígito y un alfanumérico,<br /> y no puede contener caracteres espaciales.");
 
 jQuery.validator.addMethod("username", function(value, element, param) {
-        document.title = 'pase0';
     if( value.length>0 && param ){
-        document.title = 'pase';
         eval('var RegExPattern = new RegExp(/^[a-z0-9ü][a-z0-9ü_]{5,10}$/);');
         return value.match(RegExPattern);
     }
 }, "El usuario debe tener entre 5 y 10 caracteres, debe ser en min&uacute;scula y<br /> no puede contener caracteres espaciales.");
 
+jQuery.validator.addMethod("required_list", function(value, element, param) {
+    if( param ){
+        return $(element).find('option').length>0;
+    }
+}, "Este campo es obligatorio.");

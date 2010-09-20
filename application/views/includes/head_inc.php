@@ -21,6 +21,9 @@
 <!--[if IE 6]>
 <link href="css/style_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
+<!--[if IE 7]>
+<link href="css/style_ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
 
 <!--[if IE 6]>
 <script type="text/javascript">

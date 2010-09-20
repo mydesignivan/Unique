@@ -50,7 +50,8 @@ body {
   font-size: 75%;
   color: #A62D38;
   background: #4C1920 url(../../images/bg.jpg) left top;
-  font-family: Garamond, "Minion Web", "ITC Stone Serif", "MS Georgia", "Bitstream Cyberbi";
+  /*font-family: Garamond, "Minion Web", "ITC Stone Serif", "MS Georgia", "Bitstream Cyberbi";*/
+  font-family: georgia,palatino;
 }
 
 

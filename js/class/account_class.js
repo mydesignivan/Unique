@@ -25,16 +25,17 @@ var Account = new (function(){
         $('#form1').validate(o);
 
         // Configura el calendario
-        $("#txtDate").datepicker({
-            showOn          : 'both',
-            buttonImage     : 'images/icon_calendar.png',
-            buttonImageOnly : true,
-            dateFormat      : 'dd-mm-yy',
-            changeMonth     : true,
-            changeYear      : true,
-            monthNamesShort : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+        $(document).ready(function(){
+            $("#txtDate").datepicker({
+                showOn          : 'both',
+                buttonImage     : 'images/icon_calendar.png',
+                buttonImageOnly : true,
+                dateFormat      : 'dd-mm-yy',
+                changeMonth     : true,
+                changeYear      : true,
+                monthNamesShort : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+            });
         });
-
     };
 
     this.initializer2 = function(){

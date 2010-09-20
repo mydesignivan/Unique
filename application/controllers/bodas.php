@@ -6,10 +6,10 @@ class Bodas extends Controller {
     function __construct(){
         parent::Controller();
 
-        if( $this->session->userdata('logged_in') && $this->session->userdata('level')==0 ) redirect('/paneluser/');
+        if( $this->session->userdata('logged_in') && is_numeric($this->session->userdata('bodas_id')) ) redirect('/paneluser/');
 
-        $this->load->model('users_model');
         $this->load->model('contents_model');
+        $this->load->model('bodas_model');
 
         $this->load->library('dataview', array(
             'tlp_title'            => TITLE_BODAS,
@@ -30,15 +30,17 @@ class Bodas extends Controller {
             'tlp_section'        => 'frontpage/bodas_view.php',
             'tlp_title_section'  => 'Bodas',
             'tlp_script'         => array('plugins_simplemodal', 'class_bodas'),
-            'content'            => $this->contents_model->get_content('bodas')
+            'content'            => $this->contents_model->get_content('bodas'),
+            'content_footer'     => $this->contents_model->get_content('footer'),
+            'listBodas'          => $this->bodas_model->get_list()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
 
     public function login(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-            $this->load->library("simplelogin");
-            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"], 0);
+            $this->load->library("simplelogin", array('table'=>TBL_BODAS));
+            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"]);
 
             $ret = array('status'=>'ok');
             if( $statusLogin['status']=="error" ){
@@ -54,12 +56,7 @@ class Bodas extends Controller {
     /* AJAX FUNCTIONS
      **************************************************************************/
     public function ajax_showpopup(){
-        if( $this->session->userdata('logged_in') && $this->session->userdata('level')==0 ){
-            die("logged_in");
-        }else{
-            $id = $this->uri->segment(3);
-            $this->load->view('frontpage/ajax/login_view', array('id'=>$id));            
-        }
+        $this->load->view('frontpage/ajax/login_view');
     }
 
     /* PRIVATE FUNCTIONS

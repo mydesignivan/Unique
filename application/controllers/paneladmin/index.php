@@ -22,7 +22,7 @@ class Index extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        if( $this->session->userdata('logged_in') ) {
+        if( $this->session->userdata('logged_in') && $this->session->userdata('level')==1 ) {
             redirect('/paneladmin/myaccount/');
         }else{
             $this->load->view('template_paneladmin_view', $this->_data);

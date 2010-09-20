@@ -6,16 +6,22 @@ var Bodas = new (function(){
         var o = $.extend({}, jQueryValidatorOptDef, {
             rules : {
                 txtNameInvitado : 'required',
-                txtEmail: {required: true, email: true},
-                txtPhoneNum: "required",
-                cboMenu: "required",
-                txtNiños: "required",
-                txtAdultos: "required"
-  
+                txtEmail : {required: true, email: true},
+                txtPhoneNum : "required",
+                cboMenu : "required",
+                txtNinio : "required",
+                txtAdultos : "required"
+ 
             },
             submitHandler : function(form){
+                var el1 = $('#txtDedicatoria');
+                var el2 = $('#txtCronica');
+
+                if( el1.length>0 ) $('#form1').append(el1);
+                if( el2.length>0 ) $('#form1').append(el2);
+
                 _Loader.show('#form1');
-                //form.submit();
+                form.submit();
             },
             invalidHandler : function(){
                 _Loader.hide('#form1');
@@ -23,7 +29,8 @@ var Bodas = new (function(){
         });
         $('#form1').validate(o);
 
-        formatNumber.init('#txtPhoneNum, #txtPhoneCode, #txtAdultos, #txtNiños');
+        formatNumber.init('#txtPhoneNum, #txtPhoneCode, #txtAdultos, #txtNinio');
+        $('#txtNameInvitado').blur(function(){$(this).ucTitle()});
     };
 
     this.load_menu = function(vista, num_op){
@@ -49,25 +56,21 @@ var Bodas = new (function(){
         return false;
     };
 
-    this.popup_login = function(id){
-        $.get(baseURI+'bodas/ajax_showpopup/'+id, function(data){
-            if( data=="logged_in" ){
-                location.href = baseURI+'paneluser/';
-            }else{
-                $('#popup-login').html(data).modal({
-                    overlayClose : true,
-                    onShow : function(){
-                        $('#txtUser').val('').focus();
-                        $('#txtPass').val('');
-                    }
-                });
-            }
+    this.popup_login = function(){
+        $.get(baseURI+'bodas/ajax_showpopup/', function(data){
+            $('#popup-login').html(data).modal({
+                overlayClose : true,
+                onShow : function(){
+                    $('#txtUser').val('').focus();
+                    $('#txtPass').val('');
+                }
+            });
         });
     };
 
     this.submit_login = function(f){
         $('#ajaxupload').show();
-        $(f).find(':submit')[0].disabled=true;
+        $(f).find(':submit')[0].disabled = true;
 
         $.post(baseURI+'bodas/login', $(f).serialize(), function(data){
             $('#ajaxupload').hide();
@@ -94,13 +97,8 @@ var Bodas = new (function(){
     };
 
 
-
-
-
-
     /* PRIVATE PROPERTIES
      **************************************************************************/
-     var _optval={};
      var _working=false;
 
     /* PRIVATE METHODS
