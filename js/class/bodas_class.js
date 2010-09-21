@@ -43,9 +43,11 @@ var Bodas = new (function(){
         $('div.jq-tab').hide();
         var tab = $('#tab'+num_op);
         if( !tab.data('opened') ){
+            tab.show().addClass('trow2').html('<img src="images/ajax-loader2.gif" alt="Loading..." width="100" height="100" />');
+            
             $.get(baseURI+'paneluser/index/ajax_get_form/'+vista, function(data){
                 _working=false;
-                tab.html(data).show();
+                tab.removeClass('trow2').html(data).show();
                 tab.data('opened', true);
             });
         }else{

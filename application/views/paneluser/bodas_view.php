@@ -10,7 +10,7 @@
 </div>
 <?php }?>
 
-<ul class="menu-bodas ">
+<ul class="menu-bodas">
     <li class="current"><a href="javascript:void(Bodas.load_menu('bodas_novios_view',0))">Los Novios</a></li>
     <li><a href="javascript:void(Bodas.load_menu('bodas_rsvp_view',1))">RSVP</a></li>
     <li><a href="javascript:void(Bodas.load_menu('bodas_galerias_view',2))">Galer&iacute;a</a></li>
@@ -18,7 +18,7 @@
     <li><a href="javascript:void(Bodas.load_menu('bodas_cronicas_view',4))">La Cr&oacute;nica</a></li>
 </ul>
 
-<div id="resultboda" class="clear fleft prepend-top2">
+<div id="resultboda" class="clear trow prepend-top2">
     <div id="tab0" class="jq-tab"><?php require("ajax/bodas_novios_view.php"); ?></div>
     <div id="tab1" class="jq-tab"></div>
     <div id="tab2" class="jq-tab"></div>

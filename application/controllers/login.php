@@ -26,7 +26,7 @@ class Login extends Controller{
 
             }else{
 
-                redirect('/panel/index/');
+           //     redirect('/panel/index/');
             }
         }
     }

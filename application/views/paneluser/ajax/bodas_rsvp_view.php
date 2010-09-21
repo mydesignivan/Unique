@@ -55,7 +55,7 @@
     <h3 class="subtitle">Lista de Regalos de <?=ucwords($info['nombre_novia'])?> &amp; <?=ucwords($info['nombre_novio'])?> <img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
     <ul>
     <?php foreach( $info['regalos'] as $row ){?>
-        <li class="title-section"><?=$row['regalo']?></li>
+        <li><?=$row['regalo']?></li>
     <?php }?>
     </ul>
 </div>

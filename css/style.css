@@ -8,6 +8,7 @@
 .border{border:1px solid red !important;}
 .text-size-80{font-size: 80% !important;}
 .text-size-90{font-size: 90% !important;}
+.text-size-120{font-size:120% !important}
 .trow{
     float:left;
     clear: both;
@@ -51,6 +52,12 @@ div.framegm{
     border:1px solid #ccc;
     padding: 1px;
 }
+.trow2{
+    width: 100%;
+    text-align: center;
+}
+.jq-tab p{font-size: 110%}
+.jq-tab ul li{font-size: 110%}
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA MENSAJES DEL VALIDADOR
@@ -274,9 +281,9 @@ fieldset.gallery-panel2{
 /* MENU
  -----------------------------------------------------------------------------*/
 ul.menu{
-    float: none !important;
     width: 900px;
-    margin: 0 auto !important;
+    margin: 0 auto;
+    padding: 0;
     /*border: 1px solid red;*/
 }
 ul.menu-paneladmin{
@@ -284,15 +291,12 @@ ul.menu-paneladmin{
     margin: 0 auto !important;
     /*border: 1px solid red;*/
 }
-ul.menu, ul.menu li{
-    margin: 0;
-    padding: 0;
-    float: left;
-}
 ul.menu li{
+    float: left;
+    padding: 0;
     list-style-type: none;
     display: inline;
-    margin-right: 5px;
+    margin:0 5px 0 0;
     text-align: center;
     /*border: 1px solid red;*/
 }

@@ -51,8 +51,8 @@ class Index extends Controller {
             $message = str_replace('{phone}', $_POST['txtPhoneCode'].$_POST['txtPhoneNum'], $message);
             $message = str_replace('{observaciones}', $_POST['txtObserv'], $message);
 
-            if( isset($_POST['txtCronica']) ) $message.='<br /><b>Cronica:</b><br />'.$_POST['txtCronica'];
-            if( isset($_POST['txtDedicatoria']) ) $message.='<br /><b>Dedicatoria:</b><br />'.$_POST['txtDedicatoria'];
+            if( isset($_POST['txtCronica']) ) $message.='<br /><br /><b>Cronica:</b><br />'.$_POST['txtCronica'];
+            if( isset($_POST['txtDedicatoria']) ) $message.='<br /><br /><b>Dedicatoria:</b><br />'.$_POST['txtDedicatoria'];
 
             //die($message);
 

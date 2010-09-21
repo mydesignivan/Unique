@@ -26,6 +26,9 @@ jQuery.validator.setDefaults({
     messages : {
         txtUsuario : {
             remote : 'El nombre de usuario ya existe.'
+        },
+        txtPassOld : {
+            remote : 'La contraseña ingresada es incorrecta.'
         }
     }
 });
