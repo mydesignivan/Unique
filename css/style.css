@@ -142,7 +142,7 @@ a.link1{
 input[type=text],input[type=password], textarea{
     padding:3px !important;
     text-align:left;
-    font-family: Garamond, "Minion Web", "ITC Stone Serif", "MS Georgia", "Bitstream Cyberbi";
+    font-family: georgia,palatino;
     font-size:100%;
     margin:0;
     border:1px solid #D7A2A3;
@@ -459,7 +459,7 @@ ul.menu-bodas li{
         /*border:1px solid red;*/
     }
     .main-container .content, .main-container .content span, .main-container .content p{
-        font-family: Garamond, "Minion Web", "ITC Stone Serif", "MS Georgia", "Bitstream Cyberbi" !important;
+        font-family: georgia,palatino !important;
         color: #A62D38 !important;
     }
 
