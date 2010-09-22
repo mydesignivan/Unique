@@ -229,7 +229,34 @@ class Bodas_model extends Model {
         return true;
     }
 
-     
+    public function save_dedicatoria(){
+        $data = array(
+            'bodas_id'    => $this->session->userdata('bodas_id'),
+            'dedicatoria' => $_POST['txtDedicatoria']
+        );
+        return $this->db->insert(TBL_DEDICATORIAS, $data);
+    }
+
+    public function get_list_dedicatoria(){
+        $this->db->order_by('id', 'desc');
+        return $this->db->get_where(TBL_DEDICATORIAS, array('bodas_id' => $this->session->userdata('bodas_id')))->result_array();
+    }
+
+    public function save_cronica(){
+        $data = array(
+            'bodas_id'    => $this->session->userdata('bodas_id'),
+            'cronica'     => $_POST['txtCronica']
+        );
+        return $this->db->insert(TBL_CRONICA, $data);
+    }
+
+    public function get_list_cronica(){
+        $this->db->order_by('id', 'desc');
+        return $this->db->get_where(TBL_CRONICA, array('bodas_id' => $this->session->userdata('bodas_id')))->result_array();
+    }
+
+
+
     /* PUBLIC FUNCTIONS (LLAMADAS POR AJAX)
      **************************************************************************/
      public function check_exists($v, $id){

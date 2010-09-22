@@ -14,12 +14,6 @@ var Bodas = new (function(){
  
             },
             submitHandler : function(form){
-                var el1 = $('#txtDedicatoria');
-                var el2 = $('#txtCronica');
-
-                if( el1.length>0 ) $('#form1').append(el1);
-                if( el2.length>0 ) $('#form1').append(el2);
-
                 _Loader.show('#form1');
                 form.submit();
             },
@@ -97,6 +91,29 @@ var Bodas = new (function(){
         
         return false;
     };
+
+    this.submit_comments = function(f, index){
+        if( $(f).find('textarea').val() ){
+            if( _working ) return false;
+            _working=true;
+
+            _Loader.show(f);
+            $.post(baseURI+'paneluser/index/ajax_comments_save', $(f).serialize(), function(data){
+                _Loader.hide(f);
+                _working=false;
+
+                if( data=='true' ){
+                    $('#tab'+index).data('opened', false);
+                    eval($('#menu-bodas a').eq(index).attr('href'));
+                }else{
+                    alert('ERROR AJAX:\n\n'+data);
+                    return false;
+                }
+            });
+        }
+
+        return false;
+    }
 
 
     /* PRIVATE PROPERTIES

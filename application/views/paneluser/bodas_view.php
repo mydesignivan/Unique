@@ -2,7 +2,7 @@
 
 <?php if( $this->session->flashdata('status_sendmail')=="ok" ){?>
 <div class="success">
-    Muchas Gracias por comunicarse con nosotros, nos comunicaremos con usted a la brevedad.
+    Gracias por CONTACTARNOS, nos comunicaremos a la brevedad.
 </div>
 <?php }elseif( $this->session->flashdata('status_sendmail')=="error" ){?>
 <div class="error">
@@ -10,7 +10,7 @@
 </div>
 <?php }?>
 
-<ul class="menu-bodas">
+<ul id="menu-bodas" class="menu-bodas">
     <li class="current"><a href="javascript:void(Bodas.load_menu('bodas_novios_view',0))">Los Novios</a></li>
     <li><a href="javascript:void(Bodas.load_menu('bodas_rsvp_view',1))">RSVP</a></li>
     <li><a href="javascript:void(Bodas.load_menu('bodas_galerias_view',2))">Galer&iacute;a</a></li>

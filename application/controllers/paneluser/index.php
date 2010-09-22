@@ -8,6 +8,8 @@ class Index extends Controller {
 
         if( !$this->session->userdata('logged_in') || !is_numeric($this->session->userdata('bodas_id')) ) redirect($this->config->item('base_url'));
 
+        $this->load->model('bodas_model');
+
         $this->load->library('dataview', array(
             'tlp_section'          =>  'paneluser/bodas_view.php',
             'tlp_title'            => TITLE_BODAS,
@@ -26,7 +28,6 @@ class Index extends Controller {
      **************************************************************************/
     public function index(){
         $this->load->model("contents_model");
-        $this->load->model('bodas_model');
         $info = $this->bodas_model->get_info($this->session->userdata('bodas_id'));
 
         $this->_data = $this->dataview->set_data(array(
@@ -51,9 +52,6 @@ class Index extends Controller {
             $message = str_replace('{phone}', $_POST['txtPhoneCode'].$_POST['txtPhoneNum'], $message);
             $message = str_replace('{observaciones}', $_POST['txtObserv'], $message);
 
-            if( isset($_POST['txtCronica']) ) $message.='<br /><br /><b>Cronica:</b><br />'.$_POST['txtCronica'];
-            if( isset($_POST['txtDedicatoria']) ) $message.='<br /><br /><b>Dedicatoria:</b><br />'.$_POST['txtDedicatoria'];
-
             //die($message);
 
             $this->email->from($_POST['txtEmail'], $_POST['txtNameInvitado']);
@@ -73,21 +71,39 @@ class Index extends Controller {
         redirect($this->config->item('base_url'));
     }
 
-
     /* AJAX FUNCTIONS
      **************************************************************************/
     public function ajax_get_form(){
          $vista = $this->uri->segment(4);
          $data = array();
-         if( $vista=="bodas_novios_view" || $vista=="bodas_rsvp_view" || $vista=="bodas_galerias_view" ){
-             $this->load->model('bodas_model');
-             $this->load->helpers('form');
-             $data['info'] = $this->bodas_model->get_info($this->session->userdata('bodas_id'));
+         switch($vista){
+             case "bodas_novios_view": case "bodas_rsvp_view": case "bodas_galerias_view":
+                 $this->load->helpers('form');
+                 $data['info'] = $this->bodas_model->get_info($this->session->userdata('bodas_id'));
+             break;
+
+             case "bodas_dedicatorias_view":
+                 $data['list'] = $this->bodas_model->get_list_dedicatoria();
+             break;
+
+             case "bodas_cronicas_view":
+                 $data['list'] = $this->bodas_model->get_list_cronica();
+             break;
          }
-         
+
          $this->load->view("paneluser/ajax/$vista", $data);
     }
 
+    public function ajax_comments_save(){
+        if( $_SERVER['REQUEST_METHOD']=="POST" ){
+            if( $_POST['type']=='dedicatoria' ){
+                echo json_encode($this->bodas_model->save_dedicatoria());
+            }else{
+                echo json_encode($this->bodas_model->save_cronica());
+            }
+            die();
+        }
+    }
      
 
     /* PRIVATE FUNCTIONS

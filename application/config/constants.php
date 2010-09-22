@@ -49,6 +49,8 @@ define('TBL_CONTENTS',           'contents');
 define('TBL_BODAS',              'bodas');
 define('TBL_REGALOS',            'bodas_regalos');
 define('TBL_MENU',               'bodas_menus');
+define('TBL_DEDICATORIAS',       'bodas_dedicatorias');
+define('TBL_CRONICA',            'bodas_cronicas');
 
 /*
 |--------------------------------------------------------------------------
