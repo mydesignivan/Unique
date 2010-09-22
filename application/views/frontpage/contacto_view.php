@@ -2,7 +2,7 @@
 
 <?php if( $this->session->flashdata('status_sendmail')=="ok" ){?>
 <div class="success">
-    Muchas Gracias por comunicarse con nosotros, nos comunicaremos con usted a la brevedad.
+    Gracias por CONTACTARNOS, nos comunicaremos a la brevedad.
 </div>
 <?php }elseif( $this->session->flashdata('status_sendmail')=="error" ){?>
 <div class="error">

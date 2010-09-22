@@ -9,13 +9,6 @@
 .text-size-80{font-size: 80% !important;}
 .text-size-90{font-size: 90% !important;}
 .text-size-120{font-size:120% !important}
-.trow{
-    float:left;
-    clear: both;
-    width: 100%;
-    margin: 7px 0 7px 0;
-}
-
 h1.title-section{
     float: left;
     border-bottom: 2px solid #AC3C45;
@@ -52,12 +45,31 @@ div.framegm{
     border:1px solid #ccc;
     padding: 1px;
 }
+.jq-tab p{font-size: 110%}
+.jq-tab ul li{font-size: 110%}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA FILAS
+ -----------------------------------------------------------------------------*/
+.trow{
+    float:left;
+    clear: both;
+    width: 100%;
+    margin: 7px 0 7px 0;
+}
 .trow2{
     width: 100%;
     text-align: center;
 }
-.jq-tab p{font-size: 110%}
-.jq-tab ul li{font-size: 110%}
+.trow3{
+    float: left;
+    clear: both;
+    border-bottom: 1px dashed #ccc;
+    padding:5px 0 5px 0;
+    margin-bottom: 5px;
+    width: 800px;
+    font-size: 110%;
+}
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA MENSAJES DEL VALIDADOR
