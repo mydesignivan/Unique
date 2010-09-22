@@ -49,6 +49,36 @@ var BodasList = new (function(){
         return false;
     };
 
+    this.popup_comments = function(id, view){
+        $.post(baseURI+'paneladmin/bodas/ajax_popup_comments/', {view:view, bodas_id:id}, function(data){
+            $('#popup').html(data).modal({
+                overlayClose : true,
+                onShow : function(){
+                    
+                }
+            });
+        });
+    };
+
+    this.comments_del = function(id){
+
+        if( confirm("¿Está seguro de eliminar?")){
+            $('#ajaxloader').show();
+
+            $.post(baseURI+'paneladmin/bodas/ajax_comments_del/'+id, function(data){
+                $('#ajaxloader').hide();
+                alert(data);
+                //if( data=="true" )
+            });
+        }
+
+    };
+
+    this.comments_del_sel = function(){
+
+    };
+
+
     /* PRIVATE PROPERTIES
      **************************************************************************/
      var _working=false;

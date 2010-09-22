@@ -29,7 +29,7 @@ class Bodas extends Controller {
             'tlp_section'        =>  'paneladmin/bodas_list_view.php',
             'listBodas'          =>  $this->bodas_model->get_list()
         ));
-        $this->load->view('template_frontpage_view', $this->_data);
+        $this->load->view('template_paneladmin_view', $this->_data);
     }
 
     public function form(){
@@ -50,7 +50,7 @@ class Bodas extends Controller {
         }
         
         $this->_data = $this->dataview->set_data($data);
-        $this->load->view('template_frontpage_view', $this->_data);
+        $this->load->view('template_paneladmin_view', $this->_data);
     }
 
     public function create(){
@@ -143,6 +143,29 @@ class Bodas extends Controller {
 
     public function ajax_order(){
         die($this->bodas_model->order() ? "success" : "error");
+    }
+
+    public function ajax_popup_comments(){
+        if( $_SERVER['REQUEST_METHOD']=="POST" ){
+
+            if( $_POST['view']=="bodas_dedicatorias_view" ){
+                $data = array('list' => $this->bodas_model->get_list_dedicatoria($_POST['bodas_id']));
+            }else{
+                $data = array('list' => $this->bodas_model->get_list_cronica($_POST['bodas_id']));
+            }
+
+            $this->load->view('paneladmin/ajax/'.$_POST['view'], $data);
+        }
+    }
+
+    public function ajax_comments_del(){
+        if( $this->uri->segment(4) ){
+            $id = $this->uri->segment_array();
+            array_splice($id, 0,3);
+
+            echo json_encode($this->bodas_model->comments_delete($id));
+            die();
+        }
     }
 
 

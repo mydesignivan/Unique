@@ -48,6 +48,21 @@ div.framegm{
 .jq-tab p{font-size: 110%}
 .jq-tab ul li{font-size: 110%}
 
+.title1{
+    margin: 2px 0 2px 0;
+}
+
+.ajaxloader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;left:0;
+    z-index: 1000;
+    background-color: transparent;
+    display: none;
+    text-align: center;
+}
+
 /*------------------------------------------------------------------------------
  - ESTILOS PARA FILAS
  -----------------------------------------------------------------------------*/
@@ -65,7 +80,7 @@ div.framegm{
     float: left;
     clear: both;
     border-bottom: 1px dashed #ccc;
-    padding:5px 0 5px 0;
+    padding:3px 0 8px 0;
     margin-bottom: 5px;
     width: 800px;
     font-size: 110%;
@@ -115,11 +130,11 @@ a.link-title{
 }
     a.link-title:hover{color:#581B23;}
 a.link1{
-    color:#A62D38;
+    color:#A62D38 !important;
     font-size: 100%;
     text-decoration: none;
 }
-    a.link1:hover{color:#581B23;}
+    a.link1:hover{color:#581B23 !important;}
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LABEL
@@ -558,9 +573,11 @@ ul.menu-bodas li{
  - ESTILO PARA TABLAS
  -----------------------------------------------------------------------------*/
 table{
+    clear: both;
     background-color: #F7F0E3;
     width: 100%;
     color: #A62D38 !important;
+    font-size: 110%;
 }
 table thead td{
     font-weight: bold;
@@ -606,6 +623,33 @@ table tbody tr.row-even{
     text-align: center;
 }
 .table-bodas .cell5{
+    width: 70px;
+    text-align: center;
+}
+.table-bodas .cell6{
     width: 100px;
     text-align: center;
+}
+.table-bodas .cell7{
+    width: 100px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLA "COMMENTS"
+ -----------------------------------------------------------------------------*/
+.table-comments .cell1{
+    width: 30px;
+    text-align: center;
+    padding: 0;
+}
+.table-comments .cell2{
+    width: 100px;
+}
+.table-comments .cell3{
+    width: 400px;
+}
+.table-comments .cell4{
+    text-align: center;
+    width: 90px;
 }

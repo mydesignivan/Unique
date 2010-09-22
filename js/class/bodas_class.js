@@ -54,7 +54,7 @@ var Bodas = new (function(){
 
     this.popup_login = function(){
         $.get(baseURI+'bodas/ajax_showpopup/', function(data){
-            $('#popup-login').html(data).modal({
+            $('#popup').html(data).modal({
                 overlayClose : true,
                 onShow : function(){
                     $('#txtUser').val('').focus();

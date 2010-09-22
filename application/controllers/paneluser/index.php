@@ -83,11 +83,11 @@ class Index extends Controller {
              break;
 
              case "bodas_dedicatorias_view":
-                 $data['list'] = $this->bodas_model->get_list_dedicatoria();
+                 $data['list'] = $this->bodas_model->get_list_dedicatoria($this->session->userdata('bodas_id'));
              break;
 
              case "bodas_cronicas_view":
-                 $data['list'] = $this->bodas_model->get_list_cronica();
+                 $data['list'] = $this->bodas_model->get_list_cronica($this->session->userdata('bodas_id'));
              break;
          }
 

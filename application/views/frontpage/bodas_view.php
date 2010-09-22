@@ -13,7 +13,7 @@
 
 <div class="clear span-22 align-center last"><img src="images/dibujo-cierre-seccion.png" alt="" width="140" height="28" /></div>
 
-<div id="popup-login"></div>
+<div id="popup"></div>
 
 <script type="text/javascript">
 <!--

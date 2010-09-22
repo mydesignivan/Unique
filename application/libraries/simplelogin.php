@@ -55,6 +55,7 @@ class Simplelogin{
             if( isset($row['level']) ) $data['level'] = $row['level'];
             if( isset($row['bodas_id']) ) $data['bodas_id'] = $row['bodas_id'];
             if( isset($row['users_id']) ) $data['users_id'] = $row['users_id'];
+            $data['username'] = $row['username'];
             
             $this->CI->session->set_userdata($data);
 

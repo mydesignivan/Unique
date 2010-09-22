@@ -4,7 +4,10 @@
 <?php if( count($list)>0 ){?>
     <h3 class="subtitle">Dedicatorias <img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
     <?php foreach( $list as $row ){?>
-    <div class="trow3"><?=nl2br($row['dedicatoria'])?></div>
+    <div class="trow3">
+        <p class="title1"><b>Escrito por:&nbsp;<?=$row['username']?></b></p>
+        <?=nl2br($row['dedicatoria'])?>
+    </div>
     <?php }?>
 <?php }?>
 

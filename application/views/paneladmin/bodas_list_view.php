@@ -26,9 +26,11 @@
         <tr>
             <td class="cell1">&nbsp;</td>
             <td class="cell2">Bodas</td>
-            <td class="cell3">Orden</td>
-            <td class="cell4">Modificar</td>
-            <td class="cell5">Eliminar</td>
+            <td class="cell3">Dedicatorias</td>
+            <td class="cell4">Cronicas</td>
+            <td class="cell5">Orden</td>
+            <td class="cell6">Modificar</td>
+            <td class="cell7">Eliminar</td>
         </tr>
     </thead>
     <tbody id="sortable">
@@ -42,14 +44,18 @@ foreach( $listBodas->result_array() as $row ) {
         <tr id="id<?=$row['bodas_id']?>" class="<?=$class?>">
             <td class="cell1"><input type="checkbox" value="<?=$row['bodas_id']?>" /></td>
             <td class="cell2"><a href="<?=$url?>" class="link-title"><?=ucwords($row['nombre_novia']." &amp; ".$row['nombre_novio'])?></a></td>
-            <td class="cell3"><a href="javascript:void(0)" class="handle"><img src="images/icon_arrow_move.png" alt="" width="16" alt="16" /></a></td>
-            <td class="cell4"><a href="<?=$url?>" class="link1"><img src="images/icon_edit.png" alt="" width="16" alt="16" /><span>Modificar</span></a></td>
-            <td class="cell5"><a href="javascript:void(BodasList.del(<?=$row['bodas_id']?>))" class="link1"><img src="images/icon_delete.png" alt="" width="16" alt="16" /><span>Eliminar</span></a></td>
+            <td class="cell3"><a href="javascript:void(BodasList.popup_comments(<?=$row['bodas_id']?>, 'bodas_dedicatorias_view'))" class="link1"><img src="images/icon_view.png" alt="" width="16" alt="16" /> Mostrar</a></td>
+            <td class="cell4"><a href="javascript:void(BodasList.popup_comments(<?=$row['bodas_id']?>, 'bodas_cronicas_view'))" class="link1"><img src="images/icon_view.png" alt="" width="16" alt="16" /> Mostrar</a></td>
+            <td class="cell5"><a href="javascript:void(0)" class="handle"><img src="images/icon_arrow_move.png" alt="" width="16" alt="16" /></a></td>
+            <td class="cell6"><a href="<?=$url?>" class="link1"><img src="images/icon_edit.png" alt="" width="16" alt="16" /><span>Modificar</span></a></td>
+            <td class="cell7"><a href="javascript:void(BodasList.del(<?=$row['bodas_id']?>))" class="link1"><img src="images/icon_delete.png" alt="" width="16" alt="16" /><span>Eliminar</span></a></td>
         </tr>
 <?php }?>
     </tbody>
 </table>
 <?php }?>
+
+<div id="popup"></div>
 
 <script type="text/javascript">
 <!--

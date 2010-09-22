@@ -237,9 +237,11 @@ class Bodas_model extends Model {
         return $this->db->insert(TBL_DEDICATORIAS, $data);
     }
 
-    public function get_list_dedicatoria(){
-        $this->db->order_by('id', 'desc');
-        return $this->db->get_where(TBL_DEDICATORIAS, array('bodas_id' => $this->session->userdata('bodas_id')))->result_array();
+    public function get_list_dedicatoria($id){
+        $this->db->select(TBL_BODAS.'.username, '.TBL_DEDICATORIAS.'.*');
+        $this->db->join(TBL_BODAS, TBL_DEDICATORIAS.'.bodas_id='.TBL_BODAS.'.bodas_id');
+        $this->db->order_by(TBL_DEDICATORIAS.'.id', 'desc');
+        return $this->db->get_where(TBL_DEDICATORIAS, array(TBL_DEDICATORIAS.'.bodas_id' => $id))->result_array();
     }
 
     public function save_cronica(){
@@ -250,9 +252,11 @@ class Bodas_model extends Model {
         return $this->db->insert(TBL_CRONICA, $data);
     }
 
-    public function get_list_cronica(){
-        $this->db->order_by('id', 'desc');
-        return $this->db->get_where(TBL_CRONICA, array('bodas_id' => $this->session->userdata('bodas_id')))->result_array();
+    public function get_list_cronica($id){
+        $this->db->select(TBL_BODAS.'.username, '.TBL_CRONICA.'.*');
+        $this->db->join(TBL_BODAS, TBL_CRONICA.'.bodas_id='.TBL_BODAS.'.bodas_id');
+        $this->db->order_by(TBL_CRONICA.'.id', 'desc');
+        return $this->db->get_where(TBL_CRONICA, array(TBL_CRONICA.'.bodas_id' => $id))->result_array();
     }
 
 
@@ -263,6 +267,12 @@ class Bodas_model extends Model {
          $where = $id==0 ? array('username'=>$v) : array('bodas_id !='=>$id, 'username'=>$v);
          return $this->db->get_where(TBL_BODAS, $where)->num_rows>0;
      }
+
+     public function comments_delete($id){
+         $this->db->where_in('id', $id);
+         return $this->db->delete(TBL_DEDICATORIAS, $id);
+     }
+
 
     /* PRIVATE FUNCTIONS
      **************************************************************************/
