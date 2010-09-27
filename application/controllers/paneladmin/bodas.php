@@ -163,7 +163,10 @@ class Bodas extends Controller {
             $id = $this->uri->segment_array();
             array_splice($id, 0,3);
 
-            echo json_encode($this->bodas_model->comments_delete($id));
+            $res = $this->bodas_model->comments_delete($id);
+            echo $res;
+
+            echo json_encode($res);
             die();
         }
     }

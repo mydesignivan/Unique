@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.0.1
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-09-2010 a las 00:06:19
--- Versión del servidor: 5.1.37
--- Versión de PHP: 5.3.0
+-- Tiempo de generación: 27-09-2010 a las 14:53:02
+-- Versión del servidor: 5.1.41
+-- Versión de PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -61,9 +61,9 @@ CREATE TABLE IF NOT EXISTS `bodas` (
 --
 
 INSERT INTO `bodas` (`bodas_id`, `username`, `password`, `nombre_novio`, `apellido_novio`, `nombre_novia`, `apellido_novia`, `historia_novia`, `imagen_novia`, `imagen_novia_width`, `imagen_novia_height`, `historia_novio`, `imagen_novio`, `imagen_novio_width`, `imagen_novio_height`, `historia_novios`, `imagen_novios`, `imagen_novios_width`, `imagen_novios_height`, `nombre_salon`, `nombre_iglesia`, `google_maps_salon`, `google_maps_iglesia`, `order`, `date_added`, `last_modified`) VALUES
-(4, 'invitado1', 'g6eKr0l/IQKa7AI89hQU0sP5AK8=', 'Gabriel', 'Asdfsf', 'Paula', 'Sdasd', 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848646864c957aae1f82c__06weddingsgreen.jpg', 108, 81, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647034c957abf2159f__1196069610_ta_weddings_small.jpg', 108, 72, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647214c957ad1cc7fe__bodas-foto-1.jpg', 210, 300, 'quinta al amanecer', 'San Nicolás', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 1, '2010-09-18 23:54:02', '2010-09-20 14:45:08'),
+(4, 'invitado1', 'g6eKr0l/IQKa7AI89hQU0sP5AK8=', 'Gabriel', 'Asdfsf', 'Paula', 'Sdasd', 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848646864c957aae1f82c__06weddingsgreen.jpg', 108, 81, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647034c957abf2159f__1196069610_ta_weddings_small.jpg', 108, 72, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647214c957ad1cc7fe__bodas-foto-1.jpg', 210, 300, 'quinta al amanecer', 'San Nicolás', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 3, '2010-09-18 23:54:02', '2010-09-20 14:45:08'),
 (5, 'invitado2', 'HJrAeQa1bPL2/n9CtDpz3qfMNk8=', 'Eduardo', 'Rwrwer', 'Andrea', 'Dsasa', 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650414c957c119d67e__battle-wedding-planners.jpg', 108, 81, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650604c957c2468273__salon_boda_decoracion.jpg', 108, 73, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650764c957c348dc79__bodas-foto-2.jpg', 210, 300, 'erere', 'erert', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 2, '2010-09-18 23:58:32', '2010-09-20 14:46:58'),
-(6, 'invitado3', 'ZNvOhLu2jhm84c9ONuO7og==', 'Guillermo', 'Sdfsdf', 'Veronica', 'Dafsd', 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848652114c957cbb69813__1196069610_ta_weddings_small.jpg', 108, 72, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848651694c957c9121f79__bay-area-weddings.jpg', 108, 81, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848651414c957c75e7b99__bodas-foto-3.jpg', 210, 300, 'sdfsd', 'werwer', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 3, '2010-09-19 00:00:16', '2010-09-20 14:47:48');
+(6, 'invitado3', 'ZNvOhLu2jhm84c9ONuO7og==', 'Guillermo', 'Sdfsdf', 'Veronica', 'Dafsd', 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848652114c957cbb69813__1196069610_ta_weddings_small.jpg', 108, 72, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848651694c957c9121f79__bay-area-weddings.jpg', 108, 81, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848651414c957c75e7b99__bodas-foto-3.jpg', 210, 300, 'sdfsd', 'werwer', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 4, '2010-09-19 00:00:16', '2010-09-20 14:47:48');
 
 -- --------------------------------------------------------
 
@@ -75,6 +75,7 @@ DROP TABLE IF EXISTS `bodas_cronicas`;
 CREATE TABLE IF NOT EXISTS `bodas_cronicas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `bodas_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `cronica` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
@@ -83,13 +84,6 @@ CREATE TABLE IF NOT EXISTS `bodas_cronicas` (
 -- Volcar la base de datos para la tabla `bodas_cronicas`
 --
 
-INSERT INTO `bodas_cronicas` (`id`, `bodas_id`, `cronica`) VALUES
-(9, 4, 'asdaasd\nasdasdas\nasds'),
-(10, 4, 'weqweqweqw eqwe'),
-(11, 4, 'zxcx'),
-(12, 4, 'zxx'),
-(13, 4, 'asdasa'),
-(14, 4, 'dsfdsf');
 
 -- --------------------------------------------------------
 
@@ -101,23 +95,14 @@ DROP TABLE IF EXISTS `bodas_dedicatorias`;
 CREATE TABLE IF NOT EXISTS `bodas_dedicatorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `bodas_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `dedicatoria` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcar la base de datos para la tabla `bodas_dedicatorias`
 --
-
-INSERT INTO `bodas_dedicatorias` (`id`, `bodas_id`, `dedicatoria`) VALUES
-(1, 4, 'zxczxczxc\n\nzxc'),
-(2, 4, 'dsfsdfsdf sdf s df sdfsd f sdfs fsdfset ryreterterwt ewrtwertwert wertwertwe ertwert\nwertwertwertwertwerwert wertwer wertwertwret\nwertewrt'),
-(3, 4, 'zxczxcsd a sdajshgdjasdasd\nasdasd'),
-(4, 4, 'ultima dedicatoria'),
-(5, 4, 'prueba'),
-(6, 4, 'prueba'),
-(7, 4, 'xczdd'),
-(8, 4, 'asa');
 
 -- --------------------------------------------------------
 
@@ -232,30 +217,7 @@ INSERT INTO `bodas_regalos` (`regalo_id`, `bodas_id`, `regalo`) VALUES
 (93, 5, 'werer'),
 (94, 6, 'dfgdf');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ci_sessions`
---
-
-DROP TABLE IF EXISTS `ci_sessions`;
-CREATE TABLE IF NOT EXISTS `ci_sessions` (
-  `session_id` varchar(40) NOT NULL DEFAULT '0',
-  `ip_address` varchar(16) NOT NULL DEFAULT '0',
-  `user_agent` varchar(50) NOT NULL,
-  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
-  `user_data` varchar(500) NOT NULL,
-  PRIMARY KEY (`session_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Volcar la base de datos para la tabla `ci_sessions`
---
-
-INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('9045a8ab084e601cdb6a6ae6f04a1395', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.2.9', 1285192981, 'a:4:{s:9:"logged_in";s:1:"1";s:5:"level";s:1:"1";s:8:"users_id";s:1:"3";s:8:"username";s:8:"mydesign";}');
-
--- --------------------------------------------------------
+-- ---------------------------------------
 
 --
 -- Estructura de tabla para la tabla `contents`
@@ -282,7 +244,7 @@ INSERT INTO `contents` (`content_id`, `reference`, `title`, `content`, `date_add
 (3, 'modalidad', 'Modalidad', '<p lang="es-ES"><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><strong>Etapas del servicio:</strong></span></span></p>\n<p lang="es-ES"><span style="color: #000000;"><span style="font-family: Arial,sans-serif;">Para llevar a cabo eficazmente la organizaci&oacute;n y coordinaci&oacute;n del evento contamos con 5 etapas principales:</span></span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><img style="float: right;" src="/trabajos/unique.git/uploads/kcfinder/image/modalidad-foto.png" alt="" width="339" height="422" /></span></span></p>\n<ol>\n<li>\n<p><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><strong>Planificaci&oacute;n 	y organizaci&oacute;n</strong></span></span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;">: 	En principio, se determina el concepto o tem&aacute;tica de la boda, se 	define el presupuesto total aproximado y se inicia una gu&iacute;a con los 	pasos y procesos para la optimizaci&oacute;n de la organizaci&oacute;n, donde se 	establece un cronograma con las acciones desde el inicio de la 	planificaci&oacute;n hasta su finalizaci&oacute;n.</span></span><span style="color: #000000;"></span></p>\n</li>\n<li>\n<p><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><strong>Realizaci&oacute;n, 	direcci&oacute;n y control</strong></span></span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;">: 	Orientado a la ejecuci&oacute;n de lo pautado y su seguimiento y control 	para evitar futuras eventualidades. Comprende la b&uacute;squeda y 	selecci&oacute;n de los proveedores acordes al acontecimiento, programar 	las entrevistas en funci&oacute;n de las necesidades operativas, revisi&oacute;n 	permanente de situaciones cr&iacute;ticas, disponibilidad del mobiliario y 	ubicaci&oacute;n de invitados y proveedores, confirmaci&oacute;n de asistencia, 	gesti&oacute;n hotelera y de traslado, manejo de la sincronizaci&oacute;n del 	evento, acompa&ntilde;amiento, asesoramiento y supervisi&oacute;n continua.</span></span></p>\n</li>\n<li>\n<p><span style="color: #000000;">&ldquo;</span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><strong>D&iacute;a 	D&rdquo;:</strong></span></span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"> Se refiere a la log&iacute;stica y coordinaci&oacute;n del d&iacute;a de la boda, 	poniendo en pr&aacute;ctica todo lo planeado anteriormente, verificando 	acciones para obtener soluciones ante situaciones no previstas, 	dirigiendo todos los servicios para su correcta ejecuci&oacute;n en tiempo 	y forma. Para ello se cuenta con la presencia del profesional 	durante el armado y el desarrollo del evento.</span></span></p>\n</li>\n<li>\n<p><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><strong>Post-evento: </strong></span></span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;">Nos 	ocupamos de verificar y controlar el estado de los materiales 	utilizados por los proveedores. Y adem&aacute;s se enviar&aacute; tarjetas de 	salutaci&oacute;n. </span></span></p>\n</li>\n<li>\n<p><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"><strong>Fidelizaci&oacute;n 	al cliente:</strong></span></span><span style="color: #000000;"><span style="font-family: Arial,sans-serif;"> Posterior contacto con los reci&eacute;n casados. </span></span></p>\n</li>\n</ol>', '2010-09-12 18:07:09', '2010-09-12 02:50:35'),
 (4, 'bodas', 'Bodas', '"Bodas" es un espacio para que guardes el mejor recuerdo de un d&iacute;a inolvidable. D&oacute;nde podr&aacute;s compartir la celebraci&oacute;n, antes, durante y despu&eacute;s. Manteniendo una continua comunicaci&oacute;n con los invitados para informar de todos los detalles de la boda: iglesia, sal&oacute;n, men&uacute;, listas de regalos, fotos. Adem&aacute;s los invitados podr&aacute;n confirmar su asistencia, enviar dedicatorias de boda, as&iacute; como, dietas especiales para confeccionar mejor el men&uacute;.<br /><br />', '2010-09-12 18:07:09', '2010-09-14 14:28:34'),
 (5, 'contacto', 'Contacto', '<p style="text-align: center;">&nbsp;</p>\n<p style="text-align: center;"><strong>Patricia Armenault</strong> &ndash; 261 156179911<br /><strong>Mar&iacute;a Eugenia Burriguini</strong> &ndash; 261 155270538<br />Wedding Planners<br />info@uniquewp.com.ar<br />Ciudad Mendoza</p>', '2010-09-12 18:07:09', '2010-09-12 02:58:55'),
-(6, 'footer', 'Footer', '<p><a href="/unique.git/index.php/"><img src="/uploads/kcfinder/image/iconos/icon_facebook.png" alt="Facebook" width="32" height="32" /></a>&nbsp;&nbsp;<a href="/unique.git/index.php/"><img src="/uploads/kcfinder/image/iconos/icon_twitter.png" alt="Twitter" width="32" height="32" /></a></p>', '2010-09-12 18:07:09', '2010-09-19 19:45:19');
+(6, 'footer', 'Footer', '<p><a href="/unique.git/index.php/"><img src="./uploads/kcfinder/image/iconos/icon_facebook.png" alt="Facebook" width="32" height="32" /></a>&nbsp;&nbsp;<a href="/unique.git/index.php/"><img src="./uploads/kcfinder/image/iconos/icon_twitter.png" alt="Twitter" width="32" height="32" /></a></p>', '2010-09-12 18:07:09', '2010-09-19 19:45:19');
 
 -- --------------------------------------------------------
 

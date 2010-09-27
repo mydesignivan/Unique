@@ -301,7 +301,7 @@ fieldset.gallery-panel2{
  -----------------------------------------------------------------------------*/
 .header .header-top{
     text-align: center;
-    padding: 50px 0 40px 0;
+    padding: 10px 0 0 0;
 }
 
 
@@ -444,7 +444,7 @@ ul.menu-bodas li{
  - ESTILO QUE ESTAN EN EL "MAIN CONTAINER"
  -----------------------------------------------------------------------------*/
 .main-container{
-    margin-top: 10px;
+    margin-top: -10px;
 }
     .main-container .t, .main-container .i, .main-container .b{
         float: left;
@@ -496,7 +496,7 @@ ul.menu-bodas li{
  -----------------------------------------------------------------------------*/
 .footer{
     text-align: center;
-    margin: 20px 0 20px 0;
+    margin-top:-20px;
     color: #fff;
 }
     .footer a{

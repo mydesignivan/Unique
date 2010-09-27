@@ -1,0 +1,494 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: administer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-19 22:39-0800\n"
+"PO-Revision-Date: 2008-04-04 17:17-0800\n"
+"Last-Translator: \n"
+"Language-Team: dagensskiva <henrik@dagensskiva.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+"X-Poedit-Basepath: /Users/henrik/Sites/wordpress/wp-content/plugins/ad-minister\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister\n"
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-content.php:2
+msgid "Here the content in Ad-minister is listed. Green rows indicate that the content is visible, and red that it is not. Click on the headers to sort the table according to the values of that column. To reverse the order click the arrow. To edit content click on the title."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:51
+msgid "Saved!"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:71
+msgid "Deleted!"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:76
+msgid "There is no content! Do make some."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:98
+msgid "impression"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:98
+msgid "impressions"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:101
+msgid "click"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:101
+msgid "clicks"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:107
+msgid "Are you sure you want to set the impressions to zero?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:107
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:108
+msgid "Reset"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:108
+msgid "Are you sure you want to set the clicks to zero?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:109
+msgid "Tracker url"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:115
+msgid "To create static content, fill in the Title, Position and the html code that constitues the content. You can set the visibility of the ad and the weight. Use the file browser below to upload and add an image/file."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:122
+msgid "Title"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:131
+msgid "Html code"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:142
+msgid "Scheduele"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:146
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:165
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:185
+msgid "Optional"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:152
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:687
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:155
+msgid "Position"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:161
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:696
+msgid "Impressions"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:171
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:699
+msgid "Clicks"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:175
+msgid "Optional, see documentation on how to make this work."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:181
+msgid "Weight"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:191
+msgid "Make visible?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:194
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:203
+msgid "tick for yes"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:200
+msgid "Use wrapper?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:211
+msgid "Save & preview"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:212
+msgid "Save"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:216
+msgid "Are you sure you want to delete this content?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-create.php:220
+msgid "Delete this"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:28
+msgid "Content"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:29
+msgid "Create content"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:30
+msgid "Positions/Widgets"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:31
+msgid "Settings"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:32
+msgid "Help"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:61
+msgid "Edit"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:62
+msgid "Remove"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:105
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:106
+msgid "orphan"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:207
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:214
+msgid "has"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:207
+#, php-format
+msgid "% of impressions left"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:214
+#, php-format
+msgid "% of clicks left"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:220
+msgid "expires in"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:224
+msgid "starts in"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:224
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:621
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:622
+msgid "days"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:230
+msgid "Go to"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:562
+msgid "Sort up"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:562
+msgid "Sort down"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:621
+msgid "Starts in"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:622
+msgid "Ends in"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:651
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:143
+msgid "Yes"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:651
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:142
+msgid "No"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:666
+msgid "No data available"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:681
+msgid "ID"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:684
+msgid "Content title"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:690
+msgid "Visible"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-functions.php:693
+msgid "Time left"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-help.php:23
+msgid "Looking for help?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-help.php:25
+msgid "For more information on how this plugin works, go to"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-help.php:27
+msgid "Please report bugs to"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-help.php:29
+msgid "This plugin is geared towards the generation of revenue for websites by enabling the ease of hadling advertising. It is completely free, but if you feel that you've made enough money to contribute to this project, then please do. Your contibution will enable the future development of this plugin."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-help.php:38
+msgid "Donate via PayPal!"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:14
+msgid "That position name already exists!"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:48
+msgid "Position deleted."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:49
+msgid "Error! Cannot delete a positon that does not exist."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:50
+msgid "Error! Position key missing!"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:57
+msgid "Before you can add content you need to define some positions. These positions will be where your content appears."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:71
+msgid "Positions are just that, 'positions' at which you want content to appear. A positions can be defined within a template, such as in a header for banner-ads, or a position can be a widget, which can be dragged onto a sidebar. Each position may have an optional description and html code which wraps the content withing a position. For example, this may be <em>&lt;div class=&quot;ads&quot;&gt;</em> before, and <em>&lt;/div&gt;</em> after."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:76
+msgid "Create/edit position"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:81
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:132
+msgid "Warning!"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:82
+msgid "You are editing a template position. If the description and wrapper code is also set in the template, then these values will reset when the template is reloaded."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:88
+msgid "Name"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:93
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:159
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:185
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:221
+msgid "Description"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:97
+msgid "Code before"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:101
+msgid "Code after"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:106
+msgid "Save position"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:124
+msgid "You are about to delete position"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:126
+#, php-format
+msgid "There are %s ads currently attached to this position. Deleting this position will make those ads orphans."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:128
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:133
+msgid "You are about to delete a template position. If the positions is still declared within the template, then this position will re-appear when the template is re-loaded."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:163
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:222
+msgid "Wrapper"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:179
+msgid "These are the positions defined within the theme that you are using."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:184
+msgid "Position Name"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:187
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:223
+msgid "Actions"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:200
+msgid "There are currently no template positions defined. %a%See the documentation%b% on how to do that"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:214
+msgid "Below are the Ad-minister widgets available to be <a href=\"widgets.php\">placed your blog</a> (On the widget page the positions below starts with 'Ad: ' on as to identify them)."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:220
+msgid "Widget Name"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-positions.php:234
+msgid "There are currently no widget positions"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:9
+msgid "Options saved."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:11
+msgid "Error! The ID must be a number. Try again."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:47
+msgid "Before you get started you must specify the ID of an existing post or page that will hold the content."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:51
+msgid "Error! The ID you supplied does not exist"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:51
+msgid "Go create a one"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:55
+msgid "The content is currently attached to post/page ID <strong>"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:55
+msgid "Warning! Changing the ID will cause the positions and content to dissapear. Please do proceed with caution."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:55
+msgid "Change"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:67
+msgid "Setup"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:69
+msgid "The content attaches itself to a post or page. Specify the ID of the post or page that you want the content to be attached to. Make sure this is not a page that you are likely to delete."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:71
+msgid "ID of page to attach the ads to"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:76
+msgid "Notifications"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:78
+msgid "Alert on the Dashboard of upcoming content expiration or activation."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:79
+msgid "Number of days to check for upcoming events"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:80
+msgid "Minimum percentage of clicks/impressions left before alerting"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:84
+msgid "Theme widets"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:86
+msgid "Make theme widgets?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:91
+msgid "Statistics"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:93
+msgid "Log content impressions and clicks?"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:98
+msgid "User access"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:100
+msgid "The minimum <a href=\"http://codex.wordpress.org/User_Levels\">User Level</a> required to access Ad-minister."
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:104
+msgid "Administrator"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:105
+msgid "Editor"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:106
+msgid "Author"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:107
+msgid "Contributor"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister-settings.php:125
+msgid "Update Settings"
+msgstr ""
+
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister.php:123
+#: /Users/henrik/Sites/wordpress25/wp-content/plugins/ad-minister/ad-minister.php:124
+msgid "Manage"
+msgstr ""
+

@@ -1,0 +1,6 @@
++++ Para informaci—n sobre como instalar esta traducci—n visita: http://www.todowp.org/wordpress-en-castellano/. +++
+
+
+Esta traduccion se encuentra bajo licencia Creative Commons. Puedes ver los detalles de esta licencia en: http://creativecommons.org/licenses/by-sa/3.0/es/
+
+WordPress 2.8.4 ha sido traducido por el equipo de TodoWordPress. Si encuentras algœn error, contacta con nosotros en traducciones@todowp.org o deja un comentario en la p‡gina de traducciones de WordPress en espa–ol http://www.todowp.org/wordpress-en-castellano/.

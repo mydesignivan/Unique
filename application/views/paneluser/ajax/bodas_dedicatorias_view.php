@@ -5,12 +5,16 @@
     <h3 class="subtitle">Dedicatorias <img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
     <?php foreach( $list as $row ){?>
     <div class="trow3">
-        <p class="title1"><b>Escrito por:&nbsp;<?=$row['username']?></b></p>
+        <p class="title1"><b>Escrito por:&nbsp;<?=$row['name']?></b></p>
         <?=nl2br($row['dedicatoria'])?>
     </div>
     <?php }?>
 <?php }?>
 
+    <div class="trow">
+        <label class="label label-contact" for="txtName">Nombre</label>
+        <div class="fleft"><textarea id="txtName" name="txtName" rows="5" cols="22" class="textarea-contact2"></textarea></div>
+    </div>
     <div class="trow">
         <label class="label label-contact" for="txtDedicatoria">Escribe tu dedicatoria</label>
         <div class="fleft"><textarea id="txtDedicatoria" name="txtDedicatoria" rows="5" cols="22" class="textarea-contact2"></textarea></div>

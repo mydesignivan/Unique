@@ -1,0 +1,88 @@
+/* @override http://dbc.dagensskiva.com/wp-content/plugins/ad-minister/ad-minister.css */
+
+a.sort {
+   	color: #d7d7d7;
+}
+
+/**
+***    ADD CONTENT
+**/
+
+input.create {
+	width: 97%;
+}
+tr.title {
+	background: #eeeeee;
+}
+label.create {
+	 font-weight: bold;
+}
+
+
+/**
+***    POSITIONS
+**/
+.positionKey {
+	width: 25%;
+}
+.templatePositions thead th {	
+	padding: 10px;
+}
+.templateFunctions {
+	width: 25%;	
+}
+.templatePositionsDescription {
+	width: 25%;
+}
+.templatePositionsActions {
+	width: 25%;
+}
+
+
+/**
+***   The tabs at the top.
+**/
+.tabs
+{
+	margin: 0;
+	padding: 0 0 0 0;
+	list-style: none;
+	overflow: hidden;
+	background: #eeeeee;
+}
+
+.tabs li
+{
+	float: left;
+	white-space: nowrap;
+	margin: 0;
+}
+
+.tabs li a
+{
+	border: 1px solid #dedede;
+	border-top: none;
+	padding: 6px;
+	display: block;
+	background: #eeeeee;
+	text-decoration: none;
+}
+
+	.tabs li a:hover 
+	{
+		border: 1px solid #bbb;
+		border-top: none;
+	}
+
+.tabs li a.tabs-current
+{
+	background: #fff;
+	border: none;
+	color: #D54E21;
+	border-bottom: 1px solid #fff;
+}
+
+div th a {
+/*    font-size: 12px; */
+   color: #d7d7d7;
+}
