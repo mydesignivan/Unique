@@ -12,8 +12,8 @@
 <?php }?>
 
     <div class="trow">
-        <label class="label label-contact" for="txtName">Nombre</label>
-        <div class="fleft"><textarea id="txtName" name="txtName" rows="5" cols="22" class="textarea-contact2"></textarea></div>
+        <label class="label label-contact" for="txtNameDedicatoria">* Nombre<br/></label>
+        <div class="fleft"><input type="text" id="txtNameDedicatoria" name="txtNameDedicatoria" class="input-contact" /></div>
     </div>
     <div class="trow">
         <label class="label label-contact" for="txtDedicatoria">Escribe tu dedicatoria</label>

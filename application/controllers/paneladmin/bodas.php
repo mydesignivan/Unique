@@ -159,16 +159,19 @@ class Bodas extends Controller {
     }
 
     public function ajax_comments_del(){
-        if( $this->uri->segment(4) ){
-            $id = $this->uri->segment_array();
-            array_splice($id, 0,3);
+        $id = $this->uri->segment_array();
+        array_splice($id, 0,4);
+        $tabla=$this->uri->segment(4);
 
-            $res = $this->bodas_model->comments_delete($id);
-            echo $res;
 
-            echo json_encode($res);
-            die();
-        }
+         $res = $this->bodas_model->comments_delete($id, $tabla);
+
+
+        echo json_encode($res);
+        die();
+
+        
+       
     }
 
 

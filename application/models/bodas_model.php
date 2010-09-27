@@ -232,6 +232,7 @@ class Bodas_model extends Model {
     public function save_dedicatoria(){
         $data = array(
             'bodas_id'    => $this->session->userdata('bodas_id'),
+            'name' => $_POST['txtNameDedicatoria'],
             'dedicatoria' => $_POST['txtDedicatoria']
         );
         return $this->db->insert(TBL_DEDICATORIAS, $data);
@@ -247,6 +248,7 @@ class Bodas_model extends Model {
     public function save_cronica(){
         $data = array(
             'bodas_id'    => $this->session->userdata('bodas_id'),
+            'name' => $_POST['txtNameCronica'],
             'cronica'     => $_POST['txtCronica']
         );
         return $this->db->insert(TBL_CRONICA, $data);
@@ -268,9 +270,12 @@ class Bodas_model extends Model {
          return $this->db->get_where(TBL_BODAS, $where)->num_rows>0;
      }
 
-     public function comments_delete($id){
-         $this->db->where_in('id', $id);
-         return $this->db->delete(TBL_DEDICATORIAS, $id);
+     public function comments_delete($comment_array_id, $tabla){
+  //       $this->db->where_in('id', $id);
+         foreach($comment_array_id as $comment_id){
+            $this->db->delete($tabla, array("id"=>$comment_id));
+         }
+         return true;
      }
 
 

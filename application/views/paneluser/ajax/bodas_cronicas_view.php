@@ -5,11 +5,15 @@
     <h3 class="subtitle">Cronicas<img src="images/dibujo-index.png" alt="" width="47" height="18" /></h3>
     <?php foreach( $list as $row ){?>
     <div class="trow3">
-        <p class="title1"><b>Escrito por:&nbsp;<?=$row['username']?></b></p>
+        <p class="title1"><b>Escrito por:&nbsp;<?=$row['name']?></b></p>
         <?=nl2br($row['cronica'])?>
     </div>
     <?php }?>
 <?php }?>
+    <div class="trow">
+        <label class="label label-contact" for="txtNameCronica">* Nombre<br/></label>
+        <div class="fleft"><input type="text" id="txtNameCronica" name="txtNameCronica" class="input-contact" /></div>
+    </div>
     <div class="trow">
         <label class="label label-contact" for="txtCronica">Escribe tu cr&oacute;nica</label>
         <div class="fleft"><textarea id="txtCronica" name="txtCronica" rows="5" cols="22" class="textarea-contact2"></textarea></div>

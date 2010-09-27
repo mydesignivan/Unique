@@ -50,6 +50,8 @@ var BodasList = new (function(){
     };
 
     this.popup_comments = function(id, view){
+        _bodasid=id;
+        _view=view;
         $.post(baseURI+'paneladmin/bodas/ajax_popup_comments/', {view:view, bodas_id:id}, function(data){
             $('#popup').html(data).modal({
                 overlayClose : true,
@@ -60,21 +62,32 @@ var BodasList = new (function(){
         });
     };
 
-    this.comments_del = function(id){
+    this.comments_del = function(id, tabla){
 
         if( confirm("¿Está seguro de eliminar?")){
             $('#ajaxloader').show();
 
-            $.post(baseURI+'paneladmin/bodas/ajax_comments_del/'+id, function(data){
-                $('#ajaxloader').hide();
-                alert(data);
-                //if( data=="true" )
-            });
+
+           _del_comment(id, tabla);
+           
         }
 
     };
 
-    this.comments_del_sel = function(){
+    this.comments_del_sel = function(tabla){
+        var list = $("#tblList tbody input:checked");
+        if( list.length==0 ){
+            alert("Debe seleccionar un item.");
+            return false;
+        }
+
+        var data = get_data(list);
+
+        if( confirm("¿Está seguro de eliminar la(s) boda(s) seleccionada(s)?") ){
+            _del_comment(data.id.join("/"), tabla);
+        
+        }
+        return false;
 
     };
 
@@ -82,9 +95,22 @@ var BodasList = new (function(){
     /* PRIVATE PROPERTIES
      **************************************************************************/
      var _working=false;
+     var _bodasid=0;
+     var _view=0;
 
     /* PRIVATE METHODS
      **************************************************************************/
+
+    var _del_comment = function(id, tabla){
+        
+        $.post(baseURI+'paneladmin/bodas/ajax_comments_del/'+tabla+"/"+id, function(data){
+                $('#ajaxloader').hide();
+                if( data=="true" ){
+                    BodasList.popup_comments(_bodasid, _view);
+                }
+            });
+    }
+
     var _save_order = function(arr, initorder, callback){
         $.post(baseURI+'paneladmin/bodas/ajax_order/', {rows : JSON.encode(arr), initorder : initorder}, function(data){
             _working = false;

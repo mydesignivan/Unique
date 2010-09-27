@@ -1,9 +1,11 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
 <?php if( count($list)>0 ){?>
+    <h1 class="align-center" >Dedicatorias</h1>
+
     <div class="trow">
         <div class="fright">
-            <button type="button" onclick="BodasList.comments_del_sel();">Eliminar Seleccionados</button>
+            <button type="button" onclick="BodasList.comments_del_sel('<?=TBL_DEDICATORIAS?>');">Eliminar Seleccionados</button>
         </div>
     </div>
 
@@ -27,7 +29,7 @@
                 <td class="cell1"><input type="checkbox" value="<?=$row['id']?>" /></td>
                 <td class="cell2"><?=$row['username']?></td>
                 <td class="cell3"><?=nl2br($row['dedicatoria'])?></td>
-                <td class="cell4"><a href="javascript:void(BodasList.comments_del(<?=$row['id']?>))" class="link1"><img src="images/icon_delete.png" alt="" width="16" alt="16" /><span>Eliminar</span></a></td>
+                <td class="cell4"><a href="javascript:void(BodasList.comments_del(<?=$row['id']?>,'<?=TBL_DEDICATORIAS?>'))" class="link1"><img src="images/icon_delete.png" alt="" width="16" alt="16" /><span>Eliminar</span></a></td>
             </tr>
     <?php }?>
         </tbody>

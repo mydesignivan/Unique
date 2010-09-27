@@ -24,7 +24,7 @@ var Bodas = new (function(){
         $('#form1').validate(o);
 
         formatNumber.init('#txtPhoneNum, #txtPhoneCode, #txtAdultos, #txtNinio');
-        $('#txtNameInvitado').blur(function(){$(this).ucTitle()});
+    //    $('#txtNameInvitado').blur(function(){$(this).ucTitle()});
     };
 
     this.load_menu = function(vista, num_op){
