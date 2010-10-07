@@ -219,10 +219,8 @@ $src = isset($info) ? UPLOAD_PATH_PAREJA . $info['imagen_novios'] : '';
         &nbsp;<button id="btnGenerarPass" type="button" onclick="Bodas.generate_pass();">Generar password</button>
     </div>
 
-    <div class="trow" style="width:470px">
-        <div class="fright">
-            <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button fright" value="Guardar" />
-        </div>
+    <div class="trow align-right" style="width:470px">
+       <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" style="position: relative; top:8px;" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button" value="Guardar" />
     </div>
 
     <input type="hidden" name="json" id="json" />

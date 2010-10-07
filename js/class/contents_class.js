@@ -3,7 +3,7 @@ var Contents = new (function(){
     /* PUBLIC METHODS
      **************************************************************************/
     this.initializer = function(){
-        TinyMCE_init.width = '600px';
+        TinyMCE_init.width = '100%';
         TinyMCE_init.height = '300px';
         TinyMCE_init.mode = 'exact';
     };

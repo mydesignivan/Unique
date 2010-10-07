@@ -20,6 +20,9 @@
 ?></title>
 
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
+<!--[if IE 7]>
+<link href="http://www.uniquewp.com.ar/novedades/wp-content/themes/koi/style_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
 
 <?php if ( is_single() || is_page() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
@@ -36,7 +39,7 @@
 	if ( !$theme_opts['social_off'] ) include (TEMPLATEPATH . "/socialmedia.php"); ?>
 
 	<ul id="nav">
-		<li<?php if (is_home()) { echo ' class="current_home"'; }?>><a href="http://www.uniquewp.com.ar<?php //echo get_option('home'); ?>"><div class="l"></div><div class="m"><?php _e('Home','ndesignthemes'); ?></div><div class="r"></div></a></li>
+		<li<?php if (is_home()) { echo ' class="current_home"'; }?>><a href="http://www.uniquewp.com.ar<?php //echo get_option('home'); ?>"><span class="l"></span><span class="m"><?php _e('Home','ndesignthemes'); ?></span><span class="r"></span></a></li>
 		<?php wp_list_pages(array(
 		    'sort_column' => 'menu_order',
 		    'title_li' => '',

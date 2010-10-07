@@ -189,12 +189,11 @@ input[type=reset], input[type=submit] {
     bottom: -2px;
     list-style: none;
     padding: 0;
-    width:900px;
+    width:930px;
     height:65px;
     /*border:1px solid red;*/
-    font-size: 100%;
+    font-size: 104%;
     font-family:georgia,palatino !important;/*Garamond,"Minion Web","ITC Stone Serif","MS Georgia","Bitstream Cyberbi";*/
-    font-variant: small-caps;
     /*background: url(http://www.uniquewp.com.ar/novedades/wp-content/uploads/2010/09/menu-unique.png) no-repeat left bottom;*/
 }
 #nav li {

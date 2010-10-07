@@ -1,0 +1,117 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ic BeSocial\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/ic-besocial\n"
+"POT-Creation-Date: 2010-06-28 07:30+0000\n"
+"PO-Revision-Date: 2010-06-28 09:48+0100\n"
+"Last-Translator: Jose Cuesta <jose.cuesta@inerciacreativa.com>\n"
+"Language-Team: Inercia Creativa <info@inerciacreativa.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: besocial.php:198
+msgid "Position"
+msgstr "Posición"
+
+#: besocial.php:198
+msgid "Bottom"
+msgstr "Debajo"
+
+#: besocial.php:198
+msgid "Top"
+msgstr "Arriba"
+
+#: besocial.php:198
+msgid "None"
+msgstr "Ninguna"
+
+#: besocial.php:198
+msgid "If \"None\" is selected you must use <code>ic_BeSocial_Buttons()</code> in <code>single.php</code>"
+msgstr "Si seleccionas \"Ninguna\" debes usar la función <code>ic_BeSocial_Buttons()</code> en la plantilla <code>single.php</code>"
+
+#: besocial.php:199
+msgid "Alignment"
+msgstr "Alineación"
+
+#: besocial.php:199
+msgid "Center"
+msgstr "Centrado"
+
+#: besocial.php:199
+msgid "Left"
+msgstr "Izquierda"
+
+#: besocial.php:199
+msgid "Right"
+msgstr "Derecha"
+
+#: besocial.php:200
+msgid "Show counters"
+msgstr "Mostrar contadores"
+
+#: besocial.php:239
+msgid "Configure"
+msgstr "Configurar"
+
+#: besocial.php:242
+msgid "Options saved"
+msgstr "Opciones guardadas"
+
+#: besocial.php:254
+msgid "Update"
+msgstr "Actualizar"
+
+#: besocial.php:390
+msgid "Active"
+msgstr "Activo"
+
+#: besocial.php:490
+msgid "Twitter username"
+msgstr "Nombre de usuario"
+
+#: besocial.php:491
+msgid "Bit.ly username"
+msgstr "Nombre de usuario de Bit.ly"
+
+#: besocial.php:492
+msgid "Bit.ly API key"
+msgstr "Clave API de Bit.ly"
+
+#: besocial.php:492
+#: besocial.php:577
+msgid "Found here:"
+msgstr "Puedes encontrarla aquí:"
+
+#: besocial.php:499
+msgid "Retweet this"
+msgstr "Retwittea esto"
+
+#: besocial.php:554
+msgid "Bit.ly URL"
+msgstr "URL de Bit.ly"
+
+#: besocial.php:567
+msgid "Share this on"
+msgstr "Compartir la entrada en"
+
+#: besocial.php:577
+msgid "API key"
+msgstr "Clave API"
+
+#: besocial.php:582
+#: besocial.php:595
+msgid "Submit this to"
+msgstr "Enviar la entrada a"
+

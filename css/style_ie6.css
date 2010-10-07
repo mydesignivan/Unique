@@ -1,0 +1,14 @@
+/* MENU
+ -----------------------------------------------------------------------------*/
+ul.menu{
+    width: 930px;
+    margin: 0 auto;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+ul.menu li.current .adorno{
+    width:38px !important;
+}
+ul.menu li a, ul.menu li a:link{
+    color: #FFF5D8 !important;
+}

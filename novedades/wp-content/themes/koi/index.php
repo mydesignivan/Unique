@@ -21,7 +21,7 @@
                             <span class="postauthor">by <?php //the_author_link(); ?></span>
                             <span class="postcategory">in <?php //the_category(', ') ?></span> <?php //the_tags( '<span class="posttag">Tags: ', ', ', '</span>'); ?> <?php //edit_post_link(__('[Edit]','ndesignthemes')); ?>
                         </p>-->
-			<?php the_content(__('More','ndesignthemes')); ?>
+			<?php the_content(__('MAS','ndesignthemes')); ?>
 		</div>
 		<!--/post -->
 		<?php endwhile; ?>

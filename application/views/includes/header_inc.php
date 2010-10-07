@@ -25,14 +25,14 @@
     $page = $this->uri->segment(1);?>
 
     <ul class="menu">
-        <li <?php if( $page=="" || $page=="index" ) echo 'class="current"';?>><a href="<?=$this->config->item('base_url');?>"><div class="l"></div><div class="m">Home</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="quienes-somos") echo 'class="current"';?>><a href="<?=site_url('/quienes-somos/')?>"><div class="l"></div><div class="m">¿Quienes Somos?</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="servicios") echo 'class="current"';?>><a href="<?=site_url('/servicios/')?>"><div class="l"></div><div class="m">Servicios</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="modalidad") echo 'class="current"';?>><a href="<?=site_url('/modalidad/')?>"><div class="l"></div><div class="m">Modalidad</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="galeria") echo 'class="current"';?>><a href="<?=site_url('/galeria/')?>"><div class="l"></div><div class="m">Galer&iacute;a</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="bodas") echo 'class="current"';?>><a href="<?=site_url('/bodas/')?>"><div class="l"></div><div class="m">Bodas</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li <?php if( $page=="contacto") echo 'class="current"';?>><a href="<?=site_url('/contacto/')?>"><div class="l"></div><div class="m">Contacto</div><div class="r"></div> <div class="adorno"></div></a></li>
-        <li><a href="novedades"><div class="l"></div><div class="m">Novedades</div><div class="r"></div> <div class="adorno"></div></a></li>
+        <li <?php if( $page=="" || $page=="index" ) echo 'class="current"';?>><a href="<?=$this->config->item('base_url');?>"><span class="l"></span><span class="m">Home</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="quienes-somos") echo 'class="current"';?>><a href="<?=site_url('/quienes-somos/')?>"><span class="l"></span><span class="m">¿Quienes Somos?</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="servicios") echo 'class="current"';?>><a href="<?=site_url('/servicios/')?>"><span class="l"></span><span class="m">Servicios</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="modalidad") echo 'class="current"';?>><a href="<?=site_url('/modalidad/')?>"><span class="l"></span><span class="m">Modalidad</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="galeria") echo 'class="current"';?>><a href="<?=site_url('/galeria/')?>"><span class="l"></span><span class="m">Galer&iacute;a</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="bodas") echo 'class="current"';?>><a href="<?=site_url('/bodas/')?>"><span class="l"></span><span class="m">Bodas</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="contacto") echo 'class="current"';?>><a href="<?=site_url('/contacto/')?>"><span class="l"></span><span class="m">Contacto</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li><a href="novedades"><span class="l"></span><span class="m">Novedades</span><span class="r"></span> <span class="adorno"></span></a></li>
     </ul>
 
 <?php }?>

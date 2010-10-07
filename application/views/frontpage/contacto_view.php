@@ -25,7 +25,7 @@
     </div>
     <div class="trow">
         <label class="label label-contact" for="txtDate">Fecha de Casamiento</label>
-        <div class="fleft"><input type="text" id="txtDate" name="txtDate" class="input-date" readonly /></div>
+        <div class="fleft"><input type="text" id="txtDate" name="txtDate" class="input-date" readonly="readonly" /></div>
     </div>
     <div class="trow">
         <label class="label label-contact" for="txtEmail">* Correo electr&oacute;nico</label>
@@ -39,10 +39,8 @@
         <label class="label label-contact" for="txtConsult">Consulta</label>
         <div class="fleft"><textarea id="txtConsult" name="txtConsult" rows="5" cols="22" class="textarea-contact"></textarea></div>
     </div>
-    <div class="trow" style="width:470px">
-        <div class="fright">
-            <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button fright" value="Enviar" />
-        </div>        
+    <div class="trow align-right" style="width:470px">
+       <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" style="position: relative; top:8px;" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button" value="Enviar" />
     </div>
 </form>
 

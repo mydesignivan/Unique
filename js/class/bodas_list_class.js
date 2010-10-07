@@ -101,15 +101,14 @@ var BodasList = new (function(){
     /* PRIVATE METHODS
      **************************************************************************/
 
-    var _del_comment = function(id, tabla){
-        
+    var _del_comment = function(id, tabla){        
         $.post(baseURI+'paneladmin/bodas/ajax_comments_del/'+tabla+"/"+id, function(data){
                 $('#ajaxloader').hide();
                 if( data=="true" ){
                     BodasList.popup_comments(_bodasid, _view);
                 }
             });
-    }
+    };
 
     var _save_order = function(arr, initorder, callback){
         $.post(baseURI+'paneladmin/bodas/ajax_order/', {rows : JSON.encode(arr), initorder : initorder}, function(data){

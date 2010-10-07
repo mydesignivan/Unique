@@ -43,10 +43,8 @@
             <label class="label label-contact" for="txtObserv"></label>
             <div class="fleft"><textarea id="txtObserv" name="txtObserv" rows="5" cols="22" class="textarea-contact"></textarea></div>
         </div>
-        <div class="trow" style="width:470px">
-            <div class="fright">
-                <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button fright" value="Enviar" />
-            </div>
+        <div class="trow align-right" style="width:470px">
+           <img src="images/ajax-loader3.gif" alt="Loading..." width="32" height="32" class="jq-loading hide" style="position: relative; top:8px;" />&nbsp;&nbsp;<input type="submit" id="btnSubmit" name="btnSubmit" class="button" value="Enviar" />
         </div>
     </form>
 
@@ -61,7 +59,7 @@
 </div>
 
 
-<div class="clear fleft prepend-top" >
+<div class="clear span-24 prepend-top" >
     <div class="span-10">
         <h3>Salon <?=$info['nombre_salon']?></h3>
         <div class="framegm"><?=$info['google_maps_salon']?></div>

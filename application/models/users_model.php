@@ -19,7 +19,7 @@ class Users_model extends Model {
             $this->load->library('encpss');
             $data['password'] = $this->encpss->encode($_POST['txtPassNew']);
         }
-
+        
         $this->db->where(array('username'=>$this->session->userdata('username')));
         return $this->db->update(TBL_USERS, $data);
      }

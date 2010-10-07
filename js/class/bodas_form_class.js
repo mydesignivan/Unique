@@ -31,12 +31,6 @@ var Bodas = new (function(){
             txtPass : 'required'
         };
 
-        if( !_mode_edit ){
-            rules.txtImageNovia = 'required';
-            rules.txtImageNovio = 'required';
-            rules.txtImageNovios = 'required';
-        }
-
         var o = $.extend({}, jQueryValidatorOptDef, {
             rules : rules,
             submitHandler : _on_submit,
@@ -242,6 +236,17 @@ var Bodas = new (function(){
      };
      
      var _on_submit = function(form){
+        if( !_mode_edit ){
+            var img = $('img.jq-au-thumb:hidden');
+            if( img.length>0 ){
+                img.each(function(){
+                    $(this).parent().find('.ajaxupload-error').html('Este campo es obligatorio.').show();
+                });
+                img.eq(0).parent().find('.ajaxupload-input').focus();
+                return false;
+            }
+        }
+
         _ajaxupload_output.gallery={};
         _ajaxupload_output.gallery.images_new = PictureGallery.get_images_new();
 

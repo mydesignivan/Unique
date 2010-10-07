@@ -90,8 +90,8 @@ $msg = '<b>Nombre y Apellido:</b> {name}<br />
 <b>Telefono:</b> {phone}<br />
 <b>Observaciones:</b><br />{observaciones}';
 define('EMAIL_RSVP_SUBJECT', 'Unique WP - RSVP');
-//define('EMAIL_RSVP_TO', 'info@uniquewp.com.ar');
-define('EMAIL_RSVP_TO', 'iwmattoni@gmail.com');
+define('EMAIL_RSVP_TO', 'info@uniquewp.com.ar');
+//define('EMAIL_RSVP_TO', 'iwmattoni@gmail.com');
 define('EMAIL_RSVP_MESSAGE', $msg);
 
 
@@ -143,7 +143,7 @@ define('TITLE_NOVEDADES', 'Novedades');
 | METADATA KEYWORDS
 |--------------------------------------------------------------------------
 */
-define('META_KEYWORDS_GLOBAL', '');
+define('META_KEYWORDS_GLOBAL', 'Casamiento Mendoza, Boda Mendoza, Organizacion de eventos, Organizacion de Casamiento, Wedding Planner Mendoza, Preparativos para eventos, Salon de fiestas, Decoracion bodas');
 define('META_KEYWORDS_INDEX', '');
 define('META_KEYWORDS_QUIENESOMOS', '');
 define('META_KEYWORDS_SERVICIOS', '');
@@ -159,7 +159,7 @@ define('META_KEYWORDS_NOVEDADES', '');
 | METADATA DESCRIPTIONS
 |--------------------------------------------------------------------------
 */
-define('META_DESCRIPTION_GLOBAL', '');
+define('META_DESCRIPTION_GLOBAL', 'Soñas con tu casamiento? Organizacion, preparativos, fiesta, salon, catering. Todo para tu boda en Mendoza.');
 define('META_DESCRIPTION_INDEX', '');
 define('META_DESCRIPTION_QUIENESOMOS', '');
 define('META_DESCRIPTION_SERVICIOS', '');

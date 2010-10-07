@@ -10,7 +10,7 @@
 </div>
 <?php }?>
 
-<form id="form1" action="<?//=site_url('/paneladmin/myaccount/save');?>" method="post" enctype="application/x-www-form-urlencoded">
+<form id="form1" action="<?=site_url('/paneladmin/myaccount/save');?>" method="post" enctype="application/x-www-form-urlencoded">
     <div class="trow">
         <label for="txtEmail" class="label label-contact">* Email</label>
         <input type="text" name="txtEmail" id="txtEmail" class="input-contact" value="<?=$info['email']?>" />

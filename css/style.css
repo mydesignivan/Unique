@@ -9,6 +9,7 @@
 .text-size-80{font-size: 80% !important;}
 .text-size-90{font-size: 90% !important;}
 .text-size-120{font-size:120% !important}
+
 h1.title-section{
     float: left;
     border-bottom: 2px solid #AC3C45;
@@ -135,6 +136,15 @@ a.link1{
     text-decoration: none;
 }
     a.link1:hover{color:#581B23 !important;}
+a.link-img{
+    color:#A62D38 !important;
+    font-size: 110%;
+}
+    a.link-img img{
+        position: relative;
+        top:3px;
+    }
+    a.link-img:hover{color:#581B23 !important;}
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LABEL
@@ -485,9 +495,10 @@ ul.menu-bodas li{
         margin: -200px -60px 0 0;
         /*border:1px solid red;*/
     }
-    .main-container .content, .main-container .content span, .main-container .content p{
+    .main-container .content, .main-container .content span, .main-container .content p, .main-container .content p,.main-container .content ul{
         font-family: georgia,palatino !important;
         color: #A62D38 !important;
+        font-size: 105% !important;
     }
 
 

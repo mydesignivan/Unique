@@ -93,7 +93,7 @@ var Bodas = new (function(){
     };
 
     this.submit_comments = function(f, index){
-        if( $(f).find('textarea').val() ){
+        if( $(f).find('textarea').val() && $(f).find('input:text').val() ){
             if( _working ) return false;
             _working=true;
 
@@ -113,7 +113,7 @@ var Bodas = new (function(){
         }
 
         return false;
-    }
+    };
 
 
     /* PRIVATE PROPERTIES
