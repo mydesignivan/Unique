@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-09-2010 a las 14:53:02
+-- Tiempo de generación: 14-10-2010 a las 14:51:45
 -- Versión del servidor: 5.1.41
 -- Versión de PHP: 5.3.1
 
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `bodas` (
 --
 
 INSERT INTO `bodas` (`bodas_id`, `username`, `password`, `nombre_novio`, `apellido_novio`, `nombre_novia`, `apellido_novia`, `historia_novia`, `imagen_novia`, `imagen_novia_width`, `imagen_novia_height`, `historia_novio`, `imagen_novio`, `imagen_novio_width`, `imagen_novio_height`, `historia_novios`, `imagen_novios`, `imagen_novios_width`, `imagen_novios_height`, `nombre_salon`, `nombre_iglesia`, `google_maps_salon`, `google_maps_iglesia`, `order`, `date_added`, `last_modified`) VALUES
-(4, 'invitado1', 'g6eKr0l/IQKa7AI89hQU0sP5AK8=', 'Gabriel', 'Asdfsf', 'Paula', 'Sdasd', 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848646864c957aae1f82c__06weddingsgreen.jpg', 108, 81, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647034c957abf2159f__1196069610_ta_weddings_small.jpg', 108, 72, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647214c957ad1cc7fe__bodas-foto-1.jpg', 210, 300, 'quinta al amanecer', 'San Nicolás', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 3, '2010-09-18 23:54:02', '2010-09-20 14:45:08'),
-(5, 'invitado2', 'HJrAeQa1bPL2/n9CtDpz3qfMNk8=', 'Eduardo', 'Rwrwer', 'Andrea', 'Dsasa', 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650414c957c119d67e__battle-wedding-planners.jpg', 108, 81, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650604c957c2468273__salon_boda_decoracion.jpg', 108, 73, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650764c957c348dc79__bodas-foto-2.jpg', 210, 300, 'erere', 'erert', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 2, '2010-09-18 23:58:32', '2010-09-20 14:46:58'),
+(4, 'invitado1', 'g6eKr0l/IQKa7AI89hQU0sP5AK8=', 'Gabriel', 'Asdfsf', 'Paula', 'Sdasd', 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848646864c957aae1f82c__06weddingsgreen.jpg', 108, 81, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647034c957abf2159f__1196069610_ta_weddings_small.jpg', 108, 72, 'asdasddsfjhasldf asdf asdfasdfas dfa sdfsdklfhaskdfh sdf ksdfhksdfsadf\nsdfsa dflksd lsdfhlsjkadfh sd flkhsadfl saldf asldfhlsudfyhsadf\nsadflsajdfhlsajdf asdlfhsaldfkhs dfsdflsdlf sdf sadfsdf asdf asdf  sadf asdfa\nsdfasdfasdfasdfasd\nfasdfsadf\nasdfasdflhasd', '3_12848647214c957ad1cc7fe__bodas-foto-1.jpg', 210, 300, 'quinta al amanecer', 'San Nicolás', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.886561,-68.856447&amp;spn=0.007604,0.013711&amp;z=16&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 6, '2010-09-18 23:54:02', '2010-09-20 14:45:08'),
+(5, 'invitado2', 'HJrAeQa1bPL2/n9CtDpz3qfMNk8=', 'Eduardo', 'Rwrwer', 'Andrea', 'Dsasa', 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650414c957c119d67e__battle-wedding-planners.jpg', 108, 81, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650604c957c2468273__salon_boda_decoracion.jpg', 108, 73, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848650764c957c348dc79__bodas-foto-2.jpg', 210, 300, 'erere', 'erert', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 5, '2010-09-18 23:58:32', '2010-09-20 14:46:58'),
 (6, 'invitado3', 'ZNvOhLu2jhm84c9ONuO7og==', 'Guillermo', 'Sdfsdf', 'Veronica', 'Dafsd', 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848652114c957cbb69813__1196069610_ta_weddings_small.jpg', 108, 72, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848651694c957c9121f79__bay-area-weddings.jpg', 108, 81, 'sdfsdfsdf sdfsdfsdfsdfsdf sdfsd\nsdfs\ndfsd fs df sa df asdf  sadf asd\nfasdfasdf as dñfkjaskdfj sadfasdflhasldf sadgfkgsadkfgsdk', '3_12848651414c957c75e7b99__bodas-foto-3.jpg', 210, 300, 'sdfsd', 'werwer', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', '<iframe marginheight="0" marginwidth="0" src="http://maps.google.com.ar/?ie=UTF8&amp;ll=-32.892854,-68.84442&amp;spn=0.001946,0.004823&amp;z=18&amp;output=embed" frameborder="0" height="196" scrolling="no" width="362"></iframe>', 4, '2010-09-19 00:00:16', '2010-09-20 14:47:48');
 
 -- --------------------------------------------------------
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `bodas_cronicas` (
   `name` varchar(255) NOT NULL,
   `cronica` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Volcar la base de datos para la tabla `bodas_cronicas`
@@ -98,11 +98,15 @@ CREATE TABLE IF NOT EXISTS `bodas_dedicatorias` (
   `name` varchar(255) NOT NULL,
   `dedicatoria` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Volcar la base de datos para la tabla `bodas_dedicatorias`
 --
+
+INSERT INTO `bodas_dedicatorias` (`id`, `bodas_id`, `name`, `dedicatoria`) VALUES
+(1, 4, 'ivan', 'sdsdf sd fsdf\nsd\nfsdf'),
+(2, 4, 'gabriel', 'sadasdasd');
 
 -- --------------------------------------------------------
 
@@ -217,7 +221,35 @@ INSERT INTO `bodas_regalos` (`regalo_id`, `bodas_id`, `regalo`) VALUES
 (93, 5, 'werer'),
 (94, 6, 'dfgdf');
 
--- ---------------------------------------
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ci_sessions`
+--
+
+DROP TABLE IF EXISTS `ci_sessions`;
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(16) NOT NULL DEFAULT '0',
+  `user_agent` varchar(50) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` varchar(500) NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+('4dd748f4e7ac1f2ff48eb370880bdd3f', '192.168.0.4', 'Mozilla/5.0 (X11; U; Linux x86_64; es-AR; rv:1.9.2', 1286478545, ''),
+('b4a80e4fc268f01007d5ef9dbe90f8bf', '0.0.0.0', 'Mozilla/5.0 (X11; U; Linux x86_64; es-AR; rv:1.9.2', 1287060346, ''),
+('bfef2ba23283bda3c5e45bf964d2bfab', '192.168.0.4', 'Mozilla/5.0 (X11; U; Linux x86_64; es-AR; rv:1.9.2', 1287060356, 'a:3:{s:9:"logged_in";s:1:"1";s:8:"bodas_id";s:1:"4";s:8:"username";s:9:"invitado1";}'),
+('3b69bedd225546c109ac4f74eedb0ea3', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux x86_64; es-AR; rv:1.9.2', 1285999024, ''),
+('7767f8c0cbd746b05197bdc69aabea40', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux x86_64; es-AR; rv:1.9.2', 1286478544, ''),
+('7e818b1b680d184af6e4511ea7d99cdf', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux x86_64; es-AR; rv:1.9.2', 1285994581, '');
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `contents`
@@ -297,14 +329,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `date_added` datetime NOT NULL,
   `last_modified` datetime NOT NULL,
   PRIMARY KEY (`users_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcar la base de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`users_id`, `username`, `password`, `email`, `level`, `date_added`, `last_modified`) VALUES
-(2, 'admin', 'Tj/YDjLaDSIolz5yYxCEaXMd23JUiBOl', 'iwmattoni@yahoo.com', b'1', '2010-08-23 19:07:45', '2010-09-04 12:35:17'),
-(3, 'mydesign', 'v+vbQnjvohf+yyHs6ILVj3u4RNBrmlM6A/LwFg==', 'ivan@mydesign.com.ar', b'1', '2010-08-23 19:09:30', '2010-08-23 19:09:33'),
-(4, 'federico', 'cIwxlI2zQSxoWKtxkfBXeQ==', '', b'1', '2010-08-23 19:07:45', '2010-08-23 19:07:45'),
-(6, 'invitado', 'cIwxlI2zQSxoWKtxkfBXeQ==', '', b'0', '2010-09-15 18:36:41', '2010-09-15 18:36:41');
+(2, 'admin', 'LGh2zHoDAQuvSCmiCArKJd8VorbKJyYZRSfp3mpKclg=', 'info@uniquewp.com.ar', b'1', '2010-08-23 19:07:45', '2010-09-04 12:35:17'),
+(3, 'mydesign', 'v+vbQnjvohf+yyHs6ILVj3u4RNBrmlM6A/LwFg==', 'info@uniquewp.com.ar', b'1', '2010-08-23 19:09:30', '2010-09-28 13:21:54');
