@@ -26,8 +26,8 @@ var Bodas = new (function(){
         var arr=hora.split("-");
 
         $("#contador").countdown({
-    until: new Date(arr[0],(arr[1]-1),arr[2],arr[3],arr[4],arr[5])   
-    });
+            until: new Date(arr[0],(arr[1]-1),arr[2],arr[3],arr[4],arr[5])
+        });
 
  
 

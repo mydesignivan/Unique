@@ -17,7 +17,7 @@
         <label class="label label-contact2" for="txtFecha">* Fecha y hora del evento</label>
         <div class="span-19 last">
             <div class="fleft" style="margin-right:5px;">
-                <input type="text" id="txtFecha" readonly name="txtFecha" class="input-small" value="<?=date('d-m-Y', isset($info['fecha'])? $info['fecha']:time())?>" />
+                <input type="text" id="txtFecha" readonly name="txtFecha" class="input-small" value="<?=date('d-m-Y', isset($info['fecha']) && !empty($info['fecha']) ? $info['fecha'] : time())?>" />
             </div>
             <div class="fleft">
                  <?=form_dropdown("comboHora",$comboHora,@$info['fecha'],"id='comboHora'");?>

@@ -63,7 +63,7 @@ div.framegm{
     display: none;
     text-align: center;
 }
-
+#resultboda{position: relative;}
 /*------------------------------------------------------------------------------
  - ESTILOS PARA FILAS
  -----------------------------------------------------------------------------*/
@@ -663,15 +663,4 @@ table tbody tr.row-even{
 .table-comments .cell4{
     text-align: center;
     width: 90px;
-}
-
-
-#contador{
-    position: absolute;
-    top: 250px;
-    left: 550px;
-    border: 1px solid #ff0000;
-    width:200px;
-    height: 60px;
-
 }

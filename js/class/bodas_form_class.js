@@ -287,6 +287,7 @@ var Bodas = new (function(){
         
         _Loader.show('#form1');
         form.submit();
+        return false;
      };
 
 })();

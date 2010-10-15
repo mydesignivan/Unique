@@ -85,6 +85,10 @@ AddHandler x-httpd-php5 .php
 	RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 	RewriteCond %{HTTP_USER_AGENT} ^Zeus
 	RewriteRule .* - [F]
+
+    ##### sin-www a www #####
+    RewriteCond %{HTTP_HOST} ^uniquewp.com.ar [NC]
+    RewriteRule ^(.*)$ http://www.uniquewp.com.ar/$1 [L,R=301]
 </IfModule>
 <IfModule !mod_rewrite.c>
  # If we don’t have mod_rewrite installed, all 404’s
