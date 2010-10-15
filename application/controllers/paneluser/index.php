@@ -7,7 +7,7 @@ class Index extends Controller {
         parent::Controller();
 
         if( !$this->session->userdata('logged_in') || !is_numeric($this->session->userdata('bodas_id')) ) redirect($this->config->item('base_url'));
-
+        
         $this->load->model('bodas_model');
 
         $this->load->library('dataview', array(
@@ -31,7 +31,7 @@ class Index extends Controller {
         $info = $this->bodas_model->get_info($this->session->userdata('bodas_id'));
 
         $this->_data = $this->dataview->set_data(array(
-            'tlp_script'         => array("plugins_validator", "plugins_formatnumber", "plugins_galleriffic", "class_bodas", "class_bodas_gallery"),
+            'tlp_script'         => array("plugins_validator", "plugins_formatnumber", "plugins_galleriffic", "plugins_countdown", "class_bodas", "class_bodas_gallery"),
             'tlp_title_section'  => "Bodas",
             'info'               => $info,
             'content_footer'     => $this->contents_model->get_content('footer')

@@ -13,6 +13,20 @@
 <?php $mode_edit = isset($info) ? "true" : "false"?>
 
 <form id="form1" action="<?=site_url(isset($info) ? '/paneladmin/bodas/edit/' : '/paneladmin/bodas/create/')?>" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="trow" style="width:1000px;">
+        <label class="label label-contact2" for="txtFecha">* Fecha y hora del evento</label>
+        <div class="span-19 last">
+            <div class="fleft" style="margin-right:5px;">
+                <input type="text" id="txtFecha" readonly name="txtFecha" class="input-small" value="<?=date('d-m-Y', isset($info['fecha'])? $info['fecha']:time())?>" />
+            </div>
+            <div class="fleft">
+                 <?=form_dropdown("comboHora",$comboHora,@$info['fecha'],"id='comboHora'");?>
+            </div>
+            <div class="fleft">
+                <?=form_dropdown("comboMinuto",$comboMinuto,@$info['fecha'],"id='comboMinuto'");?>
+            </div>
+        </div>
+    </div>
 
     <div class="trow" style="width:1000px;">
         <label class="label label-contact2" for="txtNombreNovia">* Nombre y Apellido de la Novia</label>

@@ -22,6 +22,14 @@ var Bodas = new (function(){
             }
         });
         $('#form1').validate(o);
+        var hora=$("#fechaBoda").val();
+        var arr=hora.split("-");
+
+        $("#contador").countdown({
+    until: new Date(arr[0],(arr[1]-1),arr[2],arr[3],arr[4],arr[5])   
+    });
+
+ 
 
         formatNumber.init('#txtPhoneNum, #txtPhoneCode, #txtAdultos, #txtNinio');
     //    $('#txtNameInvitado').blur(function(){$(this).ucTitle()});

@@ -36,9 +36,14 @@ class Bodas extends Controller {
         $id = $this->uri->segment(4);
         $this->load->helper('form');
 
+        $array_hora=array(); for($i=0;$i<24;$i++) $array_hora[]=array("name"=>strlen($i)==1?"0".$i:$i, "value"=>$i);
+        $array_minuto=array(); for($i=0;$i<60;$i++) $array_minuto[]=array("name"=>strlen($i)==1?"0".$i:$i, "value"=>$i);
+
         $data = array(
             'tlp_section' =>  'paneladmin/bodas_form_view.php',
-            'tlp_script'  =>  array('plugins_validator', 'plugins_fancybox','plugins_jqui_sortable' ,'helpers_json', 'class_bodas_form')
+            'tlp_script'  =>  array('plugins_validator', 'plugins_fancybox','plugins_jqui_sortable' ,'helpers_json',  'plugins_datepicker', 'class_bodas_form'),
+            'comboHora'  =>   $array_hora,
+            'comboMinuto' =>  $array_minuto
         );
 
         if( is_numeric($id) ){ // Edit

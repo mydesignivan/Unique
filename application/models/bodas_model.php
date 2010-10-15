@@ -16,7 +16,8 @@ class Bodas_model extends Model {
          $json = json_decode($_POST['json']);
          $gallery = $json->gallery;
 
-         //print_array($gallery, true);
+        list($dia,$mes,$anio)=explode("-",$_POST['txtFecha']);
+        $fecha = mktime($_POST['comboHora'], $_POST['comboMinuto'],null,  $mes, $dia, $anio);
 
          $data = array(
             'username'  =>  $_POST['txtUsuario'],
@@ -42,6 +43,7 @@ class Bodas_model extends Model {
             'nombre_salon' => $_POST['txtNombreSalon'],
             'nombre_iglesia' => $_POST['txtNombreIglesia'],
             'order' => $this->_get_num_order(TBL_BODAS),
+            'fecha'          =>$fecha,
             'date_added' => date('Y-m-d H:i:s')
         );
 
@@ -80,6 +82,9 @@ class Bodas_model extends Model {
 
         $bodas_id = $_POST['bodas_id'];
 
+        list($dia,$mes,$anio)=explode("-",$_POST['txtFecha']);
+        $fecha = mktime($_POST['comboHora'], $_POST['comboMinuto'],null,  $mes, $dia, $anio);
+
          $data = array(
             'username' => $_POST['txtUsuario'],
             'password' => $this->encpss->encode($_POST['txtPass']),
@@ -94,6 +99,7 @@ class Bodas_model extends Model {
             'google_maps_iglesia' => $_POST['txtUbiIglesia'],
             'nombre_salon' => $_POST['txtNombreSalon'],
             'nombre_iglesia' => $_POST['txtNombreIglesia'],
+            'fecha'          =>$fecha,
             'last_modified' => date('Y-m-d H:i:s')
         );
 

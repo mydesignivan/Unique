@@ -664,3 +664,14 @@ table tbody tr.row-even{
     text-align: center;
     width: 90px;
 }
+
+
+#contador{
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    border: 1px solid #ff0000;
+    width:200px;
+    height: 60px;
+
+}

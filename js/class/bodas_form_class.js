@@ -17,6 +17,7 @@ var Bodas = new (function(){
             txtHistNovia : 'required',
             txtHistNovio : 'required',
             txtHistNovios : 'required',
+            txtFecha : 'required',
             lstMenu : {
                 required_list : true
             },
@@ -64,6 +65,18 @@ var Bodas = new (function(){
 
             // Configura Fancybox
             $('a.jq-image').fancybox();
+        });
+
+        $("#txtFecha").datepicker({
+            showOn          : 'both',
+            buttonImage     : 'images/icon_calendar.png',
+            buttonImageOnly : true,
+            dateFormat      : 'dd-mm-yy',
+            changeMonth     : true,
+            changeYear      : true,
+            yearRange       : '1950:'+(new Date().getFullYear()),
+            monthNamesShort : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
         });
 
         $("#gallery-image").sortable({

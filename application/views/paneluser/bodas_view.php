@@ -19,6 +19,8 @@
 </ul>
 
 <div id="resultboda" class="clear trow prepend-top2">
+    <input type="hidden" id="fechaBoda" value="<?=date("Y-m-d-G-i-s",$info['fecha'])?>">
+    <div id="contador"></div>
     <div id="tab0" class="jq-tab"><?php require("ajax/bodas_novios_view.php"); ?></div>
     <div id="tab1" class="jq-tab"></div>
     <div id="tab2" class="jq-tab"></div>

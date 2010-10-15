@@ -26,6 +26,7 @@ class Bodas extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
+
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/bodas_view.php',
             'tlp_title_section'  => 'Bodas',
