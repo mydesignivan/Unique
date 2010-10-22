@@ -13,7 +13,7 @@
 ?>
 
     <ul class="menu menu-paneladmin">
-        <li <?php if( $page=="" || $page=="index" ) echo 'class="current"';?>><a href="<?=$this->config->item('base_url');?>" target="_blank"><div class="l"></div><div class="m">Home</div><div class="r"></div> <div class="adorno"></div></a></li>
+        <li <?php if( $page=="" || $page=="index" ) echo 'class="current"';?>><a href="<?=$this->config->item('base_url');?>" target="_blank"><div class="l"></div><div class="m">Inicio</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="myaccount") echo 'class="current"';?>><a href="<?=site_url('/paneladmin/myaccount/')?>"><div class="l"></div><div class="m">Mi Cuenta</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="bodas") echo 'class="current"';?>><a href="<?=site_url('/paneladmin/bodas/')?>"><div class="l"></div><div class="m">Bodas</div><div class="r"></div> <div class="adorno"></div></a></li>
         <li <?php if( $page=="galeria") echo 'class="current"';?>><a href="<?=site_url('/paneladmin/galeria/')?>"><div class="l"></div><div class="m">Galer&iacute;a</div><div class="r"></div> <div class="adorno"></div></a></li>
@@ -25,7 +25,7 @@
     $page = $this->uri->segment(1);?>
 
     <ul class="menu">
-        <li <?php if( $page=="" || $page=="index" ) echo 'class="current"';?>><a href="<?=$this->config->item('base_url');?>"><span class="l"></span><span class="m">Home</span><span class="r"></span> <span class="adorno"></span></a></li>
+        <li <?php if( $page=="" || $page=="index" ) echo 'class="current"';?>><a href="<?=$this->config->item('base_url');?>"><span class="l"></span><span class="m">Inicio</span><span class="r"></span> <span class="adorno"></span></a></li>
         <li <?php if( $page=="quienes-somos") echo 'class="current"';?>><a href="<?=site_url('/quienes-somos/')?>"><span class="l"></span><span class="m">¿Quienes Somos?</span><span class="r"></span> <span class="adorno"></span></a></li>
         <li <?php if( $page=="servicios") echo 'class="current"';?>><a href="<?=site_url('/servicios/')?>"><span class="l"></span><span class="m">Servicios</span><span class="r"></span> <span class="adorno"></span></a></li>
         <li <?php if( $page=="modalidad") echo 'class="current"';?>><a href="<?=site_url('/modalidad/')?>"><span class="l"></span><span class="m">Modalidad</span><span class="r"></span> <span class="adorno"></span></a></li>
