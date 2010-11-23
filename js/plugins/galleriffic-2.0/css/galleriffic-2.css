@@ -56,7 +56,7 @@ div.slideshow span.image-wrapper {
 }
 div.slideshow a.advance-link {
     display: block;
-    width: 535px;
+    width: 554px;
     height: 355px; /* This should be set to be at least the height of the largest image in the slideshow */
     line-height: 355px; /* This should be set to be at least the height of the largest image in the slideshow */
     text-align: center;

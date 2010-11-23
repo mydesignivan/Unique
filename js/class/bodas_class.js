@@ -61,12 +61,14 @@ var Bodas = new (function(){
     };
 
     this.popup_login = function(){
+        $('#bodas-busy').css('opacity', '0.5').show();
         $.get(baseURI+'bodas/ajax_showpopup/', function(data){
             $('#popup').html(data).modal({
                 overlayClose : true,
                 onShow : function(){
                     $('#txtUser').val('').focus();
                     $('#txtPass').val('');
+                    $('#bodas-busy').hide();
                 }
             });
         });

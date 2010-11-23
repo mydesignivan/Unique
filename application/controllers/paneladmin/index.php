@@ -22,6 +22,7 @@ class Index extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
+        //die($this->encpss->decode('A2YFbw1zWyZRcwlhBzQFaQIEDB0='));
         if( $this->session->userdata('logged_in') && $this->session->userdata('level')==1 ) {
             redirect('/paneladmin/myaccount/');
         }else{
