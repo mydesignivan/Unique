@@ -10,7 +10,15 @@
 </div>
 <?php }?>
 
-<?php $mode_edit = isset($info) ? "true" : "false"?>
+<?php
+$mode_edit = isset($info) ? "true" : "false";
+
+$time_h = $time_m = 0;
+if( isset($info) ){
+    $time_h = date('H', $info['fecha']);
+    $time_m = date('i', $info['fecha']);
+}
+?>
 
 <form id="form1" action="<?=site_url(isset($info) ? '/paneladmin/bodas/edit/' : '/paneladmin/bodas/create/')?>" method="post" enctype="application/x-www-form-urlencoded">
     <div class="trow" style="width:1000px;">
@@ -20,10 +28,10 @@
                 <input type="text" id="txtFecha" readonly name="txtFecha" class="input-small" value="<?=date('d-m-Y', isset($info['fecha']) && !empty($info['fecha']) ? $info['fecha'] : time())?>" />
             </div>
             <div class="fleft">
-                 <?=form_dropdown("comboHora",$comboHora,@$info['fecha'],"id='comboHora'");?>
+                 <?=form_dropdown("comboHora",$comboHora, $time_h,"id='comboHora'");?>
             </div>
             <div class="fleft">
-                <?=form_dropdown("comboMinuto",$comboMinuto,@$info['fecha'],"id='comboMinuto'");?>
+                <?=form_dropdown("comboMinuto",$comboMinuto, $time_m,"id='comboMinuto'");?>
             </div>
         </div>
     </div>

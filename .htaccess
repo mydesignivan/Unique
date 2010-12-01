@@ -1,8 +1,7 @@
-AddHandler x-httpd-php5 .php
+AddHandler application/x-httpd-php5 .php5
 
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteBase /
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 
