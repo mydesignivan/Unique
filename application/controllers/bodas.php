@@ -26,7 +26,6 @@ class Bodas extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-
         $this->_data = $this->dataview->set_data(array(
             'tlp_section'        => 'frontpage/bodas_view.php',
             'tlp_title_section'  => 'Bodas',
@@ -41,7 +40,7 @@ class Bodas extends Controller {
     public function login(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->load->library("simplelogin", array('table'=>TBL_BODAS));
-            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"]);
+            $statusLogin = $this->simplelogin->login($this->input->post("txtUser"), $this->input->post("txtPass"));
 
             $ret = array('status'=>'ok');
             if( $statusLogin['status']=="error" ){
